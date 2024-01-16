@@ -20,10 +20,17 @@ export const HowItWorksContainer = styled.div`
   .step-wrapper {
     position: relative;
     display: flex;
-    /* align-items: center; */
-    width: fit-content;
+    max-width: 95vw;
     gap: 0.25rem;
-    margin-top: 1.5rem;
+    /* margin-top: 1.5rem; */
+    padding: 1.5rem 0;
+    overflow-x: auto;
+
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    &::-webkit-scrollbar {
+      display: none;
+    }
 
     .next-arrow {
       width: 3rem;
@@ -36,10 +43,10 @@ export const HowItWorksContainer = styled.div`
 export const ProtocolStep = styled.div`
   display: flex;
   flex-direction: column;
-  /* justify-content: center; */
   align-items: center;
 
   width: 10rem;
+  min-width: 10rem;
   gap: 0.75rem;
 
   p {
