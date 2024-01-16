@@ -1,19 +1,16 @@
-import { BeeLogo } from "../../components/BeeLogo";
-import { ButtonsSection, HomeContainer, IntroBanner, LinkButton } from "./styles";
-import beeStripe from "../../assets/bee-stripe-2.png";
-import { VideoBanner } from "../../components/VideoBanner";
-import { useWindowSize } from 'usehooks-ts'
+import { HomeContainer, IntroBanner } from "./styles";
+// import { useWindowSize } from 'usehooks-ts'
 import { Navbar } from "../../components/Navbar";
 import { HowItWorks } from "../../components/HowItWorks";
 
 export function Home() {
-  const { width } = useWindowSize()
+  // const { width } = useWindowSize()
 
-  const whatsappNumber = "5584981033283"
-  const whatsappMessage = "Olá! Gostaria de solicitar um orçamento."
-  const whatsappAddress = width >= 620 ?
-  `https://web.whatsapp.com/send?phone=${whatsappNumber}&text=` : // Abre diretamente a versão web
-  `https://wa.me/${whatsappNumber}?text=`; // Para uso geral
+  // const whatsappNumber = "5584981033283"
+  // const whatsappMessage = "Olá! Gostaria de solicitar um orçamento."
+  // const whatsappAddress = width >= 620 ?
+  // `https://web.whatsapp.com/send?phone=${whatsappNumber}&text=` : // Abre diretamente a versão web
+  // `https://wa.me/${whatsappNumber}?text=`; // Para uso geral
 
   return (
     <HomeContainer>
