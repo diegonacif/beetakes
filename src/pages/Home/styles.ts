@@ -7,6 +7,9 @@ export const HomeContainer = styled.main`
   align-items: center;
   min-height: 100dvh;
   height: 100%;
+  width: 100vw;
+  max-width: 100vw;
+  overflow: hidden;
 
   h2 {
     font-weight: 500;
