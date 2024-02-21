@@ -14,9 +14,11 @@ export function Home() {
 
   return (
     <HomeContainer>
-      <IntroBanner>
-        <Navbar />
+      <Navbar />
+      <IntroBanner id="section-home">
         <div className="bg" />
+        <h1 className="intro-text">Seu parceiro ideal em serviços de drone.</h1>
+        <h2 className="intro-text">Somos uma empresa especializada, que oferece soluções inovadoras e personalizadas para diversos segmentos.</h2>
       </IntroBanner>
       <HowItWorks />
       <footer>

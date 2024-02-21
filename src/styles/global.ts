@@ -27,6 +27,24 @@ export const GlobalStyle = createGlobalStyle`
     -webkit-font-smoothing: antialiased;
     text-rendering: optimizeLegibility;
     overflow-x: hidden;
+
+    /* Works on Chrome, Edge, and Safari */
+    &::-webkit-scrollbar {
+      width: 8px;
+    }
+
+    &::-webkit-scrollbar-track {
+      background: gray;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background-color: #fece35;
+      border-radius: 8px;
+      border: 1px solid gray;
+    }
+
+    /* Works on Firefox */
+    scrollbar-width: thin;
   }
 
   body, input, textarea, button {

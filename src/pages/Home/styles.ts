@@ -11,13 +11,13 @@ export const HomeContainer = styled.main`
   max-width: 100vw;
   overflow: hidden;
 
-  h2 {
+  /* h2 {
     font-weight: 500;
     font-size: 1.375rem;
     text-align: center;
     margin-top: -2rem;
     padding: 0 2rem;
-  }
+  } */
 
   footer {
     display: flex;
@@ -42,6 +42,25 @@ export const IntroBanner = styled.div`
   width: 100vw;
   overflow: hidden;
 
+  h1 {
+    font-size: 1.875rem;
+    margin-top: 21vh;
+  }
+
+  h2 {
+    font-size: 1.25rem;
+    margin-top: 26vh;
+  }
+
+  .intro-text {
+    font-weight: 600;
+    text-align: center;
+    color: ${(props) => props.theme['gray-100']};
+    text-shadow: 1px 1px 2px ${(props) => props.theme['gray-600']};
+    z-index: 10;
+    padding: 0 1rem;
+  }
+  
   .bg {
     position: absolute;
     top: 0;
@@ -52,7 +71,7 @@ export const IntroBanner = styled.div`
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
-    filter: blur(5px);
+    filter: blur(5px) brightness(0.6);
     z-index: 5;
     transform: scale(1.1);
   }

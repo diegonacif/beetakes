@@ -1,14 +1,18 @@
 import styled from "styled-components";
 
 export const NavbarContainer = styled.div`
+  position: fixed;
+  top: 0;
+  left: 0;
+
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 100vw;
-  height: 4rem;
+  height: 3rem;
   color: black;
   padding: 0 0.75rem;
-  z-index: 10;
+  z-index: 20;
 
   background: linear-gradient(90deg, rgba(239,252,255,0.3) 0%, rgba(101,101,101,0.3) 50%, rgba(31,31,31,0.3) 100%);
 
@@ -18,7 +22,7 @@ export const NavbarContainer = styled.div`
     height: 100%;
 
     #bee-logo {
-      height: 95%;
+      height: 90%;
     }
     
   }

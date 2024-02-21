@@ -3,7 +3,7 @@ import nextArrows from "../../assets/next-arrows.png";
 
 export function HowItWorks() {
   return (
-    <HowItWorksContainer>
+    <HowItWorksContainer id="section-works">
       <h1>Como funciona?</h1>
       <div className="step-wrapper">
         <ProtocolStep>
