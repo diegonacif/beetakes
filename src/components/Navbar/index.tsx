@@ -2,12 +2,26 @@ import { NavbarContainer } from "./styles";
 import beeLogo from '../../assets/bee-logo-3.png';
 import { useBreakpoint } from "../../hooks/useBreakpoint";
 import { MenuButton } from "../MenuButton";
+import { useEffect, useState } from "react";
 
 export function Navbar() {
   const breakpoint = useBreakpoint();
 
+  // Navbar color //
+  const [navColor, setNavColor] = useState('gradient');
+
+  useEffect(() => {
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 50) {
+        setNavColor('solid');
+      } else {
+        setNavColor('gradient');
+      }
+    });
+  }, [])
+
   return (
-    <NavbarContainer>
+    <NavbarContainer color={navColor}>
       <div className="logo-wrapper">
         <img src={beeLogo} alt="bee takes logo" id="bee-logo" />
       </div>

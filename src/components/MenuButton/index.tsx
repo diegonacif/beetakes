@@ -51,7 +51,7 @@ export function MenuButton() {
           (styles, item) => item &&
             <animated.div className="menu-modal" style={styles}>
               <div className="menu-item">
-              <a href='#section-home'>Home</a>
+              <a href='#section-home'>Início</a>
               </div>
               <hr />
               <div className="menu-item">
