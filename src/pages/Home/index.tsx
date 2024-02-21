@@ -2,6 +2,7 @@ import { HomeContainer, IntroBanner } from "./styles";
 // import { useWindowSize } from 'usehooks-ts'
 import { Navbar } from "../../components/Navbar";
 import { HowItWorks } from "../../components/HowItWorks";
+import { Particulars } from "../../components/Particulars";
 
 export function Home() {
   // const { width } = useWindowSize()
@@ -20,6 +21,7 @@ export function Home() {
         <h1 className="intro-text">Seu parceiro ideal em serviços de drone.</h1>
         <h2 className="intro-text">Somos uma empresa especializada, que oferece soluções inovadoras e personalizadas para diversos segmentos.</h2>
       </IntroBanner>
+      <Particulars />
       <HowItWorks />
       <footer>
         <span onClick={() => window.open('https://www.linkedin.com/in/diegonacif-dev/')}>Desenvolvido por Diego Nacif</span>

@@ -16,8 +16,10 @@ export function useBreakpoint() {
       return setCurrentBreakpoint('tablet')
     } else if (size.width >= 1024 && size.width < 1280) {
       return setCurrentBreakpoint('notebook')
-    } else if (size.width >= 1280) {
+    } else if (size.width >= 1280 && size.width < 1920) {
       return setCurrentBreakpoint('desktop')
+    } else if (size.width >= 1920) {
+      return setCurrentBreakpoint('widescreen')
     }
   }, [size]);
 
