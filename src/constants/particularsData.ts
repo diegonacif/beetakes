@@ -1,7 +1,7 @@
-import particular1 from '../assets/particular1.svg';
-import particular2 from '../assets/particular2.svg';
-import particular5 from '../assets/particular5.svg';
-import particular6 from '../assets/particular6.svg';
+import particular1 from '../assets/particular1.png';
+import particular2 from '../assets/particular2.png';
+import particular5 from '../assets/particular5.png';
+import particular6 from '../assets/particular6.png';
 
 console.log(particular1)
 

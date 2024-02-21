@@ -9,4 +9,8 @@ export const ParticularContainer = styled.div`
   width: 23rem;
   color: ${(props) => props.theme['gray-600']};
   text-align: center;
+
+  img {
+    height: 5.3125rem;
+  }
 `;
