@@ -3,8 +3,6 @@ import { PacksContainer } from "./styles";
 import { packsData } from "../../constants/packsData";
 
 export function Packs() {
-  console.log(packsData);
-
   return (
     <PacksContainer>
       {
