@@ -30,7 +30,7 @@ export function Navbar() {
         <MenuButton /> :
         null
       }
-      { breakpoint === 'notebook' || breakpoint === 'desktop' ?
+      { breakpoint === 'notebook' || breakpoint === 'desktop' || breakpoint === 'widescreen' ?
         <nav>
           <ul>
             <li>Home</li>
