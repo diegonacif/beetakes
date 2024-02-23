@@ -1,6 +1,20 @@
+interface Size {
+  tablet: string
+  notebook: string
+  desktop: string
+  widescreen: string
+}
+
+const size: Size ={
+  tablet: `600px`,
+  notebook: `1024px`,
+  desktop: `1280px`,
+  widescreen: `1920px`,
+}
+
 export const deviceBreakpoint = {
-  tablet: `(min-width: 480px)`,
-  notebook: `(min-width: 992px)`,
-  desktop: `(min-width: 1200px)`,
-  widescreen: `(min-width: 1920px)`,
+  tablet: `(min-width: ${size.tablet})`,
+  notebook: `(min-width: ${size.notebook})`,
+  desktop: `(min-width: ${size.desktop})`,
+  widescreen: `(min-width: ${size.widescreen})`,
 }

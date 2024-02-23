@@ -7,6 +7,7 @@ import Autoplay from 'embla-carousel-autoplay'
 
 import { EmblaCarouselType } from 'embla-carousel'
 import { CaretDoubleLeft, CaretDoubleRight } from "@phosphor-icons/react";
+import { useBreakpoint } from "../../hooks/useBreakpoint";
 
 
 export function Packs() {
@@ -14,7 +15,15 @@ export function Packs() {
   const carouselRef = useRef(null)
 
   const [emblaRef, emblaApi] = useEmblaCarousel(
-    { containScroll: false },
+    { 
+      containScroll: false, 
+      slidesToScroll: 1,
+      breakpoints: {
+        '(min-width: 1024px)': {slidesToScroll: 2}, // notebook
+        '(min-width: 1280px)': {slidesToScroll: 3}, // desktop
+        '(min-width: 1920px)': {slidesToScroll: 4}, // widescreen
+      }
+    },
     [Autoplay({
       stopOnInteraction: true,
       delay: 5000,
@@ -23,6 +32,7 @@ export function Packs() {
 
   const [canScrollPrev, setCanScrollPrev] = useState(false);
   const [canScrollNext, setCanScrollNext] = useState(true);
+  const [canScroll, setCanScroll] = useState(true);
 
   const scrollPrev = useCallback(() => {    
     if (emblaApi) emblaApi.scrollPrev()  
@@ -37,11 +47,35 @@ export function Packs() {
     setCanScrollNext(emblaApi.canScrollNext())
   }, [])
 
+  const breakpoint = useBreakpoint();
+
+  useEffect(() => {
+    const slidesVisibleQtd = () => {
+      if (breakpoint === 'mobile' || breakpoint === 'tablet') return 1
+      else if (breakpoint === 'notebook') return 2
+      else if (breakpoint === 'desktop') return 3
+      else if (breakpoint === 'widescreen') return 4
+      else return 0
+    }
+
+    if (emblaApi) {
+      const slidesQtd = emblaApi.slideNodes().length
+
+      if (slidesVisibleQtd() >= slidesQtd) {
+        setCanScroll(false)
+      } else {
+        setCanScroll(true)
+      }
+    } 
+  }, [breakpoint, emblaApi])
+  
+  
+
   useEffect(() => {    
     if (emblaApi) {
       emblaApi.on('select', onSelect)  
     } 
-  }, [emblaApi, onSelect])
+  }, [emblaApi, onSelect, breakpoint])
 
   return (
     <PacksContainer>
@@ -58,7 +92,7 @@ export function Packs() {
           </div>
         </div>
         {
-          canScrollPrev && (
+          canScroll && canScrollPrev && (
             <div className="carousel-btn left-btn">
               <CaretDoubleLeft 
                 size={36} 
@@ -69,7 +103,7 @@ export function Packs() {
           )
         }
         {
-          canScrollNext && (
+          canScroll && canScrollNext && (
             <div className="carousel-btn right-btn">
               <CaretDoubleRight 
                 size={36} 
@@ -79,18 +113,6 @@ export function Packs() {
             </div>
           )
         }
-        {/* <span 
-          className={`${!canScrollPrev ? 'carousel-btn left-btn scroll-button-off' : 'carousel-btn left-btn'}`}
-          onClick={scrollPrev}
-        >
-          &lt;
-        </span>
-        <span 
-          className={`${!canScrollNext ? 'carousel-btn right-btn scroll-button-off' : 'carousel-btn right-btn'}`}
-          onClick={scrollNext}
-        >
-          &gt;
-        </span> */}
       </div>
     </PacksContainer>
   )

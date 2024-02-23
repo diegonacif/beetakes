@@ -6,8 +6,6 @@ export function useBreakpoint() {
 
   const [currentBreakpoint, setCurrentBreakpoint] = useState('');
 
-  // console.log(size);
-
   useEffect(() => {
     
     if (size.width >= 320 && size.width < 600) {

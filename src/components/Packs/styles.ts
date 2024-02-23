@@ -1,10 +1,12 @@
 import styled from "styled-components";
+import { deviceBreakpoint } from "../../styles/breakpoints";
 
 export const PacksContainer = styled.div`
   .embla {  
     position: relative;
     overflow: hidden;
     width: 100vw;
+    max-width: 125rem;
   }
   .embla__container {
     display: flex;
@@ -15,6 +17,7 @@ export const PacksContainer = styled.div`
     flex: 0 0 100%; 
     justify-content: center;
     min-width: 0;
+    max-width: 100%;
   }
 
   .carousel-btn {
@@ -56,4 +59,28 @@ export const PacksContainer = styled.div`
   width: 100vw;
   background-color: ${(props) => props.theme['gray-100']};
   padding: 2rem 0.75rem;
+
+  @media ${deviceBreakpoint.tablet} {
+    .embla__slide {
+      flex: 0 0 100%; 
+    }
+  }
+
+  @media ${deviceBreakpoint.notebook} {
+    .embla__slide {
+      flex: 0 0 50%; 
+    }
+  }
+
+  @media ${deviceBreakpoint.desktop} {
+    .embla__slide {
+      flex: 0 0 33.33%; 
+    }
+  }
+
+  @media ${deviceBreakpoint.widescreen} {
+    .embla__slide {
+      flex: 0 0 25%; 
+    }
+  }
 `;

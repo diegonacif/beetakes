@@ -3,8 +3,6 @@ import particular2 from '../assets/particular2.png';
 import particular5 from '../assets/particular5.png';
 import particular6 from '../assets/particular6.png';
 
-console.log(particular1)
-
 export const particularData = [
   {
     img: particular1,
