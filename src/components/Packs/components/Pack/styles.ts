@@ -13,6 +13,15 @@ export const PackContainer = styled.div`
     width: fit-content;
     margin: 0 auto;
 
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+
+    cursor: default;
+
     span {
       font-size: 1.125rem;
       font-weight: 600;
@@ -43,12 +52,20 @@ export const PackList = styled.div`
   align-items: center;
   gap: 0.125rem;
   padding-bottom: 0.5rem;
+
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+
+  cursor: default;
 `;
 
 export const ItemsRow = styled.div`
   display: flex;
   align-items: center;
-  justify-content: center;
   gap: 0.375rem;
   background-color: ${(props)=> props.theme['gray-100']};
   width: 95%;
@@ -66,10 +83,12 @@ export const ItemsRow = styled.div`
 export const PackSelect = styled.select`
   text-align: center;
   width: 6rem;
-  height: 2rem;
+  height: 1.75rem;
   margin: 0 auto;
   font-size: 1rem;
   color: ${(props)=> props.theme['gray-600']};
+  border-radius: 3px;
+  border: 0;
   cursor: pointer;
 `;
 
