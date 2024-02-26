@@ -10,6 +10,11 @@ export const FeedBackContainer = styled.div`
     flex-direction: column;
     width: 100%;
     gap: 0.5rem;
+
+    #star-img {
+      width: 1.75rem;
+      height: auto;
+    }
   }
 
   .lower-section {

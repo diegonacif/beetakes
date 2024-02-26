@@ -1,6 +1,7 @@
-import { Star } from "@phosphor-icons/react";
+// import { Star } from "@phosphor-icons/react";
 import { FeedBackContainer, FeedBackInfo, FeedBackPhoto, FeedBackStars, FeedBackText } from "./styles";
 import userIcon from "../../../../assets/abstract-user-flat-1.svg";
+import starImg from "../../../../assets/star.svg";
 
 interface FeedbackDataProps {
   text: string;
@@ -24,7 +25,8 @@ export function Feedback({ data }: FeedbackProps) {
       <div className="upper-section">
         <FeedBackStars>
           {stars.map((_, index) => (
-            <Star key={index} size={28} color="#ffd900" weight="fill" />
+            <img src={starImg} key={index} id="star-img" />
+            // <Star key={index} size={28} color="#ffd900" weight="fill" />
             ))}
         </FeedBackStars>
         <FeedBackText>{data.text}</FeedBackText>
