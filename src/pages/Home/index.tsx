@@ -5,6 +5,7 @@ import { HowItWorks } from "../../components/HowItWorks";
 import { Particulars } from "../../components/Particulars";
 import { Services } from "../../components/Services";
 import { Packs } from "../../components/Packs";
+import { Feedbacks } from "../../components/Feedbacks";
 
 export function Home() {
   // const { width } = useWindowSize()
@@ -27,6 +28,7 @@ export function Home() {
       <Services />
       <HowItWorks />
       <Packs />
+      <Feedbacks />
       <footer>
         <span onClick={() => window.open('https://www.linkedin.com/in/diegonacif-dev/')}>Desenvolvido por Diego Nacif</span>
       </footer>
