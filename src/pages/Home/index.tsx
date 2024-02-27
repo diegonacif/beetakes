@@ -7,6 +7,7 @@ import { Services } from "../../components/Services";
 import { Packs } from "../../components/Packs";
 import { Feedbacks } from "../../components/Feedbacks";
 import { WhyUs } from "../../components/WhyUs";
+import { Certified } from "../../components/Certified";
 
 export function Home() {
   // const { width } = useWindowSize()
@@ -31,6 +32,7 @@ export function Home() {
       <Packs />
       <Feedbacks />
       <WhyUs />
+      <Certified />
       <footer>
         <span onClick={() => window.open('https://www.linkedin.com/in/diegonacif-dev/')}>Desenvolvido por Diego Nacif</span>
       </footer>
