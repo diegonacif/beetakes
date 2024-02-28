@@ -1,8 +1,8 @@
 import styled from "styled-components";
-import orderImg from "../../assets/ico-order-video.png";
-import droneImg from "../../assets/ico-drone.png";
-import thumbsUpImg from "../../assets/ico-thumbs-up.png";
-import talkImg from "../../assets/ico-talk.png";
+import orderImg from "../../assets/purpose.svg";
+import droneImg from "../../assets/simple-drone.svg";
+import thumbsUpImg from "../../assets/thumbs-up.svg";
+import talkImg from "../../assets/chat.svg";
 
 interface ProtocolStepProps {
   step: string;
@@ -11,7 +11,9 @@ interface ProtocolStepProps {
 export const HowItWorksContainer = styled.div`
   display: flex;
   flex-direction: column;
+  width: 100vw;
   padding: 1.5rem 0;
+  background-color: ${(props) => props.theme['midnight-800']};
 
   h1 {
     text-align: center;
@@ -22,7 +24,7 @@ export const HowItWorksContainer = styled.div`
     display: flex;
     max-width: 95vw;
     gap: 0.25rem;
-    /* margin-top: 1.5rem; */
+    margin: 0 auto;
     padding: 1.5rem 0;
     overflow-x: auto;
 
