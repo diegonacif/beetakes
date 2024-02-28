@@ -5,7 +5,7 @@ export const packsData = [
     variants: [
       {
         variantType: 'Único',
-        title: 'Pacote Comercial de Foto',
+        title: 'Comercial de Foto',
         img: img,
         type: 'f',
         list: [
@@ -18,7 +18,7 @@ export const packsData = [
     variants: [
       {
         variantType: 'Básico',
-        title: 'Pacote Redes Sociais Básico',
+        title: 'Redes Sociais Básico',
         img: img,
         type: 'fv',
         list: [
@@ -30,7 +30,7 @@ export const packsData = [
       },
       {
         variantType: 'Avançado',
-        title: 'Pacote Redes Sociais Avançado',
+        title: 'Redes Sociais Avançado',
         img: img,
         type: 'fv',
         list: [
@@ -39,6 +39,20 @@ export const packsData = [
           '2x 2:00-3:00 minutos de video pré-editado',
           '2x 1:00-1:30 minutos de video editado',
           '1 foto 360°',
+        ],
+      }
+    ]
+  },
+  {
+    variants: [
+      {
+        variantType: 'Único',
+        title: 'Marketing Redes Sociais',
+        img: img,
+        type: 'fv',
+        list: [
+          'Produção e edição de conteúdo visual.',
+          'Serviço de Social Media',
         ],
       }
     ]

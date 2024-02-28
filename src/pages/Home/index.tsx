@@ -8,6 +8,7 @@ import { Packs } from "../../components/Packs";
 import { Feedbacks } from "../../components/Feedbacks";
 import { WhyUs } from "../../components/WhyUs";
 import { Certified } from "../../components/Certified";
+import { Beeflix } from "../../components/Beeflix";
 
 export function Home() {
   // const { width } = useWindowSize()
@@ -31,6 +32,7 @@ export function Home() {
       <HowItWorks />
       <Packs />
       <Feedbacks />
+      <Beeflix />
       <WhyUs />
       <Certified />
       <footer>
