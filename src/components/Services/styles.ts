@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const ServicesContainer = styled.div`
+export const ServicesContainer = styled.section`
   position: relative;
   display: flex;
   flex-wrap: wrap;

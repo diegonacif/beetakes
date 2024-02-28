@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { deviceBreakpoint } from "../../styles/breakpoints";
 
-export const PacksContainer = styled.div`
+export const PacksContainer = styled.section`
   .embla {  
     position: relative;
     overflow: hidden;

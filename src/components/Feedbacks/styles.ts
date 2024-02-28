@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const FeedbacksContainer = styled.div`
+export const FeedbacksContainer = styled.section`
   display: flex;
   flex-wrap: wrap;
   justify-content: center;

@@ -34,7 +34,7 @@ export const HomeContainer = styled.main`
   }
 `
 
-export const IntroBanner = styled.div`
+export const IntroBanner = styled.section`
   position: relative;
   display: flex;
   flex-direction: column;

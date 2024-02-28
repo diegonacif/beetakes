@@ -25,7 +25,7 @@ export const MenuButtonContainer = styled.div`
 
     hr {
       width: 90%;
-      margin: 0.5rem 0;
+      margin: 0 0 0.5rem 0;
       border-top: 1px solid rgba(255, 255, 255, 0.6);
       border-bottom: 0;
       border-left: 0;
@@ -34,6 +34,7 @@ export const MenuButtonContainer = styled.div`
     
     .menu-item {
       display: flex;
+      flex-direction: column;
       justify-content: center;
       align-items: center;
       width: 100%;

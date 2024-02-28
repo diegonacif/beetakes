@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useRef, useState } from "react";
+import { useCallback, useContext, useEffect, useRef, useState } from "react";
 import { Pack } from "./components/Pack";
 import { PacksContainer } from "./styles";
 import { packsData } from "../../constants/packsData";
@@ -8,6 +8,7 @@ import Autoplay from 'embla-carousel-autoplay'
 import { EmblaCarouselType } from 'embla-carousel'
 import { CaretDoubleLeft, CaretDoubleRight } from "@phosphor-icons/react";
 import { useBreakpoint } from "../../hooks/useBreakpoint";
+import { RefsContext } from "../../contexts/RefsProvider";
 
 
 export function Packs() {
@@ -77,8 +78,10 @@ export function Packs() {
     } 
   }, [emblaApi, onSelect, breakpoint])
 
+  const { packsRef } = useContext(RefsContext);
+
   return (
-    <PacksContainer>
+    <PacksContainer id="section-packs" ref={packsRef}>
       <div className="embla">
         <div className="embla__viewport" ref={emblaRef}>
           <div className="embla__container">

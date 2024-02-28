@@ -1,6 +1,6 @@
 // Hamburguer Menu Button with Animation
 import { Twirl as Hamburguer } from 'hamburger-react';
-import { useRef, useState } from 'react';
+import { useContext, useRef, useState } from 'react';
 import { MenuButtonContainer } from './styles';
 
 // Outside Click (Hook)
@@ -8,6 +8,8 @@ import { useOnClickOutside } from 'usehooks-ts'
 
 // Conditional Rendering Transition Lib
 import { useTransition, animated } from '@react-spring/web';
+import { navData } from '../../constants/navData';
+import { RefsContext } from '../../contexts/RefsProvider';
 
 export function MenuButton() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -31,6 +33,38 @@ export function MenuButton() {
     config: {duration: 200},
   });
 
+  const { homeRef, servicesRef, packsRef, feedbacksRef, beeflixRef } = useContext(RefsContext);
+
+  const refsMap: Record<string, React.MutableRefObject<HTMLElement | null>> = {
+    homeRef,
+    servicesRef,
+    packsRef,
+    feedbacksRef,
+    beeflixRef,
+  };
+
+  function currentRef(ref: string) {
+    const selectedRef = refsMap[ref];
+
+    if (selectedRef) {
+      const navbarHeight = 48;
+      const offset = selectedRef.current?.getBoundingClientRect().top;
+
+      if (offset !== undefined) {
+        window.scrollTo({
+          top: window.scrollY + offset - navbarHeight,
+          behavior: 'smooth',
+        });
+      }
+    }
+
+    // if (selectedRef) {
+    //   selectedRef.current?.scrollIntoView({
+    //     behavior: 'smooth'
+    //   });
+    // }
+  }
+
   return (
     <MenuButtonContainer
       onClick={() => handleMenuOpen()}
@@ -50,22 +84,14 @@ export function MenuButton() {
         transitions(
           (styles, item) => item &&
             <animated.div className="menu-modal" style={styles}>
-              <div className="menu-item">
-              <a href='#section-home'>Início</a>
-              </div>
-              <hr />
-              <div className="menu-item">
-                <a href='#section-services'>Serviços</a>
-              </div>
-              <div className="menu-item">
-                <a href='#section-feedbacks'>Feedbacks</a>
-              </div>
-              <div className="menu-item">
-                <a href='#section-folio'>Portifólio</a>
-              </div>
-              <div className="menu-item">
-                <a href='#section-aboutus'>Sobre Nós</a>
-              </div>
+              {
+                navData.map((item, index) => (
+                  <div className="menu-item" key={index} >
+                    {index === 1 && <hr />}
+                    <span onClick={() => currentRef(item.ref)}>{item.text}</span>
+                  </div>
+                ))
+              }
             </animated.div>
         )
       }

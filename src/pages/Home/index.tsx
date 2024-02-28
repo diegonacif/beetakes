@@ -9,6 +9,8 @@ import { Feedbacks } from "../../components/Feedbacks";
 import { WhyUs } from "../../components/WhyUs";
 import { Certified } from "../../components/Certified";
 import { Beeflix } from "../../components/Beeflix";
+import { RefsContext } from "../../contexts/RefsProvider";
+import { useContext } from "react";
 
 export function Home() {
   // const { width } = useWindowSize()
@@ -19,10 +21,12 @@ export function Home() {
   // `https://web.whatsapp.com/send?phone=${whatsappNumber}&text=` : // Abre diretamente a versão web
   // `https://wa.me/${whatsappNumber}?text=`; // Para uso geral
 
+  const { homeRef } = useContext(RefsContext);
+
   return (
     <HomeContainer>
       <Navbar />
-      <IntroBanner id="section-home">
+      <IntroBanner ref={homeRef} id="section-home">
         <div className="bg" />
         <h1 className="intro-text">Seu parceiro ideal em serviços de drone.</h1>
         <h2 className="intro-text">Somos uma empresa especializada, que oferece soluções inovadoras e personalizadas para diversos segmentos.</h2>
