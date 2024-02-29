@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import orderImg from "../../assets/purpose.svg";
 import droneImg from "../../assets/simple-drone.svg";
-import thumbsUpImg from "../../assets/1608950_thumbs_up_icon.svg";
+import thumbsUpImg from "../../assets/thumbs-up.png";
 import talkImg from "../../assets/ico-talk.png";
 
 interface ProtocolStepProps {
