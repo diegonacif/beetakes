@@ -31,15 +31,40 @@ export const NavbarContainer = styled.div`
   }
 
   nav {
-    color: white;
-
     ul {
       display: flex;
       list-style-type: none;
       gap: 0.5rem;
 
       li {
+        position: relative;
+        min-width: fit-content;
+        color: ${(props) => props.theme['gray-100']};
+        padding: 0.25rem;
+        border-radius: 3px;
+        overflow: hidden;
         cursor: pointer;
+        transition: color 0.3s ease-in-out;
+
+        &:hover {
+          color: ${(props) => props.theme['midnight-800']};
+        }
+
+        &::before {
+          background: ${(props) => props.theme['yellow-500']};
+          content: "";
+          inset: 0;
+          position: absolute;
+          transform: scaleX(0);
+          transform-origin: right;
+          transition: transform 0.3s ease-in-out;
+          z-index: -1;
+        }
+
+        &:hover::before {
+          transform: scaleX(1);
+          transform-origin: left;
+        }
       }
     }
   }
