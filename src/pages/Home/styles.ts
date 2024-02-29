@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import bgImg from "../../assets/IMG_5531.jpg";
+import { deviceBreakpoint } from "../../styles/breakpoints";
 
 export const HomeContainer = styled.main`
   display: flex;
@@ -10,14 +11,6 @@ export const HomeContainer = styled.main`
   width: 100vw;
   max-width: 100vw;
   overflow: hidden;
-
-  /* h2 {
-    font-weight: 500;
-    font-size: 1.375rem;
-    text-align: center;
-    margin-top: -2rem;
-    padding: 0 2rem;
-  } */
 `
 
 export const IntroBanner = styled.section`
@@ -28,23 +21,58 @@ export const IntroBanner = styled.section`
   width: 100vw;
   overflow: hidden;
 
-  h1 {
-    font-size: 1.875rem;
-    margin-top: 21vh;
+  .intro-logo {
+    position: absolute;
+    top: 10vh;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 13rem;
+    z-index: 10;
+    opacity: 0.9;
+    transition: top 0.4s, width 0.4s;
   }
 
-  h2 {
+  .intro-overtext {
+    font-family: "Kdam Thmor Pro", sans-serif;
+    font-weight: 400;
+    font-style: normal;
     font-size: 1.25rem;
-    margin-top: 26vh;
-  }
-
-  .intro-text {
-    font-weight: 600;
+    margin-top: 40vh;
     text-align: center;
     color: ${(props) => props.theme['gray-100']};
     text-shadow: 1px 1px 2px ${(props) => props.theme['gray-600']};
     z-index: 10;
-    padding: 0 1rem;
+    padding: 0 0.5rem;
+    transition: font-size 0.4s, margin-top 0.4s;
+  }
+
+  .intro-text {
+    font-family: "Kdam Thmor Pro", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 2.25rem;
+    margin-top: 0;
+    text-align: center;
+    color: ${(props) => props.theme['yellow-500']};
+    text-shadow: 1px 1px 2px ${(props) => props.theme['gray-600']};
+    filter: drop-shadow(2px 2px 14px ${(props) => props.theme['midnight-800']});
+    z-index: 10;
+    padding: 0 0.5rem;
+    transition: font-size 0.4s, margin-top 0.4s;
+  }
+
+  .intro-subtext {
+    /* font-family: "Kdam Thmor Pro", sans-serif; */
+    font-weight: 400;
+    font-style: normal;
+    font-size: 0.875rem;
+    margin-top: 1.5rem;
+    text-align: center;
+    color: ${(props) => props.theme['gray-100']};
+    text-shadow: 1px 1px 2px ${(props) => props.theme['gray-600']};
+    z-index: 10;
+    padding: 0 0.5rem;
+    transition: font-size 0.4s, margin-top 0.4s;
   }
   
   .bg {
@@ -62,4 +90,76 @@ export const IntroBanner = styled.section`
     transform: scale(1.1);
   }
   
+  @media ${deviceBreakpoint.tablet} {
+    .intro-overtext {
+      font-size: 1.75rem;
+      margin-top: 40vh;
+    }
+    .intro-text {
+      font-size: 3.5rem;
+      margin-top: 0;
+      color: ${(props) => props.theme['yellow-500']};
+      filter: drop-shadow(2px 2px 14px ${(props) => props.theme['midnight-800']} )
+    }
+    .intro-subtext {
+      font-size: 1rem;
+      margin-top: 2rem;
+    }
+  }
+
+  @media ${deviceBreakpoint.notebook} {
+    .intro-overtext {
+      font-size: 2rem;
+      margin-top: 38vh;
+    }
+    .intro-text {
+      font-size: 4rem;
+      margin-top: 0;
+      color: ${(props) => props.theme['yellow-500']};
+      filter: drop-shadow(2px 2px 14px ${(props) => props.theme['midnight-800']} )
+    }
+    .intro-subtext {
+      font-size: 1.125rem;
+      margin-top: 2rem;
+    }
+  }
+
+  @media ${deviceBreakpoint.desktop} {
+    .intro-overtext {
+      font-size: 2.5rem;
+      margin-top: 34vh;
+    }
+    .intro-text {
+      font-size: 5rem;
+      margin-top: 0;
+      color: ${(props) => props.theme['yellow-500']};
+      filter: drop-shadow(2px 2px 14px ${(props) => props.theme['midnight-800']} )
+    }
+    .intro-subtext {
+      font-size: 1.5rem;
+      margin-top: 2rem;
+    }
+  }
+
+  @media ${deviceBreakpoint.widescreen} {
+    .intro-logo {
+      top: 8.5vh;
+      width: 11rem;
+    }
+
+    .intro-overtext {
+      font-size: 3rem;
+      margin-top: 31vh;
+    }
+    .intro-text {
+      font-size: 6rem;
+      margin-top: 0;
+      color: ${(props) => props.theme['yellow-500']};
+      filter: drop-shadow(2px 2px 14px ${(props) => props.theme['midnight-800']} )
+    }
+    .intro-subtext {
+      font-size: 1.75rem;
+      margin-top: 2rem;
+    }
+  }
 `

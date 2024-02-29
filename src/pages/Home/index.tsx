@@ -13,6 +13,7 @@ import { RefsContext } from "../../contexts/RefsProvider";
 import { useContext } from "react";
 import { Footer } from "../../components/Footer";
 import { WhatsappButton } from "../../components/WhatsappButton";
+import beeLogo from "../../assets/bee-logo-2.png";
 
 export function Home() {
   // const { width } = useWindowSize()
@@ -30,8 +31,10 @@ export function Home() {
       <Navbar />
       <IntroBanner ref={homeRef} id="section-home">
         <div className="bg" />
-        <h1 className="intro-text">Seu parceiro ideal em serviços de drone.</h1>
-        <h2 className="intro-text">Somos uma empresa especializada, que oferece soluções inovadoras e personalizadas para diversos segmentos.</h2>
+        <img className="intro-logo" src={beeLogo} alt="bee takes logo" />
+        <h1 className="intro-overtext">SEU PARCEIRO IDEAL EM</h1>
+        <h1 className="intro-text">SERVIÇOS DE DRONE.</h1>
+        <h2 className="intro-subtext">Somos uma empresa especializada,<br />que oferece soluções inovadoras e personalizadas para diversos segmentos.</h2>
       </IntroBanner>
       <Particulars />
       <Services />
