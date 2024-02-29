@@ -1,6 +1,7 @@
 import { useEffect, useMemo, useState } from "react";
 import { ImageWrapper, ItemsRow, OrderButton, PackCard, PackContainer, PackIcons, PackList, PackSelect } from "./styles";
 import { Camera, Check, ShoppingCart, VideoCamera } from "@phosphor-icons/react";
+import { useWindowSize } from "usehooks-ts";
 
 interface VariantProps {
   variantType: string;
@@ -39,6 +40,14 @@ export function Pack({ data }: PackProps) {
     setVariantData(variant ?? initialPackData)
     setVariantOptions(options)
   }, [data.variants, currentVariant, initialPackData])
+
+  const { width } = useWindowSize()
+
+  const whatsappNumber = "5584981033283"
+  const whatsappMessage = `Olá! Gostaria de saber mais sobre o pacote ${variantData.title}!`
+  const whatsappAddress = width >= 620 ?
+  `https://web.whatsapp.com/send?phone=${whatsappNumber}&text=${whatsappMessage}` : // Abre diretamente a versão web
+  `https://wa.me/${whatsappNumber}?text=${whatsappMessage}`; // Para uso geral
 
   return (
     <PackContainer>
@@ -85,7 +94,7 @@ export function Pack({ data }: PackProps) {
           )
         }
 
-        <OrderButton>
+        <OrderButton onClick={() => window.open(whatsappAddress)}>
           <ShoppingCart size={26} color="#241f31" weight="duotone" />
           <span>SAIBA MAIS</span>
         </OrderButton>
