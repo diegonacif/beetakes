@@ -18,8 +18,15 @@ export const ServiceContainer = styled.div`
     height: 12rem;
     border-radius: 12px;
     overflow: hidden;
+    filter: drop-shadow(2px 2px 6px ${(props) => props.theme['midnight-500']});
+    transition: filter 0.3s ease-in-out;
+
     img {
       max-width: 100%;
+    }
+
+    &:hover {
+      filter: drop-shadow(2px 2px 6px ${(props)=> props.theme['yellow-500']});
     }
   }
 

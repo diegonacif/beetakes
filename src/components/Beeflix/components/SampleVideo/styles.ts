@@ -7,4 +7,11 @@ export const SampleVideoContainer = styled.div`
   background-color: antiquewhite;
   border-radius: 8px;
   overflow: hidden;
+
+  filter: drop-shadow(2px 2px 6px ${(props) => props.theme['midnight-400']});
+  transition: filter 0.3s ease-in-out;
+
+  &:hover {
+    filter: drop-shadow(2px 2px 6px ${(props)=> props.theme['yellow-500']});
+  }
 `

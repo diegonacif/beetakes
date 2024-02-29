@@ -12,6 +12,7 @@ export const WhyUsContainer = styled.div`
   #whyus-title {
     color: ${(props) => props.theme['yellow-500']};
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
+    text-align: center;
   }
 `
 

@@ -34,11 +34,11 @@ export const FooterSocials = styled.div`
   gap: 1rem;
   svg {
     color: ${(props) => props.theme['yellow-500']};
-    transition: color 0.3s ease-in-out;
+    transition: filter 0.3s ease-in-out;
     cursor: pointer;
     
     &:hover {
-      color: ${(props) => props.theme['gray-100']};
+      filter: drop-shadow(1px 1px 6px ${(props)=> props.theme['yellow-500']});
     }
   }
 `;

@@ -5,6 +5,7 @@ export const PackContainer = styled.div`
   width: 18rem;
   background-color: ${(props)=> props.theme['gray-100']};
   color: ${(props)=> props.theme['gray-600']};
+  padding: 0.75rem 0;
 
   .pack-title {
     display: flex;
@@ -35,7 +36,13 @@ export const PackCard = styled.div`
   flex-direction: column;
   background-color: ${(props)=> props.theme['gray-300']};
   border-radius: 6px;
+  filter: drop-shadow(2px 2px 6px ${(props) => props.theme['midnight-100']});
+  transition: filter 0.3s ease-in-out;
   overflow: hidden;
+
+  &:hover {
+    filter: drop-shadow(2px 2px 6px ${(props)=> props.theme['yellow-500']});
+  }
 `;
 
 export const PackIcons = styled.div`

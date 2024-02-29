@@ -29,17 +29,19 @@ export function Feedback({ data }: FeedbackProps) {
             // <Star key={index} size={28} color="#ffd900" weight="fill" />
             ))}
         </FeedBackStars>
-        <FeedBackText>{data.text}</FeedBackText>
       </div>
 
       <div className="lower-section">
-              <FeedBackPhoto src={data.img === '' ? userIcon : data.img} />
+        <FeedBackText>{data.text}</FeedBackText>
+        <div className="lower-section-inner">
+          <FeedBackPhoto src={data.img === '' ? userIcon : data.img} />
           <FeedBackInfo>
             <span><strong>{data.name}</strong></span>
             <span>{data.role}</span>
             <span>{data.company}</span>
             <span>{data.location}</span>
           </FeedBackInfo>
+        </div>
       </div>
 
       

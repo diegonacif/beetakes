@@ -25,6 +25,7 @@ export const PacksContainer = styled.section`
     justify-content: center;
     min-width: 0;
     max-width: 100%;
+    /* padding: 0.5rem 0; */
   }
 
   .carousel-btn {
@@ -62,7 +63,7 @@ export const PacksContainer = styled.section`
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
-  gap: 2rem 1rem;
+  /* gap: 2rem 1rem; */
   width: 100vw;
   background-color: ${(props) => props.theme['gray-100']};
   padding: 1.5rem 0.75rem;

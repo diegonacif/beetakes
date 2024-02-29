@@ -19,11 +19,24 @@ export const FeedBackContainer = styled.div`
 
   .lower-section {
     display: flex;
+    flex-direction: column;
     width: 100%;
-    gap: 1.25rem;
     background-color: ${(props) => props.theme['gray-100']};
-    border-radius: 0 0 8px 8px;
-    padding: 0 1.5rem 1rem;
+    border-radius: 8px;
+    overflow: hidden;
+    margin-top: .5rem;
+    filter: drop-shadow(2px 2px 6px ${(props) => props.theme['midnight-100']});
+    transition: filter 0.3s ease-in-out;
+
+    &:hover {
+      filter: drop-shadow(2px 2px 6px ${(props)=> props.theme['yellow-500']});
+    }
+    
+    .lower-section-inner {
+      display: flex;
+      padding: 0 1.5rem 1rem;
+      gap: 1.25rem;
+    }
   }
 `
 export const FeedBackText = styled.span`
@@ -37,7 +50,6 @@ export const FeedBackText = styled.span`
   padding: 1.75rem;
   color: ${(props) => props.theme['gray-600']};
   background-color: ${(props) => props.theme['gray-100']};
-  border-radius: 8px 8px 0 0;
 
   /* &::after {
     content: "";
