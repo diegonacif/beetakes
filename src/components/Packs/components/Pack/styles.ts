@@ -100,6 +100,15 @@ export const ImageWrapper = styled.div`
   img {
     width: 100%;
     height: auto;
+
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+
+    cursor: default;
   }
 `;
 

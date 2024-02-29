@@ -2,6 +2,13 @@ import styled from "styled-components";
 import { deviceBreakpoint } from "../../styles/breakpoints";
 
 export const PacksContainer = styled.section`
+  #packs-title {
+    width: 100%;
+    color: ${(props) => props.theme['gray-600']};
+    font-size: 2rem;
+    text-align: center;
+    /* color: red; */
+  }
   .embla {  
     position: relative;
     overflow: hidden;
@@ -58,7 +65,7 @@ export const PacksContainer = styled.section`
   gap: 2rem 1rem;
   width: 100vw;
   background-color: ${(props) => props.theme['gray-100']};
-  padding: 2rem 0.75rem;
+  padding: 1.5rem 0.75rem;
 
   @media ${deviceBreakpoint.tablet} {
     .embla__slide {

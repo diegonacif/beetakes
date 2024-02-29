@@ -82,6 +82,7 @@ export function Packs() {
 
   return (
     <PacksContainer id="section-packs" ref={packsRef}>
+      <h3 id="packs-title">Nossos pacotes</h3>
       <div className="embla">
         <div className="embla__viewport" ref={emblaRef}>
           <div className="embla__container">

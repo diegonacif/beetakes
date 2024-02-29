@@ -39,7 +39,7 @@ export const NavbarContainer = styled.div`
       li {
         position: relative;
         min-width: fit-content;
-        color: ${(props) => props.theme['gray-100']};
+        color: ${(props) => props.theme['yellow-500']};
         padding: 0.25rem;
         border-radius: 3px;
         overflow: hidden;

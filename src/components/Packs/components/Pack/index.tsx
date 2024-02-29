@@ -73,13 +73,18 @@ export function Pack({ data }: PackProps) {
           }
         </PackList>
 
-        <PackSelect onChange={(e) => setCurrentVariant(e.target.value)}>
-          {
-            variantOptions.map((option, index) => (
-              <option key={index} value={option}>{option}</option>
-            ))
-          }
-        </PackSelect>
+        {
+          variantOptions.length > 1 && (
+            <PackSelect onChange={(e) => setCurrentVariant(e.target.value)}>
+              {
+                variantOptions.map((option, index) => (
+                  <option key={index} value={option}>{option}</option>
+                ))
+              }
+            </PackSelect>
+          )
+        }
+
         <OrderButton>
           <ShoppingCart size={26} color="#241f31" weight="duotone" />
           <span>SAIBA MAIS</span>
