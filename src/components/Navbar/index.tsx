@@ -36,7 +36,7 @@ export function Navbar() {
     const selectedRef = refsMap[ref];
 
     if (selectedRef) {
-      const navbarHeight = 48;
+      const navbarHeight = 56;
       const offset = selectedRef.current?.getBoundingClientRect().top;
 
       if (offset !== undefined) {

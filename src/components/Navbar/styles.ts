@@ -10,14 +10,14 @@ export const NavbarContainer = styled.div`
   justify-content: space-between;
   align-items: center;
   width: 100vw;
-  height: 3rem;
+  height: 3.5rem;
   color: black;
   padding: 0 0.75rem;
   z-index: 20;
 
   background: ${(props) => props.color === 'gradient' ?
-  'linear-gradient(90deg, rgba(239,252,255,0.3) 0%, rgba(101,101,101,0.3) 50%, rgba(31,31,31,0.3) 100%)' :
-  'linear-gradient(90deg, rgba(126,129,130,0.97) 0%, rgba(101,101,101,0.97) 50%, rgba(31,31,31,0.97) 100%)'
+  'linear-gradient(90deg, rgba(239,252,255,0.3) 0%, rgba(101,101,101,0.3) 50%, rgba(40,42,54,0.4) 100%)' :
+  `linear-gradient(90deg, #6A6C71 0%, #34374B 50%, #282A36 100%)`
   };  
 
   .logo-wrapper {

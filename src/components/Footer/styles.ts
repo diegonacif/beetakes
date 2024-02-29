@@ -36,13 +36,39 @@ export const FooterSocials = styled.div`
 
   svg {
     color: ${(props) => props.theme['yellow-500']};
-    transition: filter 0.3s ease-in-out;
+    transition: filter 0.3s, color 0.3s;
     cursor: pointer;
     
     @media ${deviceBreakpoint.notebook} {
       &:hover {
         filter: drop-shadow(1px 1px 6px ${(props)=> props.theme['yellow-500']});
+
+        &#whatsapp-logo {
+          filter: drop-shadow(1px 1px 5px #3c9c46);
+          color: #3c9c46;
+        }
+
+        &#instagram-logo {
+          filter: drop-shadow(3px 3px 3px #fa8225) drop-shadow(0px 0px 4px #912eb9) drop-shadow(-3px -3px 3px #5560d6);
+          color: #e1e1e6;
+        }
+
+        &#facebook-logo {
+          filter: drop-shadow(1px 1px 5px #096cf8);
+          color: #096cf8;
+        }
+        
+        &#tiktok-logo {
+          filter: drop-shadow(2px 2px 3px #08f2eb) drop-shadow(-2px -2px 3px #fe2f5d);
+          color: #e1e1e6;
+        }
+
+        &#mail-logo {
+          filter: drop-shadow(1px 1px 5px #e1e1e6);
+          color: #e1e1e6;
+        }
       }
+
     }
   }
 `;

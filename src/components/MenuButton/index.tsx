@@ -57,12 +57,6 @@ export function MenuButton() {
         });
       }
     }
-
-    // if (selectedRef) {
-    //   selectedRef.current?.scrollIntoView({
-    //     behavior: 'smooth'
-    //   });
-    // }
   }
 
   return (

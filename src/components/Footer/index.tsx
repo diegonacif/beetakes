@@ -27,26 +27,31 @@ export function Footer() {
             size={32} 
             weight="regular" 
             onClick={() => window.open(whatsappAddress)}
-            />
+            id="whatsapp-logo"
+          />
           <InstagramLogo 
             size={32} 
             weight="regular" 
             onClick={() => window.open(instagramAddress)}
-            />
+            id="instagram-logo"
+          />
           <FacebookLogo 
             size={32} 
             weight="regular" 
             onClick={() => window.open(facebookAddress)}
-            />
+            id="facebook-logo"
+          />
           <TiktokLogo 
             size={32} 
             weight="regular" 
             onClick={() => window.open(tiktokAddress)}
-            />
+            id="tiktok-logo"
+          />
           <Envelope 
             size={32} 
             weight="regular" 
             onClick={() => window.open(mailAddress)}
+            id="mail-logo"
           />
         </FooterSocials>
       </FooterInner>

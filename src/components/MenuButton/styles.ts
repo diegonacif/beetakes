@@ -46,6 +46,7 @@ export const MenuButtonContainer = styled.div`
 
       span {
         font-size: 1.25rem;
+        width: 100%;
       }
 
       & + .menu-item {
