@@ -5,9 +5,11 @@ export const PacksContainer = styled.section`
   #packs-title {
     width: 100%;
     color: ${(props) => props.theme['gray-600']};
-    font-size: 2rem;
     text-align: center;
-    /* color: red; */
+    font-family: "Kdam Thmor Pro", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 2rem;
   }
   .embla {  
     position: relative;

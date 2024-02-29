@@ -35,9 +35,11 @@ export const ServiceContainer = styled.div`
 
   h3 {
     margin-top: 1rem;
+    font-weight: 500;
+    font-size: 1.25rem;
   }
 
-  h5 {
+  span {
     margin-top: 0.75rem;
   }
 `;

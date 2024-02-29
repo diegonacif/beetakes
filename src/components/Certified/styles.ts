@@ -24,7 +24,11 @@ export const CertifiedInfo = styled.div`
   height: fit-content;
 
   #certified-title {
+    font-family: "Kdam Thmor Pro", sans-serif;
+    font-weight: 400;
+    font-style: normal;
     text-align: center;
+    font-size: 1.375rem;
     color: ${(props) => props.theme['midnight-800']};
   }
 
@@ -37,6 +41,7 @@ export const CertifiedRows = styled.div`
   display: flex;
   align-items: center;
   color: ${(props) => props.theme['midnight-800']};
+  font-size: 1.0625rem;
 
   &::before {
     content: "";

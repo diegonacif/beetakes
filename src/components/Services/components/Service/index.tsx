@@ -17,7 +17,7 @@ export function Service({ data }: ServicesProps) {
         <img src={data.img} alt="" />
       </div>
       <h3>{data.title}</h3>
-      <h5>{data.text}</h5>
+      <span>{data.text}</span>
     </ServiceContainer>
   )
 }

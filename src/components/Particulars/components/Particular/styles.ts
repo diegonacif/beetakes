@@ -13,4 +13,12 @@ export const ParticularContainer = styled.div`
   img {
     height: 5.3125rem;
   }
+
+  h3 {
+    font-weight: 700;
+  }
+
+  span {
+    font-weight: 400;
+  }
 `;

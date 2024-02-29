@@ -47,6 +47,7 @@ export const FeedBackText = styled.span`
   align-items: center;
   justify-content: center;
   text-align: center;
+  font-size: 1.125rem;
   line-height: 1.5;
   width: 100%;
   height: fit-content;
@@ -83,4 +84,8 @@ export const FeedBackInfo = styled.div`
   flex-direction: column;
   gap: 0.25rem;
   color: black;
+
+  #customer-name {
+    font-weight: 700;
+  }
 `

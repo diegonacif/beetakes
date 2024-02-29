@@ -14,12 +14,11 @@ export const PackContainer = styled.div`
     height: 4rem;
     width: fit-content;
     margin: 0 auto;
-
     cursor: default;
 
     span {
-      font-size: 1.125rem;
-      font-weight: 600;
+      font-size: 1.375rem;
+      font-weight: 500;
       text-align: center;
     }
   }
@@ -110,10 +109,13 @@ export const OrderButton = styled.button`
   background-color: ${(props) => props.theme['yellow-500']};
 
   color: ${(props) => props.theme['gray-600']};
-  font-weight: 600;
-  font-size: 1.25rem;
 
   border: none;
   border-radius: 0;
   cursor: pointer;
+
+  span {
+    font-weight: 500;
+    font-size: 1.25rem;
+  }
 `

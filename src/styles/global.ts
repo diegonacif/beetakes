@@ -17,6 +17,10 @@ export const GlobalStyle = createGlobalStyle`
     -o-user-select: none;
     user-select: none;
 
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+
     a {
         text-decoration: none;
         color: inherit;

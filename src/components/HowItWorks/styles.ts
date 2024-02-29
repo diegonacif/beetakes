@@ -17,6 +17,10 @@ export const HowItWorksContainer = styled.div`
 
   h1 {
     text-align: center;
+    font-family: "Kdam Thmor Pro", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 2rem;
   }
 
   .step-wrapper {
@@ -94,5 +98,6 @@ export const ProtocolStepCircle = styled.div<ProtocolStepProps>`
     font-weight: 600;
     border-radius: 9999px;
     outline: 1px solid black;
+    overflow: hidden;
   }
 `

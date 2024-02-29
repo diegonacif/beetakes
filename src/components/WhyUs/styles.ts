@@ -13,6 +13,10 @@ export const WhyUsContainer = styled.div`
     color: ${(props) => props.theme['yellow-500']};
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
     text-align: center;
+    font-family: "Kdam Thmor Pro", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.5rem;
   }
 `
 
@@ -55,6 +59,10 @@ export const WhyUsRow = styled.div`
   align-items: center;
   gap: 0.25rem;
   color: black;
+
+  span {
+    font-size: 1.0625rem;
+  }
 
   &:not(:first-child) {
     margin-top: 0.75rem;

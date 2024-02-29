@@ -36,7 +36,7 @@ export function Feedback({ data }: FeedbackProps) {
         <div className="lower-section-inner">
           <FeedBackPhoto src={data.img === '' ? userIcon : data.img} />
           <FeedBackInfo>
-            <span><strong>{data.name}</strong></span>
+            <span id="customer-name">{data.name}</span>
             <span>{data.role}</span>
             <span>{data.company}</span>
             <span>{data.location}</span>

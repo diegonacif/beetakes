@@ -15,6 +15,9 @@ export const FeedbacksContainer = styled.section`
     width: 100%;
     color: ${(props) => props.theme['gray-600']};
     text-align: center;
+    font-family: "Kdam Thmor Pro", sans-serif;
+    font-weight: 400;
+    font-style: normal;
     font-size: 2rem;
   }
 `

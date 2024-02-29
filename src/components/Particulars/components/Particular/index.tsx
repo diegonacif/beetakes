@@ -15,7 +15,7 @@ export function Particular({ data }: ParticularProps) {
     <ParticularContainer>
       <img src={data.img} alt="ícone de imagens aéreas" />
       <h3>{data.title}</h3>
-      <h5>{data.text}</h5>
+      <span>{data.text}</span>
     </ParticularContainer>
   )
 }

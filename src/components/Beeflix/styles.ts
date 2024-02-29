@@ -8,6 +8,9 @@ export const BeeflixContainer = styled.section`
   #beeflix-title {
     text-align: center;
     color: ${(props) => props.theme['midnight-800']};
+    font-family: "Kdam Thmor Pro", sans-serif;
+    font-weight: 400;
+    font-style: normal;
     font-size: 2rem;
   }
 `

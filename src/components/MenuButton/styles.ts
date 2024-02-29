@@ -18,7 +18,7 @@ export const MenuButtonContainer = styled.div`
     padding: 1rem 0.5rem;
     border-radius: 8px;
 
-    background-color: rgba(40, 42, 54, 0.85);
+    background-color: rgba(40, 42, 54, 0.95);
     backdrop-filter: blur(3px);
     color: ${(props) => props.theme['yellow-500']};
     font-weight: bold;
@@ -44,6 +44,10 @@ export const MenuButtonContainer = styled.div`
       border-radius: 4px;
       transition: background-color 0.1s;
 
+      span {
+        font-size: 1.25rem;
+      }
+
       & + .menu-item {
         margin-top: 0.75rem;
       }
@@ -54,7 +58,7 @@ export const MenuButtonContainer = styled.div`
         border-radius: 4px;
 
         &:active {
-          background-color: $green-bg-mirror-50;
+          background-color: ${(props) => props.theme['gray-100']};
           transition: background-color 0.1s;
         }
       }
