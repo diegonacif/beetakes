@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { deviceBreakpoint } from "../../styles/breakpoints";
 
 export const ServicesContainer = styled.section`
   position: relative;
@@ -22,5 +23,18 @@ export const ServicesContainer = styled.section`
     font-size: 2rem;
 
     color: ${(props) => props.theme['gray-600']};
+  }
+
+  @media ${deviceBreakpoint.tablet} {
+    padding: 5rem 1rem 2rem;
+  }
+  @media ${deviceBreakpoint.notebook} {
+    padding: 5rem 1.5rem 2rem;
+  }
+  @media ${deviceBreakpoint.desktop} {
+    padding: 5rem 2rem 2rem;
+  }
+  @media ${deviceBreakpoint.widescreen} {
+    padding: 5rem 2.5rem 2rem;
   }
 `;

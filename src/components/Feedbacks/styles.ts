@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { deviceBreakpoint } from "../../styles/breakpoints";
 
 export const FeedbacksContainer = styled.section`
   display: flex;
@@ -19,5 +20,18 @@ export const FeedbacksContainer = styled.section`
     font-weight: 400;
     font-style: normal;
     font-size: 2rem;
+  }
+
+  @media ${deviceBreakpoint.tablet} {
+    padding: 2rem 1rem;
+  }
+  @media ${deviceBreakpoint.notebook} {
+    padding: 2rem 1.5rem;
+  }
+  @media ${deviceBreakpoint.desktop} {
+    padding: 2rem;
+  }
+  @media ${deviceBreakpoint.widescreen} {
+    padding: 2rem 2.5rem;
   }
 `

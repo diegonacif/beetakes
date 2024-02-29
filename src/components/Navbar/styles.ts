@@ -82,10 +82,6 @@ export const NavbarContainer = styled.div`
     padding: 0 1rem;
   }
   @media ${deviceBreakpoint.notebook} {
-    padding: 0 1.25rem;
-  }
-
-  @media ${deviceBreakpoint.notebook} {
     padding: 0 1.5rem;
   }
   @media ${deviceBreakpoint.desktop} {

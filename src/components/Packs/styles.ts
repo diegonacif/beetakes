@@ -69,26 +69,31 @@ export const PacksContainer = styled.section`
   width: 100vw;
   background-color: ${(props) => props.theme['gray-100']};
   padding: 1.5rem 0.75rem;
+  transition: padding 0.4s;
 
   @media ${deviceBreakpoint.tablet} {
+    padding: 1.5rem 1rem;
     .embla__slide {
       flex: 0 0 100%; 
     }
   }
 
   @media ${deviceBreakpoint.notebook} {
+    padding: 1.5rem 1.25rem;
     .embla__slide {
       flex: 0 0 50%; 
     }
   }
 
   @media ${deviceBreakpoint.desktop} {
+    padding: 1.5rem 2rem;
     .embla__slide {
       flex: 0 0 33.33%; 
     }
   }
 
   @media ${deviceBreakpoint.widescreen} {
+    padding: 1.5rem 2.5rem;
     .embla__slide {
       flex: 0 0 25%; 
     }
