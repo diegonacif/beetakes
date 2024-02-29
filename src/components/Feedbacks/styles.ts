@@ -10,4 +10,11 @@ export const FeedbacksContainer = styled.section`
   background-color: ${(props) => props.theme['gray-300']};
   padding: 2rem 0.75rem;
   overflow: hidden;
+
+  #feedbacks-title {
+    width: 100%;
+    color: ${(props) => props.theme['gray-600']};
+    text-align: center;
+    font-size: 2rem;
+  }
 `

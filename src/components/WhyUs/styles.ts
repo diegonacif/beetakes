@@ -17,6 +17,7 @@ export const WhyUsContainer = styled.div`
 
 export const WhyUsTextWrapper = styled.div`
   width: fit-content;
+  max-width: 45rem;
   background-color: ${(props) => props.theme['gray-100']};
   /* background-color: ${(props) => props.theme['yellow-500']}; */
   padding: 0.75rem;

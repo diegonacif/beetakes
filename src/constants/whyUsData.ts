@@ -11,4 +11,7 @@ export const whyUsData = [
   {
     text: 'Equipamento aéreo da linha DJI.',
   },
+  {
+    text: 'Seguimos rigorosamente todas as normas de segurança e regulamentações da ANAC, garantindo a segurança de cada voo.',
+  },
 ]
