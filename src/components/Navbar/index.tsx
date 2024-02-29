@@ -46,12 +46,6 @@ export function Navbar() {
         });
       }
     }
-
-    // if (selectedRef) {
-    //   selectedRef.current?.scrollIntoView({
-    //     behavior: 'smooth'
-    //   });
-    // }
   }
 
   return (

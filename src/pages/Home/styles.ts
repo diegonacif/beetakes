@@ -162,4 +162,25 @@ export const IntroBanner = styled.section`
       margin-top: 2rem;
     }
   }
+
+  @media (max-height: 660px) {
+    .intro-logo {
+      transform: translateX(-50%) scale(0.7);
+      top: 5vh 
+    }
+  }
+
+  @media (max-height: 660px) and (max-width: 600px) {
+    .intro-logo {
+      transform: translateX(-50%) scale(0.7);
+      top: 7vh 
+    }
+  }
+
+  @media (max-height: 380px) and (orientation: landscape) {
+    .intro-logo {
+      transform: translateX(-50%) scale(0.4);
+      top: 0;
+    }
+  }
 `

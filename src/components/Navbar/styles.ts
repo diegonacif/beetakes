@@ -14,6 +14,7 @@ export const NavbarContainer = styled.div`
   color: black;
   padding: 0 0.75rem;
   z-index: 20;
+  transition: padding 0.3s ease-in-out;
 
   background: ${(props) => props.color === 'gradient' ?
   'linear-gradient(90deg, rgba(239,252,255,0.3) 0%, rgba(101,101,101,0.3) 50%, rgba(40,42,54,0.4) 100%)' :
@@ -40,12 +41,13 @@ export const NavbarContainer = styled.div`
       li {
         position: relative;
         min-width: fit-content;
+        font-size: 1.25rem;
         color: ${(props) => props.theme['yellow-500']};
-        padding: 0.25rem;
-        border-radius: 3px;
+        padding: 0.375rem;
+        border-radius: 4px;
         overflow: hidden;
         cursor: pointer;
-        transition: color 0.3s ease-in-out;
+        transition: color 0.3s ease-in-out, font-size 0.3s;
 
         &::before {
           background: ${(props) => props.theme['yellow-500']};
@@ -68,8 +70,29 @@ export const NavbarContainer = styled.div`
             transform-origin: left;
           }
         }
+
+        @media ${deviceBreakpoint.widescreen} {
+          font-size: 1.375rem;
+        }
       }
     }
+  }
+
+  @media ${deviceBreakpoint.tablet} {
+    padding: 0 1rem;
+  }
+  @media ${deviceBreakpoint.notebook} {
+    padding: 0 1.25rem;
+  }
+
+  @media ${deviceBreakpoint.notebook} {
+    padding: 0 1.5rem;
+  }
+  @media ${deviceBreakpoint.desktop} {
+    padding: 0 2rem;
+  }
+  @media ${deviceBreakpoint.widescreen} {
+    padding: 0 2.5rem;
   }
 
 `
