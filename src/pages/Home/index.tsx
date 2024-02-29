@@ -11,6 +11,7 @@ import { Certified } from "../../components/Certified";
 import { Beeflix } from "../../components/Beeflix";
 import { RefsContext } from "../../contexts/RefsProvider";
 import { useContext } from "react";
+import { Footer } from "../../components/Footer";
 
 export function Home() {
   // const { width } = useWindowSize()
@@ -39,9 +40,7 @@ export function Home() {
       <Beeflix />
       <WhyUs />
       <Certified />
-      <footer>
-        <span onClick={() => window.open('https://www.linkedin.com/in/diegonacif-dev/')}>Desenvolvido por Diego Nacif</span>
-      </footer>
+      <Footer />
     </HomeContainer>
   )
 }

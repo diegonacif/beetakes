@@ -18,20 +18,6 @@ export const HomeContainer = styled.main`
     margin-top: -2rem;
     padding: 0 2rem;
   } */
-
-  footer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 3rem;
-    margin-top: auto;
-
-    span {
-      color: ${(props) => props.theme['gray-500']};
-      cursor: pointer;
-    }
-  }
 `
 
 export const IntroBanner = styled.section`
