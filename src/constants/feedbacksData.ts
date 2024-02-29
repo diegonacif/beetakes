@@ -1,7 +1,17 @@
-import gina from "../assets/customers/IMG_20240223_141607.jpg"
-import evilazio from "../assets/customers/IMG_20240223_141430.jpg"
+import gina from "../assets/customers/IMG_20240223_141607.jpg";
+import evilazio from "../assets/customers/IMG_20240223_141430.jpg";
+import nicassio from "../assets/customers/nicassio.jpg";
 
 export const feedbacksData = [
+  {
+    text: '"Reconheço e agradeço a empresa Bee Takes, pelo excelente trabalho de fotos e filmagens aéreas prestado. Portanto, indico e recomendo, pelo seu profissionalismo e por toda dedicação."',
+    img: nicassio,
+    stars: 5,
+    name: 'Nicássio Assis',
+    role: 'Proprietário',
+    company: 'Chácara Recanto de Paz',
+    location: 'Martins - RN',
+  },
   {
     text: '"Parabéns pelo engajamento!"',
     img: gina,
@@ -19,23 +29,5 @@ export const feedbacksData = [
     role: 'Proprietário',
     company: 'Dojo Templo da Serra',
     location: 'Martins - RN',
-  },
-  {
-    text: '"Eu não posso dizer o suficiente sobre o excelente serviço e passeios aéreos de alta qualidade da Bee Takes!"',
-    img: '',
-    stars: 5,
-    name: 'Sean Blanchette',
-    role: 'Corretor de imóveis',
-    company: 'KDA Imóveis',
-    location: 'Pau dos Ferros - RN',
-  },
-  {
-    text: '"Eu postei o vídeos nas mídias sociais, antes de listar a propriedade, e já temos CONTRATO!"',
-    img: '',
-    stars: 5,
-    name: 'Angie Isidro Bresnahan',
-    role: 'Corretor de imóveis',
-    company: 'Lousiana Empreendimentos',
-    location: 'Natal - RN',
   },
 ]
