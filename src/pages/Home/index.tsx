@@ -12,6 +12,7 @@ import { Beeflix } from "../../components/Beeflix";
 import { RefsContext } from "../../contexts/RefsProvider";
 import { useContext } from "react";
 import { Footer } from "../../components/Footer";
+import { WhatsappButton } from "../../components/WhatsappButton";
 
 export function Home() {
   // const { width } = useWindowSize()
@@ -41,6 +42,8 @@ export function Home() {
       <WhyUs />
       <Certified />
       <Footer />
+
+      <WhatsappButton />
     </HomeContainer>
   )
 }

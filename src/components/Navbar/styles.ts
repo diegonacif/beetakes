@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { deviceBreakpoint } from "../../styles/breakpoints";
 
 export const NavbarContainer = styled.div`
   position: fixed;
@@ -46,10 +47,6 @@ export const NavbarContainer = styled.div`
         cursor: pointer;
         transition: color 0.3s ease-in-out;
 
-        &:hover {
-          color: ${(props) => props.theme['midnight-800']};
-        }
-
         &::before {
           background: ${(props) => props.theme['yellow-500']};
           content: "";
@@ -61,9 +58,15 @@ export const NavbarContainer = styled.div`
           z-index: -1;
         }
 
-        &:hover::before {
-          transform: scaleX(1);
-          transform-origin: left;
+        @media ${deviceBreakpoint.notebook} {
+          &:hover {
+            color: ${(props) => props.theme['midnight-800']};
+          }
+
+          &:hover::before {
+            transform: scaleX(1);
+            transform-origin: left;
+          }
         }
       }
     }

@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { deviceBreakpoint } from "../../../../styles/breakpoints";
 
 export const PackContainer = styled.div`
   height: max-content;
@@ -13,13 +14,6 @@ export const PackContainer = styled.div`
     height: 4rem;
     width: fit-content;
     margin: 0 auto;
-
-    -webkit-user-select: none;
-    -khtml-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    -o-user-select: none;
-    user-select: none;
 
     cursor: default;
 
@@ -40,8 +34,10 @@ export const PackCard = styled.div`
   transition: filter 0.3s ease-in-out;
   overflow: hidden;
 
-  &:hover {
-    filter: drop-shadow(2px 2px 6px ${(props)=> props.theme['yellow-500']});
+  @media ${deviceBreakpoint.notebook} {
+    &:hover {
+      filter: drop-shadow(2px 2px 6px ${(props)=> props.theme['yellow-500']});
+    }
   }
 `;
 
@@ -59,14 +55,6 @@ export const PackList = styled.div`
   align-items: center;
   gap: 0.125rem;
   padding-bottom: 0.5rem;
-
-  -webkit-user-select: none;
-  -khtml-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  -o-user-select: none;
-  user-select: none;
-
   cursor: default;
 `;
 
@@ -107,14 +95,6 @@ export const ImageWrapper = styled.div`
   img {
     width: 100%;
     height: auto;
-
-    -webkit-user-select: none;
-    -khtml-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    -o-user-select: none;
-    user-select: none;
-
     cursor: default;
   }
 `;

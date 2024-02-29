@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { deviceBreakpoint } from "../../../../styles/breakpoints";
 
 export const SampleVideoContainer = styled.div`
   width: 22rem;
@@ -11,7 +12,9 @@ export const SampleVideoContainer = styled.div`
   filter: drop-shadow(2px 2px 6px ${(props) => props.theme['midnight-400']});
   transition: filter 0.3s ease-in-out;
 
-  &:hover {
-    filter: drop-shadow(2px 2px 6px ${(props)=> props.theme['yellow-500']});
+  @media ${deviceBreakpoint.notebook} {
+    &:hover {
+      filter: drop-shadow(2px 2px 6px ${(props)=> props.theme['yellow-500']});
+    }
   }
 `

@@ -10,6 +10,13 @@ export const GlobalStyle = createGlobalStyle`
 
     -webkit-tap-highlight-color: transparent; // remove color highlight on tap
 
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+
     a {
         text-decoration: none;
         color: inherit;

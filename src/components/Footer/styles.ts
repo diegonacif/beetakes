@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { deviceBreakpoint } from "../../styles/breakpoints";
 
 export const FooterContainer = styled.footer`
   position: relative;
@@ -32,13 +33,16 @@ export const FooterSocials = styled.div`
   justify-content: center;
   align-items: center;
   gap: 1rem;
+
   svg {
     color: ${(props) => props.theme['yellow-500']};
     transition: filter 0.3s ease-in-out;
     cursor: pointer;
     
-    &:hover {
-      filter: drop-shadow(1px 1px 6px ${(props)=> props.theme['yellow-500']});
+    @media ${deviceBreakpoint.notebook} {
+      &:hover {
+        filter: drop-shadow(1px 1px 6px ${(props)=> props.theme['yellow-500']});
+      }
     }
   }
 `;

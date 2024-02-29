@@ -1,9 +1,10 @@
 import styled from "styled-components";
+import { deviceBreakpoint } from "../../../../styles/breakpoints";
 
 export const FeedBackContainer = styled.div`
   width: 28rem;
   max-width: 100%;
-  /* background-color: ${(props) => props.theme['gray-300']}; */
+  cursor: default;
 
   .upper-section {
     display: flex;
@@ -27,15 +28,17 @@ export const FeedBackContainer = styled.div`
     margin-top: .5rem;
     filter: drop-shadow(2px 2px 6px ${(props) => props.theme['midnight-100']});
     transition: filter 0.3s ease-in-out;
-
-    &:hover {
-      filter: drop-shadow(2px 2px 6px ${(props)=> props.theme['yellow-500']});
-    }
     
     .lower-section-inner {
       display: flex;
       padding: 0 1.5rem 1rem;
       gap: 1.25rem;
+    }
+
+    @media ${deviceBreakpoint.notebook} {
+      &:hover {
+        filter: drop-shadow(2px 2px 6px ${(props)=> props.theme['yellow-500']});
+      }
     }
   }
 `

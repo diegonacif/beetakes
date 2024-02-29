@@ -2,8 +2,6 @@ import styled from "styled-components";
 
 export const ParticularsContainer = styled.div`
   display: grid;
-
-  
   row-gap: 3rem;
   justify-items: center;
   width: 100vw;

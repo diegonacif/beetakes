@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { deviceBreakpoint } from "../../../../styles/breakpoints";
 
 export const ServiceContainer = styled.div`
   display: flex;
@@ -25,8 +26,10 @@ export const ServiceContainer = styled.div`
       max-width: 100%;
     }
 
-    &:hover {
-      filter: drop-shadow(2px 2px 6px ${(props)=> props.theme['yellow-500']});
+    @media ${deviceBreakpoint.notebook} {
+      &:hover {
+        filter: drop-shadow(2px 2px 6px ${(props)=> props.theme['yellow-500']});
+      }
     }
   }
 
