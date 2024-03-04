@@ -5,8 +5,8 @@ export const ParticularContainer = styled.div`
   flex-direction: column;
   align-items: center;
   gap: 0.5rem;
+  width: 100%;
   max-width: 23rem;
-  width: 23rem;
   color: ${(props) => props.theme['gray-600']};
   text-align: center;
 

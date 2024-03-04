@@ -23,6 +23,7 @@ export const WhatsappButtonContainer = styled.div`
   svg {
     position: relative;
     bottom: 1px;
+    left: 1px;
     color: ${(props) => props.theme['gray-100']};
   }
   

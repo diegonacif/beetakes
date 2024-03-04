@@ -19,7 +19,7 @@ export function HowItWorks() {
           <ProtocolStepCircle step={"contract"}>
             <div id="step-number">2</div>
           </ProtocolStepCircle>
-          <p>Apresentaremos a proposta comercial.</p>
+          <p>Apresentação da proposta comercial.</p>
         </ProtocolStep>
         
         <img src={nextArrows} alt="next step arrow" className="next-arrow" />

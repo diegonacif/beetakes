@@ -1,15 +1,20 @@
 import img from "../assets/residencial.png";
+import photosImg from "../assets/paz-aerial.jpg";
+import obrasImg from "../assets/obras.jpg";
+import marketingImg from "../assets/redessociais01.png";
+import marketing2Img from "../assets/redessociais.png";
 
 export const packsData = [
   {
     variants: [
       {
         variantType: 'Único',
-        title: 'Comercial de Foto',
-        img: img,
+        title: 'Fotos Aéreas',
+        img: photosImg,
         type: 'f',
         list: [
-          '20 Fotos de CRE Exterior',
+          'Fotos aéreas com resolução em 4K',
+          'Formatos JPEG e DNG',
         ],
       }
     ]
@@ -19,26 +24,26 @@ export const packsData = [
       {
         variantType: 'Básico',
         title: 'Redes Sociais Básico',
-        img: img,
+        img: marketingImg,
         type: 'fv',
         list: [
           'Propriedade residencial/comercial',
-          '10 Fotos Aéreas Hi-Res',
-          '1x 2:00-3:00 minutos de video pré-editado',
-          '1x 1:00-1:30 minutos de video editado',
+          '10 Fotos aéreas em 4K',
+          '2 vídeos pré-editados de 2:00 a 3:00 minutos',
+          '2 vídeos editados de 1:00 a 1:30 minutos',
         ],
       },
       {
         variantType: 'Avançado',
         title: 'Redes Sociais Avançado',
-        img: img,
+        img: marketing2Img,
         type: 'fv',
         list: [
           'Propriedade residencial/comercial',
-          '25 Fotos Aéreas Hi-Res',
-          '2x 2:00-3:00 minutos de video pré-editado',
-          '2x 1:00-1:30 minutos de video editado',
-          '1 foto 360°',
+          '25 Fotos aéreas em 4K',
+          '2 vídeos pré-editados de 2:00 a 3:00 minutos',
+          '2 vídeos editados de 1:00 a 1:30 minutos',
+          '1 Foto aérea 360°',
         ],
       }
     ]
@@ -53,6 +58,20 @@ export const packsData = [
         list: [
           'Produção e edição de conteúdo visual.',
           'Serviço de Social Media',
+        ],
+      }
+    ]
+  },
+  {
+    variants: [
+      {
+        variantType: 'Único',
+        title: 'Acompanhamento de Obras',
+        img: obrasImg,
+        type: 'fv',
+        list: [
+          'Entregas periódicas de vídeos e fotos.',
+          ''
         ],
       }
     ]

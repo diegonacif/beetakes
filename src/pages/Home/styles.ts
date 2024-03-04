@@ -23,10 +23,10 @@ export const IntroBanner = styled.section`
 
   .intro-logo {
     position: absolute;
-    top: 10vh;
+    top: 11vh;
     left: 50%;
     transform: translateX(-50%);
-    width: 13rem;
+    width: 11rem;
     z-index: 10;
     opacity: 0.9;
     transition: top 0.4s, width 0.4s;
@@ -165,15 +165,15 @@ export const IntroBanner = styled.section`
 
   @media (max-height: 660px) {
     .intro-logo {
-      transform: translateX(-50%) scale(0.7);
-      top: 5vh 
+      transform: translateX(-50%) scale(0.8);
+      top: 9vh 
     }
   }
 
   @media (max-height: 660px) and (max-width: 600px) {
     .intro-logo {
-      transform: translateX(-50%) scale(0.7);
-      top: 7vh 
+      transform: translateX(-50%) scale(0.75);
+      top: 9.5vh 
     }
   }
 
