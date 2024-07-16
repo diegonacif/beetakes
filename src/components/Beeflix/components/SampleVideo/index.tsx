@@ -15,6 +15,7 @@ export function SampleVideo({ data }: SampleVideoProps) {
     <SampleVideoContainer>
       <LiteYouTubeEmbed 
         id={data.id}
+        params="vq=hd2160"
         title="What’s new in Material Design for the web (Chrome Dev Summit 2019)"
       />
     </SampleVideoContainer>

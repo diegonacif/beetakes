@@ -71,7 +71,6 @@ export const packsData = [
         type: 'fv',
         list: [
           'Entregas periódicas de vídeos e fotos.',
-          ''
         ],
       }
     ]
