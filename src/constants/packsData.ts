@@ -80,9 +80,21 @@ export const packsData = [
         type: 'fv',
         list: [
           '1 vídeo aéreo exibindo o trajeto de um ponto de referência, até a localização do ponto de interesse',
-          'Animações orientando o percurso correto',
+          'Animações orientando o percurso correto e pontos de referência',
           'Duração de 45 segundos a 1:30 minutos',
           'Trajeto de até 1,5km',
+        ],
+      },
+      {
+        variantType: 'Terrestre',
+        title: 'Geolocalização Terrestre',
+        img: geoImg,
+        type: 'fv',
+        list: [
+          '1 vídeo terrestre exibindo o trajeto de um ponto de referência, até a localização do ponto de interesse',
+          'Animações orientando o percurso correto e pontos de referência',
+          'Duração de 45 segundos a 1:30 minutos',
+          'Trajeto de até 3km',
         ],
       }
     ]
