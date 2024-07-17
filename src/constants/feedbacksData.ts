@@ -1,6 +1,7 @@
 import gina from "../assets/customers/IMG_20240223_141607.jpg";
 import evilazio from "../assets/customers/IMG_20240223_141430.jpg";
 import nicassio from "../assets/customers/nicassio.jpg";
+import larissa from "../assets/customers/larissa.png";
 
 export const feedbacksData = [
   {
@@ -10,6 +11,15 @@ export const feedbacksData = [
     name: 'Nicássio Assis',
     role: 'Proprietário',
     company: 'Chácara Recanto de Paz',
+    location: 'Martins - RN',
+  },
+  {
+    text: '"Diego e Sofia são maravilhosos! Atendimento super humanizado, atencioso, amigável e tudo o mais. Trabalho perfeito, vão além do que a gente imagina. A Bee Takes é uma empresa que surpreende! Obrigada por abrilhantarem o nosso evento com filmagens de emocionar!"',
+    img: larissa,
+    stars: 5,
+    name: 'Larissa Taynna',
+    role: 'Organizadora',
+    company: 'Corrida das Serras',
     location: 'Martins - RN',
   },
   {
