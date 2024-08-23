@@ -4,9 +4,14 @@ import * as yup from 'yup';
 import { yupResolver } from "@hookform/resolvers/yup";
 import { PatternFormat } from "react-number-format";
 import { Selector } from "../Selector";
-import { useCallback, useEffect, useState } from "react";
+import { useCallback, useContext, useEffect, useState } from "react";
 import * as Checkbox from "@radix-ui/react-checkbox";
 import { CheckIcon } from "@radix-ui/react-icons";
+import { Timestamp, doc, setDoc } from "firebase/firestore";
+import { db } from "../../../../services/firebase.config";
+import { v4 as uuid } from 'uuid';
+import { useNavigate } from "react-router-dom";
+import { ToastifyContext } from "../../../../contexts/ToastifyProvider";
 
 interface IFormInput {
   name: string;
@@ -49,13 +54,49 @@ export function ContactForm() {
     resolver: yupResolver(schema),
   });
 
+  const { notifySuccess, notifyError } = useContext(ToastifyContext);
+
   const [selectedServiceCategory, setSelectedServiceCategory] = useState('');
   const [selectedBudget, setSelectedBudget] = useState('');
   const [isTermsCheckbox, setIsTermsCheckbox] = useState(false);
   const [isSendButtonActive, setIsSendButtonActive] = useState(false);
+  const navigate = useNavigate();
 
   const onSubmit: SubmitHandler<IFormInput> = async data => {
-    console.log(data);
+    const requestId = uuid();
+
+    const requestData = {
+      name: data.name,
+      enterprise: data.enterprise,
+      email: data.email,
+      phone: data.phone,
+      serviceCategory: data.serviceCategory,
+      description: data.description,
+      budget: data.budget,
+      location: data.location,
+      createdAt: Timestamp.now(),
+      status: 'novo'
+    }
+
+    try {
+      await setDoc(doc(db, 'budget-requests', requestId), requestData);
+
+      setValue('name', '');
+      setValue('enterprise', '');
+      setValue('email', '');
+      setValue('phone', '');
+      setSelectedServiceCategory('');
+      setValue('description', '');
+      setSelectedBudget('');
+      setValue('location', '');
+      setIsTermsCheckbox(false);
+
+      navigate("/");
+      notifySuccess("Solicitação enviada com sucesso!");
+    } catch (error) {
+      console.error('Error creating request: ', error);
+      notifyError("Erro ao enviar solicitação!");
+    }
   }
 
   function handleServiceCategoryChange(selectedOption: string) {
@@ -86,18 +127,11 @@ export function ContactForm() {
     function triggerErrors() {
       if(touchedFields.location === true || isTermsCheckbox === true) {
         trigger();
-        console.log("trigando");
       }
     }
 
     triggerErrors();
   }, [touchedFields.location, trigger, isTermsCheckbox, isValid])
-
-  console.log({
-    error: errors.email,
-    data: watch('email'),
-    isValid,
-  });
 
   return (
     <ContactFormContainer>
