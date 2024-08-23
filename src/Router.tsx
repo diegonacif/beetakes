@@ -3,6 +3,7 @@ import { Home } from "./pages/Home";
 import { DefaultLayout } from "./layouts/DefaultLayout";
 import { UnderConstruction } from "./components/UnderConstruction";
 import { RefsProvider } from "./contexts/RefsProvider";
+import { Contact } from "./pages/Contact";
 
 
 export function Router() {
@@ -11,6 +12,7 @@ export function Router() {
       <Routes>
         <Route path="/" element={<DefaultLayout />}>
           <Route index element={<Home />} />
+          <Route path="/contact-form" element={<Contact />} />
           <Route path="/under-construction" element={<UnderConstruction />} />
         </Route>
       </Routes>
