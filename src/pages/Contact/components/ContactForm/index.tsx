@@ -4,7 +4,7 @@ import * as yup from 'yup';
 import { yupResolver } from "@hookform/resolvers/yup";
 import { PatternFormat } from "react-number-format";
 import { Selector } from "../Selector";
-import { useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import * as Checkbox from "@radix-ui/react-checkbox";
 import { CheckIcon } from "@radix-ui/react-icons";
 
@@ -28,7 +28,7 @@ const schema = yup.object().shape({
   name: yup.string().required('Nome precisa ser preenchido'),
   enterprise: yup.string(),
   email: yup.string().matches(emailRegex, "Formato inválido de email").required("Insira seu email"),
-  phone: yup.string().required("Insira seu telefone"),
+  phone: yup.string().required("Insira seu telefone").min(10),
   serviceCategory: yup.string().required("Uma opção precisa ser selecionada"),
   description: yup.string().required("Nos conte algo sobre o projeto"),
   budget: yup.string().required("Uma opção precisa ser selecionada"),
@@ -39,10 +39,11 @@ export function ContactForm() {
   const { 
     register, 
     handleSubmit, 
-    formState: { errors }, 
+    formState: { errors, isValid, touchedFields }, 
     setValue, 
     watch, 
     clearErrors, 
+    trigger,
     control 
   } = useForm<IFormInput>({
     resolver: yupResolver(schema),
@@ -51,6 +52,7 @@ export function ContactForm() {
   const [selectedServiceCategory, setSelectedServiceCategory] = useState('');
   const [selectedBudget, setSelectedBudget] = useState('');
   const [isTermsCheckbox, setIsTermsCheckbox] = useState(false);
+  const [isSendButtonActive, setIsSendButtonActive] = useState(false);
 
   const onSubmit: SubmitHandler<IFormInput> = async data => {
     console.log(data);
@@ -68,7 +70,34 @@ export function ContactForm() {
     selectedOption.length !== 0 && clearErrors('budget')
   }
 
-  // console.log(isTermsCheckbox);
+  const handleSendButton = useCallback(() => {
+    if (!isValid || !isTermsCheckbox) {
+      setIsSendButtonActive(false);
+    } else {
+      setIsSendButtonActive(true);
+    }
+  }, [isValid, isTermsCheckbox]);
+
+  useEffect(() => {
+    handleSendButton();
+  }, [isValid, handleSendButton])
+
+  useEffect(() => {
+    function triggerErrors() {
+      if(touchedFields.location === true || isTermsCheckbox === true) {
+        trigger();
+        console.log("trigando");
+      }
+    }
+
+    triggerErrors();
+  }, [touchedFields.location, trigger, isTermsCheckbox, isValid])
+
+  console.log({
+    error: errors.email,
+    data: watch('email'),
+    isValid,
+  });
 
   return (
     <ContactFormContainer>
@@ -81,6 +110,10 @@ export function ContactForm() {
             placeholder="digite seu nome" 
             maxLength={40}
             {...register('name')}
+            id={
+              errors.name && watch('name') === "" ?
+              "error" : ""
+            }
           />
         </ContactFormInputWrapper>
 
@@ -100,6 +133,10 @@ export function ContactForm() {
           <ContactFormInput 
             placeholder="seu_email@gmail.com" 
             {...register('email')}
+            id={
+              errors.email && watch('email') === "" ?
+              "error" : ""
+            }
           />
         </ContactFormInputWrapper>
 
@@ -115,9 +152,16 @@ export function ContactForm() {
                 valueIsNumericString={true}
                 customInput={ContactFormInput}
                 format="## # ####-####"
-                className={errors.phone && 'with-error'}
                 placeholder='84 9 9999-9999'
                 onValueChange={(values) => onChange(values.value)}
+                id={
+                  errors.phone && watch('phone') === undefined ?
+                  "error" :
+                  errors.phone && watch('phone') === "" ?
+                  "error" :
+                  errors.phone && watch('phone').length < 10 ?
+                  "error" : ""
+                }
               />
             )}
           />  
@@ -140,6 +184,10 @@ export function ContactForm() {
           <ContactFormInput 
             placeholder="nos conte sobre seu projeto" 
             {...register('description')}
+            id={
+              errors.description && watch('description') === "" ?
+              "error" : ""
+            }
           />
         </ContactFormInputWrapper>
 
@@ -160,13 +208,15 @@ export function ContactForm() {
           <ContactFormInput 
             placeholder="cidade / estado" 
             {...register('location')}
+            id={
+              errors.location && watch('location') === "" ?
+              "error" : ""
+            }
           />
         </ContactFormInputWrapper>
 
         {/* TERMOS */}
         <ContactFormInputWrapper>
-          {/* <ContactFormLabel>Aceitação dos termos</ContactFormLabel> */}
-          {/* <ContactFormInput placeholder="Entendo que os serviços de drone são especializados e exigem investimento adequado." /> */}
           <ContactFormCheckboxContainer checked={isTermsCheckbox} onCheckedChange={() => setIsTermsCheckbox(prevState => !prevState)}>
             <Checkbox.Indicator className="checkbox-indicator">
               <CheckIcon />
@@ -175,7 +225,7 @@ export function ContactForm() {
           <span id="terms-text">Entendo que os serviços de drone são especializados e exigem investimento adequado.</span>
         </ContactFormInputWrapper>
 
-        <button type="submit" disabled={false}>Enviar</button>
+        <button type="submit" disabled={!isSendButtonActive}>Enviar</button>
       </form>
     </ContactFormContainer>
   )

@@ -86,6 +86,10 @@ export const ContactFormInput = styled.input`
 
     transition: border 0.3s;
   }  
+
+  &#error {
+    border: 2px solid ${({ theme }) => theme['error']};
+  }
 `
 
 export const ContactFormLabel = styled.label`
