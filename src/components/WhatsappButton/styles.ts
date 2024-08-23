@@ -11,8 +11,8 @@ export const WhatsappButtonContainer = styled.div`
   bottom: 1.25rem;
   width: 4rem;
   height: 4rem;
-  background: rgb(60,156,69);
-  background: linear-gradient(234deg, rgba(60,156,69,1) 0%, rgba(26,122,41,1) 100%);
+  background: ${(props) => props.theme['yellow-500']};
+  background: linear-gradient(234deg, rgba(249,206,56,1) 0%, rgba(167,137,32,1) 100%);
   border-radius: 9999px;
   transition: filter 0.3s, width 0.3s, right 0.3s;
   filter: opacity(0.85);
@@ -24,12 +24,12 @@ export const WhatsappButtonContainer = styled.div`
     position: relative;
     bottom: 1px;
     left: 1px;
-    color: ${(props) => props.theme['gray-100']};
+    color: ${(props) => props.theme['gray-800']};
   }
   
   #speak-with-us {
     font-weight: bold;
-    color: ${(props) => props.theme['gray-100']};
+    color: ${(props) => props.theme['gray-800']};
     display: none;
     min-width: max-content;
     transition: display 0.3s;
@@ -43,7 +43,7 @@ export const WhatsappButtonContainer = styled.div`
     
     &:hover {
       filter: opacity(1);
-      width: 12rem;
+      width: 14rem;
       
       #speak-with-us {
         display: inline-block;
