@@ -6,23 +6,32 @@ import { RefsProvider } from "./contexts/RefsProvider";
 import { Contact } from "./pages/Contact";
 import { ToastifyProvider } from "./contexts/ToastifyProvider";
 import { useScrollToTop } from "./hooks/useScrollToTop";
+import { BudgetsPanel } from "./pages/BudgetsPanel";
+import { AuthProvider } from "./contexts/AuthEmailProvider";
+import { PrivateRoutes } from "./PrivateRoutes";
+import { AdmLogin } from "./pages/AdmLogin";
 
 
 export function Router() {
   useScrollToTop();
 
   return (
-    <RefsProvider>
-      <ToastifyProvider>
-        <Routes>
-          <Route path="/" element={<DefaultLayout />}>
-            <Route index element={<Home />} />
-            <Route path="/contact-form" element={<Contact />} />
-            <Route path="/under-construction" element={<UnderConstruction />} />
-          </Route>
-        </Routes>
-      </ToastifyProvider>
-    </RefsProvider>
-
+    <AuthProvider>
+      <RefsProvider>
+        <ToastifyProvider>
+          <Routes>
+            <Route path="/" element={<DefaultLayout />}>
+              <Route index element={<Home />} />
+              <Route path="/contact-form" element={<Contact />} />
+              <Route path="/under-construction" element={<UnderConstruction />} />
+              <Route path="/login" element={<AdmLogin />} />
+              <Route element={<PrivateRoutes />}>
+                <Route path="/budgets-panel" element={<BudgetsPanel />} />
+              </Route>
+            </Route>
+          </Routes>
+        </ToastifyProvider>
+      </RefsProvider>
+    </AuthProvider>
   )
 }
