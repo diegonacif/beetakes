@@ -19,8 +19,10 @@ const apiKey = getEnvVariable('VITE_API_KEY') || getEnvVariable('API_KEY');
 const authDomain = getEnvVariable('VITE_AUTH_DOMAIN') || getEnvVariable('AUTH_DOMAIN');
 
 const firebaseConfig = {
-  apiKey: apiKey,
-  authDomain: authDomain,
+  // apiKey: apiKey,
+  // authDomain: authDomain,
+  apiKey: process.env.API_KEY,
+  authDomain: process.env.AUTH_DOMAIN,
   projectId: "bee-takes-site",
   storageBucket: "bee-takes-site.appspot.com",
   messagingSenderId: "902907949524",
