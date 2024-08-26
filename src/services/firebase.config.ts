@@ -21,8 +21,8 @@ import { getAuth } from "firebase/auth";
 const firebaseConfig = {
   // apiKey: apiKey,
   // authDomain: authDomain,
-  apiKey: process.env.API_KEY,
-  authDomain: process.env.AUTH_DOMAIN,
+  apiKey: "AIzaSyCm0r1wGkAksbseU_s8K5dOh20yehPdybA",
+  authDomain: "bee-takes-site.firebaseapp.com",
   projectId: "bee-takes-site",
   storageBucket: "bee-takes-site.appspot.com",
   messagingSenderId: "902907949524",
