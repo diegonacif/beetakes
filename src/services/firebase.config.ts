@@ -19,10 +19,8 @@ import { getAuth } from "firebase/auth";
 // const authDomain = getEnvVariable('VITE_AUTH_DOMAIN') || getEnvVariable('AUTH_DOMAIN');
 
 const firebaseConfig = {
-  // apiKey: apiKey,
-  // authDomain: authDomain,
-  apiKey: "AIzaSyCm0r1wGkAksbseU_s8K5dOh20yehPdybA",
-  authDomain: "bee-takes-site.firebaseapp.com",
+  apiKey: import.meta.env.VITE_API_KEY,
+  authDomain: import.meta.env.VITE_AUTH_DOMAIN,
   projectId: "bee-takes-site",
   storageBucket: "bee-takes-site.appspot.com",
   messagingSenderId: "902907949524",
