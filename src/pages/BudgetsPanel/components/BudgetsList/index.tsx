@@ -34,7 +34,7 @@ export const BudgetsList = () => {
 
   const [refresh, setRefresh] = useState(false);
 
-  console.log(currentBudgetStatus)
+  // console.log(import.meta.env.VITE_API_KEY)
 
   useEffect(() => {
     const getBudgets = async () => {
