@@ -5,18 +5,18 @@ import { getFirestore } from "firebase/firestore";
 import { getStorage } from "firebase/storage";
 import { getAuth } from "firebase/auth";
 
-function getEnvVariable(key: string): string | undefined {
-  if (import.meta.env.DEV) {
-    // Ambiente de desenvolvimento (Vite)
-    return import.meta.env[key];
-  } else {
-    // Ambiente de produção (Vercel)
-    return process.env[key];
-  }
-}
+// function getEnvVariable(key: string): string | undefined {
+//   if (import.meta.env.DEV) {
+//     // Ambiente de desenvolvimento (Vite)
+//     return import.meta.env[key];
+//   } else {
+//     // Ambiente de produção (Vercel)
+//     return process.env[key];
+//   }
+// }
 
-const apiKey = getEnvVariable('VITE_API_KEY') || getEnvVariable('API_KEY');
-const authDomain = getEnvVariable('VITE_AUTH_DOMAIN') || getEnvVariable('AUTH_DOMAIN');
+// const apiKey = getEnvVariable('VITE_API_KEY') || getEnvVariable('API_KEY');
+// const authDomain = getEnvVariable('VITE_AUTH_DOMAIN') || getEnvVariable('AUTH_DOMAIN');
 
 const firebaseConfig = {
   // apiKey: apiKey,
