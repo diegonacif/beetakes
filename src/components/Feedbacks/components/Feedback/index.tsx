@@ -9,7 +9,7 @@ interface FeedbackDataProps {
   stars: number;
   name: string;
   role: string;
-  company: string;
+  company?: string;
   location: string;
 }
 
