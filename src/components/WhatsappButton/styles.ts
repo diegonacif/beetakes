@@ -3,12 +3,17 @@ import { deviceBreakpoint } from "../../styles/breakpoints";
 
 export const WhatsappButtonContainer = styled.div`
   position: fixed;
-  display: flex;
+  right: .75rem;
+  bottom: 1.25rem;
+
+  display: none;
+  &#isButtonShown {
+    display: flex;
+  }
+
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
-  right: .75rem;
-  bottom: 1.25rem;
   width: 4rem;
   height: 4rem;
   background: ${(props) => props.theme['yellow-500']};
@@ -19,6 +24,8 @@ export const WhatsappButtonContainer = styled.div`
   overflow: hidden;
   z-index: 15;
   cursor: pointer;
+
+  transition: display 0.3s ease;
 
   svg {
     position: relative;

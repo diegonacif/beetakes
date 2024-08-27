@@ -3,6 +3,7 @@ import anac from "../../assets/logos/anac.png";
 import anatel from "../../assets/logos/anatel.png";
 import decea from "../../assets/logos/decea.png";
 import mapfre from "../../assets/logos/mapfre-seguros.png";
+import { BudgetButton } from "../BudgetButton";
 
 export function Certified() {
   return (
@@ -23,6 +24,7 @@ export function Certified() {
         <img src={anatel} alt="anatel logo" id="anatel-logo" />
         <img src={mapfre} alt="mapfre seguros logo" id="mapfre-logo" />
       </CertifiedLogos>
+      <BudgetButton />
     </CertifiedContainer>
   )
 }

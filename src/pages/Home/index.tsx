@@ -4,7 +4,7 @@ import { Navbar } from "../../components/Navbar";
 import { HowItWorks } from "../../components/HowItWorks";
 import { Particulars } from "../../components/Particulars";
 import { Services } from "../../components/Services";
-import { Packs } from "../../components/Packs";
+// import { Packs } from "../../components/Packs";
 import { Feedbacks } from "../../components/Feedbacks";
 import { WhyUs } from "../../components/WhyUs";
 import { Certified } from "../../components/Certified";
@@ -12,8 +12,9 @@ import { Beeflix } from "../../components/Beeflix";
 import { RefsContext } from "../../contexts/RefsProvider";
 import { useContext } from "react";
 import { Footer } from "../../components/Footer";
-import { WhatsappButton } from "../../components/WhatsappButton";
+// import { WhatsappButton } from "../../components/WhatsappButton";
 import beeLogo from "../../assets/bee-logo-2.png";
+import { BudgetButton } from "../../components/BudgetButton";
 
 export function Home() {
   // const { width } = useWindowSize()
@@ -35,18 +36,19 @@ export function Home() {
         <h1 className="intro-overtext">SEU PARCEIRO IDEAL EM</h1>
         <h1 className="intro-text">SERVIÇOS DE DRONE.</h1>
         <h2 className="intro-subtext">Somos uma empresa especializada,<br />que oferece soluções inovadoras e personalizadas para diversos segmentos.</h2>
+        <BudgetButton />
       </IntroBanner>
       <Particulars />
       <Services />
       <HowItWorks />
-      <Packs />
+      {/* <Packs /> */}
       <Feedbacks />
       <Beeflix />
       <WhyUs />
       <Certified />
       <Footer />
 
-      <WhatsappButton />
+      {/* <WhatsappButton /> */}
     </HomeContainer>
   )
 }

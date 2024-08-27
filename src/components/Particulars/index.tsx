@@ -1,5 +1,6 @@
 import { particularData } from "../../constants/particularsData";
 import { useBreakpoint } from "../../hooks/useBreakpoint";
+import { WhatsappButton } from "../WhatsappButton";
 import { Particular } from "./components/Particular";
 import { ParticularsContainer } from "./styles";
 
@@ -12,6 +13,7 @@ export function Particulars() {
       <Particular data={particularData[1]} />
       <Particular data={particularData[2]} />
       <Particular data={particularData[3]} />
+      <WhatsappButton />
     </ParticularsContainer>
   )
 }

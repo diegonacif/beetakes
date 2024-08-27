@@ -9,11 +9,11 @@ export const navData = [
     url: '#section-services',
     ref: 'servicesRef'
   },
-  {
-    text: 'Pacotes',
-    url: '#section-packs',
-    ref: 'packsRef'
-  },
+  // {
+  //   text: 'Pacotes',
+  //   url: '#section-packs',
+  //   ref: 'packsRef'
+  // },
   {
     text: 'Feedbacks',
     url: '#section-feedbacks',

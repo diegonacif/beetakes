@@ -9,7 +9,7 @@ export const ServicesContainer = styled.section`
   width: 100vw;
   gap: 3rem 1rem;
 
-  padding: 5rem 0.75rem 2rem;
+  padding: 5rem 0.75rem 7rem;
   background-color: ${(props) => props.theme['gray-300']};
 
   .services-title {
@@ -26,15 +26,15 @@ export const ServicesContainer = styled.section`
   }
 
   @media ${deviceBreakpoint.tablet} {
-    padding: 5rem 1rem 2rem;
+    padding: 5rem 1rem 7rem;
   }
   @media ${deviceBreakpoint.notebook} {
-    padding: 5rem 1.5rem 2rem;
+    padding: 5rem 1.5rem 7rem;
   }
   @media ${deviceBreakpoint.desktop} {
-    padding: 5rem 2rem 2rem;
+    padding: 5rem 2rem 7rem;
   }
   @media ${deviceBreakpoint.widescreen} {
-    padding: 5rem 2.5rem 2rem;
+    padding: 5rem 2.5rem 7rem;
   }
 `;

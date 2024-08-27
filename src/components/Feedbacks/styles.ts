@@ -2,6 +2,7 @@ import styled from "styled-components";
 import { deviceBreakpoint } from "../../styles/breakpoints";
 
 export const FeedbacksContainer = styled.section`
+  position: relative;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -9,7 +10,7 @@ export const FeedbacksContainer = styled.section`
   width: 100vw;
   max-width: 100vw;
   background-color: ${(props) => props.theme['gray-300']};
-  padding: 2rem 0.75rem;
+  padding: 2rem 0.75rem 8rem;
   overflow: hidden;
 
   #feedbacks-title {
@@ -23,15 +24,15 @@ export const FeedbacksContainer = styled.section`
   }
 
   @media ${deviceBreakpoint.tablet} {
-    padding: 2rem 1rem;
+    padding: 2rem 1rem 8rem;
   }
   @media ${deviceBreakpoint.notebook} {
-    padding: 2rem 1.5rem;
+    padding: 2rem 1.5rem 8rem;
   }
   @media ${deviceBreakpoint.desktop} {
-    padding: 2rem;
+    padding: 2rem 2rem 8rem;
   }
   @media ${deviceBreakpoint.widescreen} {
-    padding: 2rem 2.5rem;
+    padding: 2rem 2.5rem 8rem;
   }
 `

@@ -4,6 +4,7 @@ import { useBreakpoint } from "../../hooks/useBreakpoint";
 import { Service } from "./components/Service";
 import { ServicesContainer } from "./styles";
 import { RefsContext } from "../../contexts/RefsProvider";
+import { BudgetButton } from "../BudgetButton";
 
 export function Services() {
   const breakpoint = useBreakpoint();
@@ -17,6 +18,7 @@ export function Services() {
           <Service key={index} data={service} />
         ))
       }
+      <BudgetButton />
     </ServicesContainer>
   )
 }

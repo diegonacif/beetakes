@@ -3,6 +3,7 @@ import { FeedbacksContainer } from "./styles";
 import { feedbacksData } from "../../constants/feedbacksData";
 import { useContext } from "react";
 import { RefsContext } from "../../contexts/RefsProvider";
+import { BudgetButton } from "../BudgetButton";
 
 
 
@@ -17,6 +18,7 @@ export function Feedbacks() {
           <Feedback key={index} data={feedback} />
         ))
       }
+      <BudgetButton />
     </FeedbacksContainer>
   )
 }

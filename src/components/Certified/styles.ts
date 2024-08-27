@@ -3,6 +3,7 @@ import img from "../../assets/star.svg";
 import { deviceBreakpoint } from "../../styles/breakpoints";
 
 export const CertifiedContainer = styled.div`
+  position: relative;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -10,7 +11,7 @@ export const CertifiedContainer = styled.div`
   gap: 3rem;
   width: 100vw;
   background-color: ${(props) => props.theme['gray-100']};
-  padding: 2rem 0.75rem;
+  padding: 2rem 0.75rem 8rem;
   
   @media ${deviceBreakpoint.notebook} {
     flex-wrap: nowrap;

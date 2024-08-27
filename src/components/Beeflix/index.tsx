@@ -3,6 +3,7 @@ import { beeflixData } from "../../constants/beeflixData";
 import { SampleVideo } from "./components/SampleVideo";
 import { BeeflixContainer, BeeflixGrid } from "./styles";
 import { RefsContext } from "../../contexts/RefsProvider";
+import { BudgetButton } from "../BudgetButton";
 
 export function Beeflix() {
   const { beeflixRef } = useContext(RefsContext);
@@ -16,6 +17,7 @@ export function Beeflix() {
           ))
         }
       </BeeflixGrid>
+      <BudgetButton />
     </BeeflixContainer>
   )
 }

@@ -2,9 +2,10 @@ import styled from "styled-components";
 import { deviceBreakpoint } from "../../styles/breakpoints";
 
 export const BeeflixContainer = styled.section`
+  position: relative;
   width: 100vw;
   background-color: ${(props) => props.theme['gray-100']};
-  padding: 2rem 0.75rem;
+  padding: 2rem 0.75rem 8rem;
 
   #beeflix-title {
     text-align: center;
@@ -16,16 +17,16 @@ export const BeeflixContainer = styled.section`
   }
 
   @media ${deviceBreakpoint.tablet} {
-    padding: 2rem 1rem;
+    padding: 2rem 1rem 8rem;
   }
   @media ${deviceBreakpoint.notebook} {
-    padding: 2rem 1.5rem;
+    padding: 2rem 1.5rem 8rem;
   }
   @media ${deviceBreakpoint.desktop} {
-    padding: 2rem 2rem;
+    padding: 2rem 2rem 8rem;
   }
   @media ${deviceBreakpoint.widescreen} {
-    padding: 2rem 2.5rem;
+    padding: 2rem 2.5rem 8rem;
   }
 `
 

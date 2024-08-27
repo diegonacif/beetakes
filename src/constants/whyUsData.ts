@@ -3,10 +3,13 @@ export const whyUsData = [
     text: 'Estamos comprometidos em fornecer imagens de alta qualidade e um serviço excepcional, garantindo sua total satisfação.',
   },
   {
-    text: 'Edição profissional para aprimorar as imagens, realçar detalhes e criar resultados visuais impressionantes.',
+    text: 'Edição profissional para aprimorar as imagens e criar resultados visuais prontos para serem compartilhados.',
   },
   {
-    text: 'Vídeos terrestres com estabilização profissional.',
+    text: 'Vídeos estrategicamente roteirizados alinhados com seu objetivo.',
+  },
+  {
+    text: 'Vídeos terrestres estabilizados.',
   },
   {
     text: 'Atenção ao cliente, do pedido ao pós venda.',
@@ -16,8 +19,5 @@ export const whyUsData = [
   },
   {
     text: 'Seguimos rigorosamente todas as normas de segurança e regulamentações da ANAC, garantindo a segurança de cada voo.',
-  },
-  {
-    text: 'Oferecemos pacotes flexíveis e preços competitivos para atender a diferentes necessidades.',
   },
 ]

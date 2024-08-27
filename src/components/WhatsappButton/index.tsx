@@ -1,6 +1,7 @@
 import { ChatCenteredText } from "@phosphor-icons/react";
 import { WhatsappButtonContainer } from "./styles";
 import { useNavigate } from "react-router-dom";
+import { useState } from "react";
 // import { useWindowSize } from "usehooks-ts";
 
 export function WhatsappButton() {
@@ -12,9 +13,24 @@ export function WhatsappButton() {
   // `https://wa.me/${whatsappNumber}?text=`; // Para uso geral
 
   const navigate = useNavigate();
+  const [isButtonShown, setIsButtonShown] = useState(false);
+
+// Função para verificar a rolagem da página
+function handleScroll(): void {
+  if (window.scrollY > 300) { 
+    setIsButtonShown(true);
+  } else {
+    setIsButtonShown(false);
+  }
+}
+
+window.addEventListener('scroll', handleScroll);
 
   return (
-    <WhatsappButtonContainer onClick={() => navigate("/contact-form")}>
+    <WhatsappButtonContainer 
+      id={isButtonShown ? 'isButtonShown' : ''}
+      onClick={() => navigate("/contact-form")}
+    >
       {/* <WhatsappLogo weight="light" size={48} /> */}
       <ChatCenteredText size={44} weight="duotone" />
       <span id="speak-with-us">Solicitar Orçamento</span>
