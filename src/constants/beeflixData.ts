@@ -1,9 +1,15 @@
 export const beeflixData = [
   {
-    id: 'ZAd1MaF5yYY',
+    id: '_OZUa32UEUo', // vídeo Charles - Imóvel do Centro
   },
   {
-    id: 'osOLg4BFzas',
+    id: 'trmipXQ_2bo', // vídeo seu João Batista
+  },
+  {
+    id: 'CU7_77oj3sc', // Pousada Jardim das Dunas - Cinematográfico
+  },
+  {
+    id: 'KvIOj4uJQ-A', // Festival Gastronômico Martins 2024
   },
   {
     id: '4xnh_o60bkg',
@@ -12,12 +18,6 @@ export const beeflixData = [
     id: 'yyJ58K6RX5w',
   },
   {
-    id: 'NNHbxUFTzbE',
-  },
-  {
     id: 'etV2WGQoaSs',
-  },
-  {
-    id: 'tp5HZGeS7q8',
   },
 ];
