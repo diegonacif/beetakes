@@ -62,7 +62,7 @@ export function ContactForm() {
   const [isSendButtonActive, setIsSendButtonActive] = useState(false);
   const navigate = useNavigate();
 
-  const descriptionCounter = watch('description').length;
+  const descriptionCounter = watch('description') ? watch('description').length : 0;
 
   const onSubmit: SubmitHandler<IFormInput> = async data => {
     const requestId = uuid();
