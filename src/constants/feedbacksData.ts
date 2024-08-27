@@ -2,6 +2,8 @@ import gina from "../assets/customers/IMG_20240223_141607.jpg";
 import evilazio from "../assets/customers/IMG_20240223_141430.jpg";
 import nicassio from "../assets/customers/nicassio.jpg";
 import larissa from "../assets/customers/larissa.png";
+import charles from "../assets/customers/charles.png";
+import regis from "../assets/customers/regis.png";
 
 export const feedbacksData = [
   {
@@ -38,6 +40,24 @@ export const feedbacksData = [
     name: 'Evilazio Jocas',
     role: 'Proprietário',
     company: 'Dojo Templo da Serra',
+    location: 'Martins - RN',
+  },
+  {
+    text: '"Bee Takes sempre atingindo nossas metas e nos surpreendendo com os vídeos de alta qualidade e rapidez na entrega, continuaremos com essa forte parceria."',
+    img: charles,
+    stars: 5,
+    name: 'Charles Lopes',
+    role: 'Proprietário',
+    company: 'CL Imóveis',
+    location: 'Pau dos Ferros - RN',
+  },
+  {
+    text: '"Bendita a hora que me indicaram seus trabalhos! Era exatamente o que eu queria! Ficou perfeito, muito bonito e valeu a pena!"',
+    img: regis,
+    stars: 5,
+    name: 'Reginaldo da Silva',
+    role: 'Proprietário do Imóvel',
+    // company: 'Dojo Templo da Serra',
     location: 'Martins - RN',
   },
 ]

@@ -72,6 +72,29 @@ export const ContactFormInputWrapper = styled.div`
   }
 `
 
+export const ContactFormTextArea = styled.textarea`
+  width: 100%;
+  min-height: 5.5rem;
+  height: max-content;
+  padding: 1rem .5rem .25rem;
+  border: 2px solid ${(props) => props.theme['gray-300']};
+  border-radius: 5px;
+  resize: none;
+
+  transition: border 0.2s;
+
+  &:focus-visible {
+    outline: 0;
+    border: 2px solid ${({ theme }) => theme['gray-500']};
+
+    transition: border 0.3s;
+  }  
+
+  &#error {
+    border: 2px solid ${({ theme }) => theme['error']};
+  }
+`
+
 export const ContactFormInput = styled.input`
   width: 100%;
   padding: 1rem .5rem .25rem;
@@ -132,4 +155,15 @@ export const ContactFormCheckboxContainer = styled(Checkbox.Root)`
       height: 150%;
     }
   }
+`
+
+export const ContactFormCharacterCounter = styled.span`
+  position: absolute;
+  bottom: -.95rem;
+  right: .5rem;
+
+  font-size: 0.675rem;
+  font-weight: 500;
+
+  color: ${(props) => props.theme['gray-400']};
 `

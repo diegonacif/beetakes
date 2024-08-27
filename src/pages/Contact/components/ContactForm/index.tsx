@@ -1,5 +1,5 @@
 import { Controller, SubmitHandler, useForm } from "react-hook-form";
-import { ContactFormCheckboxContainer, ContactFormContainer, ContactFormInput, ContactFormInputWrapper, ContactFormLabel } from "./styles";
+import { ContactFormCharacterCounter, ContactFormCheckboxContainer, ContactFormContainer, ContactFormInput, ContactFormInputWrapper, ContactFormLabel, ContactFormTextArea } from "./styles";
 import * as yup from 'yup';
 import { yupResolver } from "@hookform/resolvers/yup";
 import { PatternFormat } from "react-number-format";
@@ -61,6 +61,8 @@ export function ContactForm() {
   const [isTermsCheckbox, setIsTermsCheckbox] = useState(false);
   const [isSendButtonActive, setIsSendButtonActive] = useState(false);
   const navigate = useNavigate();
+
+  const descriptionCounter = watch('description').length;
 
   const onSubmit: SubmitHandler<IFormInput> = async data => {
     const requestId = uuid();
@@ -167,6 +169,7 @@ export function ContactForm() {
           <ContactFormInput 
             placeholder="seu_email@gmail.com" 
             {...register('email')}
+            maxLength={40}
             id={
               errors.email && watch('email') === "" ?
               "error" : ""
@@ -215,14 +218,16 @@ export function ContactForm() {
         {/* DESCRIÇÃO */}
         <ContactFormInputWrapper>
           <ContactFormLabel>Descrição breve do projeto</ContactFormLabel>
-          <ContactFormInput 
+          <ContactFormTextArea 
             placeholder="nos conte sobre seu projeto" 
             {...register('description')}
+            maxLength={250}
             id={
               errors.description && watch('description') === "" ?
               "error" : ""
             }
           />
+          <ContactFormCharacterCounter>({descriptionCounter} / 250)</ContactFormCharacterCounter>
         </ContactFormInputWrapper>
 
         {/* ORÇAMENTO */}
