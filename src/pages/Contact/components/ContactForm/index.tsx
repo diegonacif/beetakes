@@ -26,8 +26,8 @@ interface IFormInput {
 
 const emailRegex = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i;
 
-const serviceCategoryList = ['Imobiliário', 'Evento', 'Institucional', 'Fotografia Aérea', 'Outro'];
-const budgetList = ['Menos de R$ 1.000', 'R$ 1.000 - R$ 5.000', 'R$ 5.000 - R$ 10.000', 'Acima de R$ 10.000'];
+const serviceCategoryList = ['Imobiliário', 'Obras', 'Eventos', 'Turismo', 'Ensaios', 'Video Marketing', 'Outros'];
+const budgetList = ['Menos de R$ 800', 'R$ 800 - R$ 2.000', 'R$ 2.000 - R$ 5.000', 'Acima de R$ 5.000'];
 
 const schema = yup.object().shape({
   name: yup.string().required('Nome precisa ser preenchido'),
