@@ -10,12 +10,15 @@ import { useOnClickOutside } from 'usehooks-ts'
 import { useTransition, animated } from '@react-spring/web';
 import { navData } from '../../constants/navData';
 import { RefsContext } from '../../contexts/RefsProvider';
+import { useNavigate } from 'react-router-dom';
 
 export function MenuButton() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const handleMenuOpen = () => {
     setIsMenuOpen(!isMenuOpen);
   }
+
+  const navigate = useNavigate();
 
   // Outside Click (Variable)
   const refContainer = useRef(null);
@@ -86,6 +89,9 @@ export function MenuButton() {
                   </div>
                 ))
               }
+              <div className="menu-item">
+                <span onClick={() => navigate('contact-form')}>Orçamento</span>
+              </div>
             </animated.div>
         )
       }

@@ -5,9 +5,11 @@ import { MenuButton } from "../MenuButton";
 import { useContext, useEffect, useState } from "react";
 import { navData } from "../../constants/navData";
 import { RefsContext } from "../../contexts/RefsProvider";
+import { useNavigate } from "react-router-dom";
 
 export function Navbar() {
   const breakpoint = useBreakpoint();
+  const navigate = useNavigate();
 
   // Navbar color //
   const [navColor, setNavColor] = useState('gradient');
@@ -66,6 +68,7 @@ export function Navbar() {
                 <li key={index} onClick={() => currentRef(item.ref)}>{item.text}</li>
               ))
             }
+            <li onClick={() => navigate('/contact-form')}>Orçamento</li>
           </ul>
         </nav> :
         null
