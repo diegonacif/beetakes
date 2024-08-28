@@ -11,7 +11,6 @@ import { AuthProvider } from "./contexts/AuthEmailProvider";
 import { PrivateRoutes } from "./PrivateRoutes";
 import { AdmLogin } from "./pages/AdmLogin";
 
-
 export function Router() {
   useScrollToTop();
 

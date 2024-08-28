@@ -10,10 +10,10 @@ import { CheckIcon } from "@radix-ui/react-icons";
 import { Timestamp, doc, setDoc } from "firebase/firestore";
 import { db } from "../../../../services/firebase.config";
 import { v4 as uuid } from 'uuid';
-import { useNavigate } from "react-router-dom";
 import { ToastifyContext } from "../../../../contexts/ToastifyProvider";
 import axios from "axios";
 import { ThreeCircles } from 'react-loader-spinner'
+import { SuccessSubmission } from "../SuccessSubmission";
 
 interface IFormInput {
   name: string;
@@ -56,16 +56,16 @@ export function ContactForm() {
     resolver: yupResolver(schema),
   });
 
-  const { notifySuccess, notifyError } = useContext(ToastifyContext);
+  const { notifyError } = useContext(ToastifyContext);
 
   const [selectedServiceCategory, setSelectedServiceCategory] = useState('');
   const [selectedBudget, setSelectedBudget] = useState('');
   const [isTermsCheckbox, setIsTermsCheckbox] = useState(false);
   const [isSendButtonActive, setIsSendButtonActive] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const navigate = useNavigate();
+  const [isSubmited, setIsSubmitted] = useState(false);
 
-  console.log(isSubmitting)
+  console.log(isSubmited)
 
   const descriptionCounter = watch('description') ? watch('description').length : 0;
 
@@ -118,8 +118,9 @@ export function ContactForm() {
 
 
       setIsSubmitting(false);
-      navigate("/");
-      notifySuccess("Solicitação enviada com sucesso!");
+      setIsSubmitted(true);
+      // navigate("/");
+      // notifySuccess("Solicitação enviada com sucesso!");
     } catch (error) {
       console.error('Error creating request: ', error);
       notifyError("Erro ao enviar solicitação!");
@@ -304,6 +305,11 @@ export function ContactForm() {
               wrapperClass=""
             />
           </LoadingLayer>
+        )
+      }
+      {
+        isSubmited && (
+          <SuccessSubmission />
         )
       }
     </ContactFormContainer>
