@@ -2,6 +2,7 @@
 import React, { useState, FormEvent, useContext } from 'react';
 import { AuthContext } from '../../contexts/AuthEmailProvider';
 import { useNavigate } from 'react-router-dom';
+import { AdmLoginContainer } from './styles';
 
 export const AdmLogin: React.FC = () => {
   const authContext = useContext(AuthContext);
@@ -31,10 +32,11 @@ export const AdmLogin: React.FC = () => {
   };
 
   return (
-    <div>
-      <h2>Login</h2>
+    <AdmLoginContainer>
       {error && <p style={{ color: 'red' }}>{error}</p>}
+      <div className="bg" />
       <form onSubmit={handleLogin}>
+        <h2>Login</h2>
         <input
           type="email"
           placeholder="Email"
@@ -51,6 +53,6 @@ export const AdmLogin: React.FC = () => {
         />
         <button type="submit">Entrar</button>
       </form>
-    </div>
+    </AdmLoginContainer>
   );
 };
