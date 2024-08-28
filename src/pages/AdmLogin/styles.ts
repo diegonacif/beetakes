@@ -10,9 +10,8 @@ export const AdmLoginContainer = styled.main`
 
   width: 100vw;
   height: 100dvh;
-  background-image: url(${bgImg});
-  background-size: contain;
-  background-repeat: no-repeat;
+  overflow: hidden;
+  
 
   .bg {
     position: absolute;
@@ -47,7 +46,8 @@ export const AdmLoginContainer = styled.main`
     margin-top: 1rem;
     padding: 1.5rem 1rem;
     background-color: rgba(255, 255, 255, 0.45);
-    width: max-content;
+    width: 90%;
+    max-width: 20rem;
     height: max-content;
     border-radius: 12px;
 
@@ -57,6 +57,7 @@ export const AdmLoginContainer = styled.main`
       padding: .25rem .5rem;
       border: 0;
       border-radius: 4px;
+      width: 100%;
 
       &:first-of-type {
         margin-top: 1rem;

@@ -1,13 +1,8 @@
+import { CaretUpDown } from '@phosphor-icons/react';
 import { MenuItem, Select, SelectLabel, SelectorContainer } from './styles';
-
-// interface OptionType {
-//   value: string;
-//   label: string;
-// }
 
 interface ISelector {
   handleChanger: (selectedOption: string) => void
-  // cities: OptionType[]
   selected: string
   error: boolean
   label: string
@@ -37,6 +32,7 @@ export const Selector = ({ handleChanger, error, label, selected, dataList }: IS
           ))
         }
       </Select>
+      <CaretUpDown size={24} />
     </SelectorContainer>
   )
 

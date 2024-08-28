@@ -1,19 +1,30 @@
 import styled from "styled-components";
 
-// Wrapper para o FormControl
 export const SelectorContainer = styled.div`
   position: relative;
-  display: flex;
-  flex-direction: column;
+  /* display: flex;
+  flex-direction: column; */
+
+  svg {
+    position: absolute;
+    top: .7rem;
+    right: .5rem;
+  }
 `;
 
 export const Select = styled.select`
+  width: 100%;
   padding: 1rem .5rem .25rem;
   background-color: ${({ theme }) => theme['white']};
   border: 2px solid ${(props) => props.theme['gray-300']};
   border-radius: 5px;
   transition: border 0.2s;
   font-size: 1rem;
+  color: ${(props) => props.theme['gray-700']};
+  background-image: url("/img/selectarrow.png") no-repeat right;
+  
+  -webkit-appearance: none;
+  appearance: none;
 
   &:focus {
     outline: 0;
