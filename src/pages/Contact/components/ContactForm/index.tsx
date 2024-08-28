@@ -12,6 +12,7 @@ import { db } from "../../../../services/firebase.config";
 import { v4 as uuid } from 'uuid';
 import { useNavigate } from "react-router-dom";
 import { ToastifyContext } from "../../../../contexts/ToastifyProvider";
+import axios from "axios";
 
 interface IFormInput {
   name: string;
@@ -82,6 +83,23 @@ export function ContactForm() {
 
     try {
       await setDoc(doc(db, 'budget-requests', requestId), requestData);
+
+      // await axios.post('http://localhost:3001/send-email', requestData); // para back local
+      const response = await axios.post(
+        'https://beetakes-email-backend.vercel.app/api/send-email', 
+        {
+          "name": `${requestData.name}`,
+          "email": `${requestData.email}`,
+          "phone": `${requestData.phone}`,
+          "serviceCategory": `${requestData.serviceCategory}`,
+        },
+        {
+          headers: {
+            'Content-Type': 'application/json',
+          }
+        }
+      ); // para back na vercel
+      console.log('resposta do backend', response);
 
       setValue('name', '');
       setValue('enterprise', '');
