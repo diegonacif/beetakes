@@ -3,8 +3,11 @@ import * as Checkbox from "@radix-ui/react-checkbox";
 import { deviceBreakpoint } from "../../../../styles/breakpoints";
 
 export const ContactFormContainer = styled.main`
+  position: relative;
   padding: 4.5rem .75rem 1.5rem;
   background-color: ${(props) => props.theme['gray-100']};
+  width: 100vw;
+  height: max-content;
   min-height: 100dvh;
 
   h2 {
@@ -62,6 +65,16 @@ export const ContactFormInputWrapper = styled.div`
   max-width: 25rem;
   height: max-content;
   margin: 0 auto;
+
+  /* #input-generico {
+    -webkit-appearance: none;
+    appearance: none;
+    color: black;
+    height: 3rem;
+    padding: 0 0.5rem;
+    -webkit-user-select: text;
+    user-select: text;
+  } */
   
   #terms-text {
     color: ${(props) => props.theme['gray-600']};
@@ -82,6 +95,10 @@ export const ContactFormTextArea = styled.textarea`
   border-radius: 5px;
   resize: none;
 
+  /* Pra bixiga do safari escrever texto */
+  -webkit-user-select: text;
+  user-select: text;
+
   transition: border 0.2s;
 
   &:focus-visible {
@@ -101,6 +118,10 @@ export const ContactFormInput = styled.input`
   padding: 1rem .5rem .25rem;
   border: 2px solid ${(props) => props.theme['gray-300']};
   border-radius: 5px;
+
+  /* Pra bixiga do safari escrever texto */
+  -webkit-user-select: text;
+  user-select: text;
 
   transition: border 0.2s;
 
@@ -167,4 +188,20 @@ export const ContactFormCharacterCounter = styled.span`
   font-weight: 500;
 
   color: ${(props) => props.theme['gray-400']};
+`
+
+export const LoadingLayer = styled.div`
+  position: absolute;
+  top: 0;
+  left: 0;
+  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: inherit;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+
+  z-index: 99;
 `

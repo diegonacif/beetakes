@@ -2,13 +2,11 @@ import { useNavigate } from "react-router-dom";
 import { BudgetButtonContainer } from "./styles";
 
 interface BudgetButtonProps {
-  isHigher: boolean;
+  isHigher?: boolean;
 }
 
 export function BudgetButton(props: BudgetButtonProps)  {
   const navigate = useNavigate();
-
-  console.log(props)
 
   return (
     <BudgetButtonContainer 

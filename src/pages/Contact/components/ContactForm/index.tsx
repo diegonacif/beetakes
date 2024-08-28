@@ -1,5 +1,5 @@
 import { Controller, SubmitHandler, useForm } from "react-hook-form";
-import { ContactFormCharacterCounter, ContactFormCheckboxContainer, ContactFormContainer, ContactFormInput, ContactFormInputWrapper, ContactFormLabel, ContactFormTextArea } from "./styles";
+import { ContactFormCharacterCounter, ContactFormCheckboxContainer, ContactFormContainer, ContactFormInput, ContactFormInputWrapper, ContactFormLabel, ContactFormTextArea, LoadingLayer } from "./styles";
 import * as yup from 'yup';
 import { yupResolver } from "@hookform/resolvers/yup";
 import { PatternFormat } from "react-number-format";
@@ -13,6 +13,7 @@ import { v4 as uuid } from 'uuid';
 import { useNavigate } from "react-router-dom";
 import { ToastifyContext } from "../../../../contexts/ToastifyProvider";
 import axios from "axios";
+import { ThreeCircles } from 'react-loader-spinner'
 
 interface IFormInput {
   name: string;
@@ -61,7 +62,10 @@ export function ContactForm() {
   const [selectedBudget, setSelectedBudget] = useState('');
   const [isTermsCheckbox, setIsTermsCheckbox] = useState(false);
   const [isSendButtonActive, setIsSendButtonActive] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const navigate = useNavigate();
+
+  console.log(isSubmitting)
 
   const descriptionCounter = watch('description') ? watch('description').length : 0;
 
@@ -82,6 +86,7 @@ export function ContactForm() {
     }
 
     try {
+      setIsSubmitting(true);
       await setDoc(doc(db, 'budget-requests', requestId), requestData);
 
       // await axios.post('http://localhost:3001/send-email', requestData); // para back local
@@ -111,6 +116,8 @@ export function ContactForm() {
       setValue('location', '');
       setIsTermsCheckbox(false);
 
+
+      setIsSubmitting(false);
       navigate("/");
       notifySuccess("Solicitação enviada com sucesso!");
     } catch (error) {
@@ -284,6 +291,21 @@ export function ContactForm() {
 
         <button type="submit" disabled={!isSendButtonActive}>Enviar</button>
       </form>
+      {
+        isSubmitting && (
+          <LoadingLayer>
+            <ThreeCircles
+              visible={true}
+              height="100"
+              width="100"
+              color="#f9ce38"
+              ariaLabel="three-circles-loading"
+              wrapperStyle={{}}
+              wrapperClass=""
+            />
+          </LoadingLayer>
+        )
+      }
     </ContactFormContainer>
   )
 }
