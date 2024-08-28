@@ -36,7 +36,7 @@ export function Home() {
         <h1 className="intro-overtext">SEU PARCEIRO IDEAL EM</h1>
         <h1 className="intro-text">SERVIÇOS DE DRONE.</h1>
         <h2 className="intro-subtext">Somos uma empresa especializada,<br />que oferece soluções inovadoras e personalizadas para diversos segmentos.</h2>
-        <BudgetButton />
+        <BudgetButton isHigher={true} />
       </IntroBanner>
       <Particulars />
       <Services />

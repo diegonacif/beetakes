@@ -17,4 +17,8 @@ export const BudgetButtonContainer = styled.button`
   border: 0;
   background: linear-gradient(180deg, rgba(249,206,56,1) 0%, rgba(167,137,32,1) 100%);
   cursor: pointer;
+
+  &#budget-btn-higher {
+    bottom: 15vh;
+  }
 `
