@@ -3,6 +3,7 @@ import React, { useState, FormEvent, useContext } from 'react';
 import { AuthContext } from '../../contexts/AuthEmailProvider';
 import { useNavigate } from 'react-router-dom';
 import { AdmLoginContainer } from './styles';
+import { House } from '@phosphor-icons/react';
 
 export const AdmLogin: React.FC = () => {
   const authContext = useContext(AuthContext);
@@ -35,6 +36,7 @@ export const AdmLogin: React.FC = () => {
     <AdmLoginContainer>
       {error && <p style={{ color: 'red' }}>{error}</p>}
       <div className="bg" />
+
       <form onSubmit={handleLogin}>
         <h2>Login</h2>
         <input
@@ -52,6 +54,12 @@ export const AdmLogin: React.FC = () => {
           required
         />
         <button type="submit">Entrar</button>
+
+        <House 
+          size={32} 
+          weight="duotone" 
+          onClick={() => navigate('/')}
+        />
       </form>
     </AdmLoginContainer>
   );

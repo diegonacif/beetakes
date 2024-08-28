@@ -5,6 +5,7 @@ import { deviceBreakpoint } from "../../../../styles/breakpoints";
 export const ContactFormContainer = styled.main`
   padding: 4.5rem .75rem 1.5rem;
   background-color: ${(props) => props.theme['gray-100']};
+  min-height: 100dvh;
 
   h2 {
     font-family: "Kdam Thmor Pro", sans-serif;

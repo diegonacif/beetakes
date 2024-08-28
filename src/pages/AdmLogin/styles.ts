@@ -12,6 +12,7 @@ export const AdmLoginContainer = styled.main`
   height: 100dvh;
   overflow: hidden;
   
+  
 
   .bg {
     position: absolute;
@@ -84,6 +85,15 @@ export const AdmLoginContainer = styled.main`
       border: 0;
       background: linear-gradient(180deg, rgba(249,206,56,1) 0%, rgba(167,137,32,1) 100%);
       z-index: 10;
+      cursor: pointer;
+    }
+
+    svg {
+      position: absolute;
+      top: .75rem;
+      right: .75rem;
+      z-index: 10;
+      color: ${(props) => props.theme['gray-500']};
       cursor: pointer;
     }
   }
