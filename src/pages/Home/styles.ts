@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import bgImg from "../../assets/IMG_5531.jpg";
+import bgImg from "../../assets/IMG_5531.webp";
 import { deviceBreakpoint } from "../../styles/breakpoints";
 
 export const HomeContainer = styled.main`

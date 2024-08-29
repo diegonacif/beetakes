@@ -35,7 +35,8 @@ export function Home() {
         <img className="intro-logo" src={beeLogo} alt="bee takes logo" />
         <h1 className="intro-overtext">SEU PARCEIRO IDEAL EM</h1>
         <h1 className="intro-text">SERVIÇOS DE DRONE.</h1>
-        <h2 className="intro-subtext">Somos uma empresa especializada,<br />que oferece soluções inovadoras e personalizadas para diversos segmentos.</h2>
+        {/* <h2 className="intro-subtext">Somos uma empresa especializada,<br />que oferece soluções inovadoras e personalizadas para diversos segmentos.</h2> */}
+        <h2 className="intro-subtext">Especialistas em imagens aéreas e produções cinematográficas para empresas.<br />Aumente suas vendas com vídeos de alta qualidade.</h2>
         <BudgetButton isHigher={true} />
       </IntroBanner>
       <Particulars />
