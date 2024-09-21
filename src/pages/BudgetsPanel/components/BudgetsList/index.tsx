@@ -5,7 +5,7 @@ import { db } from '../../../../services/firebase.config';
 import { BudgetsListContainer, LogoutButton, StyledTable, StyledTbody, StyledTd, StyledTh, StyledThead, StyledTr, SyledModal } from './styles';
 import { AuthContext } from '../../../../contexts/AuthEmailProvider';
 import { ToastifyContext } from '../../../../contexts/ToastifyProvider';
-import { XCircle } from '@phosphor-icons/react';
+import { Copy, XCircle } from '@phosphor-icons/react';
 // import Modal from 'react-modal';
 
 interface IBudget {
@@ -19,6 +19,10 @@ interface IBudget {
   budget: string;
   location: string;
   status: string;
+  createdAt: {
+    seconds: number,
+    nanoseconds: number,
+  };
 }
 
 export const BudgetsList = () => {
@@ -31,10 +35,10 @@ export const BudgetsList = () => {
   const [selectedBudget, setSelectedBudget] = useState<IBudget | null>(null);
   const [currentBudgetStatus, setCurrentBudgetStatus] = useState('');
 
-
   const [refresh, setRefresh] = useState(false);
 
   // console.log(import.meta.env.VITE_API_KEY)
+  const currentDate = selectedBudget ? new Date(selectedBudget?.createdAt.seconds * 1000).toLocaleString() : '';
 
   useEffect(() => {
     const getBudgets = async () => {
@@ -51,6 +55,7 @@ export const BudgetsList = () => {
           budget: doc.data().budget,
           location: doc.data().location,
           status: doc.data().status,
+          createdAt: doc.data().createdAt,
         }))
       );
     }
@@ -70,8 +75,6 @@ export const BudgetsList = () => {
       console.error('O contexto de autenticação não está disponível.');
     }
   }
-
-  // console.log(budgets.map((budgets) => budgets.name))
 
   const handleRowClick = (budget: IBudget) => {
     setSelectedBudget(budget);
@@ -113,7 +116,16 @@ export const BudgetsList = () => {
       }
     }
   };
-  
+
+  const copyToClipboard = async (text: string) => {
+    try {
+      await navigator.clipboard.writeText(text);
+      console.log('Texto copiado para a área de transferência');
+    } catch (err) {
+      console.error('Falha ao copiar o texto', err);
+    }
+  }
+
 
   return (
     <BudgetsListContainer>
@@ -165,12 +177,13 @@ export const BudgetsList = () => {
             <>
               <p><strong>Nome:</strong> {selectedBudget.name}</p>
               <p><strong>Empresa:</strong> {selectedBudget.enterprise}</p>
-              <p><strong>Email:</strong> {selectedBudget.email}</p>
-              <p><strong>Telefone:</strong> {selectedBudget.phone}</p>
+              <p><strong>Email:</strong> {selectedBudget.email}&ensp;<Copy size={20} onClick={() => copyToClipboard(selectedBudget.email)} /></p>
+              <p><strong>Telefone:</strong> {selectedBudget.phone}&ensp;<Copy size={20} onClick={() => copyToClipboard(selectedBudget.phone)} /></p> 
               <p><strong>Categoria do Serviço:</strong> {selectedBudget.serviceCategory}</p>
               <p><strong>Descrição:</strong> {selectedBudget.description}</p>
               <p><strong>Orçamento:</strong> {selectedBudget.budget}</p>
               <p><strong>Local:</strong> {selectedBudget.location}</p>
+              <p><strong>Criado em:</strong> {currentDate}</p>
             </>
           )
         }

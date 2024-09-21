@@ -82,6 +82,10 @@ export const SyledModal = styled(Modal)`
   border-radius: 6px;
   color: ${(props) => props.theme['gray-100']};
 
+  svg {
+    cursor: pointer;
+  }
+
   .action-buttons {
     display: flex;
     flex-direction: row;
