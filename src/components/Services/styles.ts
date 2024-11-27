@@ -12,6 +12,12 @@ export const ServicesContainer = styled.section`
   padding: 5rem 0.75rem 7rem;
   background-color: ${(props) => props.theme['gray-300']};
 
+  span {
+    text-decoration: underline;
+    font-size: small;
+    margin-top: 0.25rem;
+  }
+
   .services-title {
     position: absolute;
     top: 1rem;
@@ -23,6 +29,12 @@ export const ServicesContainer = styled.section`
     font-size: 2rem;
 
     color: ${(props) => props.theme['gray-600']};
+  }
+
+  #service-wrapper {
+    &:hover {
+      cursor: pointer;
+    }
   }
 
   @media ${deviceBreakpoint.tablet} {

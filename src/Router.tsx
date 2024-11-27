@@ -10,6 +10,7 @@ import { BudgetsPanel } from "./pages/BudgetsPanel";
 import { AuthProvider } from "./contexts/AuthEmailProvider";
 import { PrivateRoutes } from "./PrivateRoutes";
 import { AdmLogin } from "./pages/AdmLogin";
+import { ServicesFolio } from "./pages/ServicesFolio";
 
 export function Router() {
   useScrollToTop();
@@ -22,6 +23,7 @@ export function Router() {
             <Route path="/" element={<DefaultLayout />}>
               <Route index element={<Home />} />
               <Route path="/contact-form" element={<Contact />} />
+              <Route path="/services/:service" element={<ServicesFolio />} />
               <Route path="/under-construction" element={<UnderConstruction />} />
               <Route path="/login" element={<AdmLogin />} />
               <Route element={<PrivateRoutes />}>

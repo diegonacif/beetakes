@@ -1,9 +1,12 @@
 import styled from "styled-components";
 import { deviceBreakpoint } from "../../../../styles/breakpoints";
 
+const videoWidth = 35;
+const videoHeight = (videoWidth*9)/16;
+
 export const SampleVideoContainer = styled.div`
-  width: 22rem;
-  height: 12.375rem;
+  width: ${`${videoWidth}rem`};
+  height: ${videoHeight};
   max-width: 100%;
   background-color: antiquewhite;
   border-radius: 8px;

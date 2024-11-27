@@ -5,9 +5,11 @@ import { Service } from "./components/Service";
 import { ServicesContainer } from "./styles";
 import { RefsContext } from "../../contexts/RefsProvider";
 import { BudgetButton } from "../BudgetButton";
+import { useNavigate } from "react-router-dom";
 
 export function Services() {
   const breakpoint = useBreakpoint();
+  const navigate = useNavigate();
   const { servicesRef } = useContext(RefsContext);
 
   return (
@@ -15,7 +17,15 @@ export function Services() {
       <h2 className="services-title">Serviços</h2>
       {
         servicesData.map((service, index) => (
-          <Service key={index} data={service} />
+          <div
+            onClick={() => navigate(`services/${service.id}`)}
+            id="service-wrapper"
+          >
+            <Service 
+              key={index} 
+              data={service} 
+            />
+          </div>
         ))
       }
       <BudgetButton />
