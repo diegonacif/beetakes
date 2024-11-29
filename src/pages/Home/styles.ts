@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import bgImg from "../../assets/IMG_5531.webp";
 import { deviceBreakpoint } from "../../styles/breakpoints";
+import customCursor from "../../assets/cursor/Normal-Select-y.png";
 
 export const HomeContainer = styled.main`
   display: flex;
@@ -11,6 +12,8 @@ export const HomeContainer = styled.main`
   width: 100vw;
   max-width: 100vw;
   overflow: hidden;
+
+  cursor: url(${customCursor}), auto;
 `
 
 export const IntroBanner = styled.section`

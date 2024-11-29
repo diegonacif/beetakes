@@ -6,7 +6,7 @@ const videoHeight = (videoWidth*9)/16;
 
 export const SampleVideoContainer = styled.div`
   width: ${`${videoWidth}rem`};
-  height: ${videoHeight};
+  height: ${`${videoHeight}rem`};
   max-width: 100%;
   background-color: antiquewhite;
   border-radius: 8px;

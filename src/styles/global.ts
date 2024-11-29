@@ -21,6 +21,7 @@ export const GlobalStyle = createGlobalStyle`
     font-weight: 400;
     font-style: normal;
 
+
     a {
         text-decoration: none;
         color: inherit;

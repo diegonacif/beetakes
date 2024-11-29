@@ -1,12 +1,16 @@
 import styled from "styled-components";
 import { deviceBreakpoint } from "../../../../styles/breakpoints";
+import customCursor from "../../../../assets/cursor/Normal-Select-y.png";
+
 
 export const ServicesBeeflixContainer = styled.section`
   position: relative;
   width: 100vw;
   min-height: 100dvh;
   background-color: ${(props) => props.theme['gray-100']};
-  padding: 2rem 0.75rem 8rem;
+  padding: 5rem 0.75rem 8rem;
+
+  cursor: url(${customCursor}), auto;
 
   #services-beeflix-title {
     text-align: center;
@@ -18,6 +22,7 @@ export const ServicesBeeflixContainer = styled.section`
   }
 
   #flex-columns {
+    position: relative;
     display: flex;
     flex-direction: column;
     text-align: center;
@@ -26,6 +31,7 @@ export const ServicesBeeflixContainer = styled.section`
     max-width: 120rem;
     margin: 1.25rem auto 0;
     width: 100%;
+    height: 100%;
 
     @media ${deviceBreakpoint.notebook} {
       display: grid;
@@ -48,7 +54,7 @@ export const ServicesBeeflixContainer = styled.section`
 
   #single-column-widescreen {
     position: sticky;
-    top: 40%;
+    top: 20vh;
     display: flex;
     flex-direction: column;
 
@@ -81,16 +87,16 @@ export const ServicesBeeflixContainer = styled.section`
   }
 
   @media ${deviceBreakpoint.tablet} {
-    padding: 2rem 1rem 8rem;
+    padding: 5rem 1rem 8rem;
   }
   @media ${deviceBreakpoint.notebook} {
-    padding: 2rem 1.5rem 8rem;
+    padding: 5rem 1.5rem 5rem;
   }
   @media ${deviceBreakpoint.desktop} {
-    padding: 2rem 2rem 8rem;
+    padding: 5rem 2rem 5rem;
   }
   @media ${deviceBreakpoint.widescreen} {
-    padding: 2rem 2.5rem 8rem;
+    padding: 5rem 2.5rem 5rem;
   }
 `
 

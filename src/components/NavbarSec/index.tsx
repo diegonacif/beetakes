@@ -26,7 +26,7 @@ export function NavbarSec() {
       
       <nav>
         <ul>
-          <Link to="/">
+          <Link to={'..'}>
             <li onClick={() => console.log("go back")}>Sair</li>
           </Link>
         </ul>

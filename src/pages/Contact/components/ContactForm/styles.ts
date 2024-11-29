@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import * as Checkbox from "@radix-ui/react-checkbox";
 import { deviceBreakpoint } from "../../../../styles/breakpoints";
+import customCursor from "../../../../assets/cursor/Normal-Select-y.png";
 
 export const ContactFormContainer = styled.main`
   position: relative;
@@ -9,6 +10,8 @@ export const ContactFormContainer = styled.main`
   width: 100vw;
   height: max-content;
   min-height: 100dvh;
+
+  cursor: url(${customCursor}), auto;
 
   h2 {
     font-family: "Kdam Thmor Pro", sans-serif;

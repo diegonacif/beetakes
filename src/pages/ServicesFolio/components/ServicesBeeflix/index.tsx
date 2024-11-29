@@ -1,17 +1,17 @@
-import { ServiceText, ServicesBeeflixContainer, ServicesBeeflixGrid } from "./styles";
+import { ServicesBeeflixContainer, ServicesBeeflixGrid } from "./styles";
 import { SampleVideo } from "../../../../components/Beeflix/components/SampleVideo";
 import { BudgetButton } from "../../../../components/BudgetButton";
 import { servicesFolioData } from "../../../../constants/serviceFolioData";
 import { useNavigate, useParams } from "react-router-dom";
 import { useBreakpoint } from "../../../../hooks/useBreakpoint";
+import { DynamicText } from "../../../../components/DynamicText";
 
 export function ServicesBeeflix() {
   const breakpoint = useBreakpoint();
   const { service } = useParams();
   const navigate = useNavigate();
   const currentService = servicesFolioData.find((item) => item.id === service);
-
-  console.log(breakpoint);
+  const currentText = currentService ? currentService.text : '';
 
   return (
     <ServicesBeeflixContainer id="section-beeflix">
@@ -24,7 +24,8 @@ export function ServicesBeeflix() {
             "single-column"
           }
         >
-          <ServiceText>{currentService?.text}</ServiceText>
+          {/* <ServiceText>{currentService?.text}</ServiceText> */}
+          <DynamicText text={currentText} />
           { ["notebook", "desktop", "widescreen"].includes(breakpoint) && (
             <button 
               id="internal-budget-button"
