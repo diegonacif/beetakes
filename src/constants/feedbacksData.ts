@@ -1,5 +1,5 @@
 import gina from "../assets/customers/IMG_20240223_141607.jpg";
-import evilazio from "../assets/customers/IMG_20240223_141430.jpg";
+import marcel from "../assets/customers/marcel.png";
 import nicassio from "../assets/customers/nicassio.jpg";
 import larissa from "../assets/customers/larissa.png";
 import charles from "../assets/customers/charles.png";
@@ -52,12 +52,12 @@ export const feedbacksData = [
     location: 'Martins - RN',
   },
   {
-    text: '"Competência!"',
-    img: evilazio,
+    text: '"Trabalho extremamente profissional, com todos os detalhes que queríamos! Pessoal, super atencioso, equipe discreta e eficiente. Obrigado por registrar o LOVE SONGS MARTINS."',
+    img: marcel,
     stars: 5,
-    name: 'Evilazio Jocas',
+    name: 'Marcel Filgueira',
     role: 'Proprietário',
-    company: 'Dojo Templo da Serra',
-    location: 'Martins - RN',
+    company: 'Banda Doutor Zé',
+    location: 'Mossoró - RN',
   },
 ]
