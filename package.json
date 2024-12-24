@@ -23,6 +23,7 @@
     "nodemailer": "^6.9.14",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-facebook-pixel": "^1.0.4",
     "react-hook-form": "^7.52.2",
     "react-lite-youtube-embed": "^2.4.0",
     "react-loader-spinner": "^6.1.6",

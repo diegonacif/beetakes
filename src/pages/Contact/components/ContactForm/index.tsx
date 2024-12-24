@@ -14,6 +14,7 @@ import { ToastifyContext } from "../../../../contexts/ToastifyProvider";
 import axios from "axios";
 import { ThreeCircles } from 'react-loader-spinner'
 import { SuccessSubmission } from "../SuccessSubmission";
+import { pixelFormView } from "../../../../utils/facebookEvents";
 
 interface IFormInput {
   name: string;
@@ -160,6 +161,10 @@ export function ContactForm() {
 
     triggerErrors();
   }, [touchedFields.location, trigger, isTermsCheckbox, isValid])
+
+  useEffect(() => {
+    pixelFormView();
+  }, [])
 
   return (
     <ContactFormContainer>

@@ -1,4 +1,4 @@
-import { Route, Routes } from "react-router-dom";
+import { Route, Routes, useLocation } from "react-router-dom";
 import { Home } from "./pages/Home";
 import { DefaultLayout } from "./layouts/DefaultLayout";
 import { UnderConstruction } from "./components/UnderConstruction";
@@ -11,8 +11,17 @@ import { AuthProvider } from "./contexts/AuthEmailProvider";
 import { PrivateRoutes } from "./PrivateRoutes";
 import { AdmLogin } from "./pages/AdmLogin";
 import { ServicesFolio } from "./pages/ServicesFolio";
+import { useEffect } from "react";
+import ReactPixel from 'react-facebook-pixel';
 
 export function Router() {
+  const location = useLocation();
+
+  // Rastreia a visualização de página do pixel ao navegar
+  useEffect(() => {
+    ReactPixel.pageView();
+  }, [location]);
+
   useScrollToTop();
 
   return (

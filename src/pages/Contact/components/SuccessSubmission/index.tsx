@@ -1,9 +1,15 @@
 import { SuccessSubmissionContainer } from "./styled";
 import abelhaDoida from "../../../../assets/1f41d.gif";
 import { useNavigate } from "react-router-dom";
+import { useEffect } from "react";
+import { pixelBudgetRequest } from "../../../../utils/facebookEvents";
 
 export function SuccessSubmission() {
   const navigate = useNavigate();
+
+  useEffect(() => {
+    pixelBudgetRequest();
+  }, [])
 
   return (
     <SuccessSubmissionContainer>
