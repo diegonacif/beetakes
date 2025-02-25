@@ -1,4 +1,4 @@
-import gina from "../assets/customers/IMG_20240223_141607.jpg";
+import juniorGondim from "../assets/customers/juniorGondim.png";
 import marcel from "../assets/customers/marcel.png";
 import nicassio from "../assets/customers/nicassio.jpg";
 import larissa from "../assets/customers/larissa.png";
@@ -43,12 +43,12 @@ export const feedbacksData = [
     location: 'Martins - RN',
   },
   {
-    text: '"Parabéns pelo engajamento!"',
-    img: gina,
+    text: '"Excelente trabalho, ótimo profissional."',
+    img: juniorGondim,
     stars: 5,
-    name: 'Georgina Campos',
-    role: 'Proprietária',
-    company: 'Chácara Flor da Serra',
+    name: 'Júnior Gondim',
+    role: 'Proprietário',
+    company: 'A Casa de Madeira Martins',
     location: 'Martins - RN',
   },
   {
