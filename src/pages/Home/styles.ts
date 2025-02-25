@@ -202,6 +202,7 @@ export const IntroBanner = styled.section`
     left: 50%;
     transform: translateX(-50%);
     width: 11rem;
+    height: auto;
     z-index: 10;
     opacity: 0.9;
     transition: top 0.4s, width 0.4s;

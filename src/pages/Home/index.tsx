@@ -40,7 +40,11 @@ export function Home() {
       </IntroBanner> */}
       <IntroBanner ref={homeRef} id="section-home">
         <div className="bg" />
-        <img className="intro-logo" src={beeLogo} loading="lazy" alt="Logotipo da Bee Takes: Drone e Serviços Audiovisuais" />
+        <img 
+          className="intro-logo" 
+          src={beeLogo} 
+          alt="Logotipo da Bee Takes: Drone e Serviços Audiovisuais" 
+        />
         <span className="intro-overtext">SEU PARCEIRO IDEAL EM</span>
         <h1 className="intro-text">SERVIÇOS DE DRONE.</h1>
         <h2 className="intro-subtext">Especialistas em imagens aéreas e produções cinematográficas para empresas.<br />Aumente suas vendas com vídeos de alta qualidade.</h2>
