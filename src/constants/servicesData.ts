@@ -1,10 +1,10 @@
 // import residencialImg from '../assets/residencial.png';
-import comercialImg from '../assets/comercial.jpg';
-import obrasImg from '../assets/obras.jpg';
-import eventosImg from '../assets/show.jpg';
-import turismoImg from '../assets/hikers.jpg';
-import marketingImg from '../assets/marketing.png';
-import ensaioImg from '../assets/bride.png';
+import comercialImg from '../assets/comercial_01.jpg';
+import obrasImg from '../assets/obras_01.jpg';
+import eventosImg from '../assets/show_01.jpg';
+import turismoImg from '../assets/hikers_01.jpg';
+import marketingImg from '../assets/marketing_01.png';
+import ensaioImg from '../assets/bride_01.png';
 
 export const servicesData = [
   {
