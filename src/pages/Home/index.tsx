@@ -13,7 +13,7 @@ import { RefsContext } from "../../contexts/RefsProvider";
 import { useContext } from "react";
 import { Footer } from "../../components/Footer";
 // import { WhatsappButton } from "../../components/WhatsappButton";
-import beeLogo from "../../assets/bee-logo-2_comp.png";
+import beeLogo from "../../assets/bee-logo-3_comp.webp";
 import { BudgetButton } from "../../components/BudgetButton";
 
 export function Home() {
