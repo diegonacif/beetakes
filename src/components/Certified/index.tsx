@@ -1,8 +1,8 @@
 import { CertifiedContainer, CertifiedInfo, CertifiedLogos, CertifiedRows } from "./styles";
-import anac from "../../assets/logos/anac.png";
-import anatel from "../../assets/logos/anatel.png";
-import decea from "../../assets/logos/decea.png";
-import mapfre from "../../assets/logos/mapfre-seguros.png";
+import anac from "../../assets/logos/anac_01.png";
+import anatel from "../../assets/logos/anatel_01.png";
+import decea from "../../assets/logos/decea_01.png";
+import mapfre from "../../assets/logos/mapfre-seguros_01.png";
 import { BudgetButton } from "../BudgetButton";
 
 export function Certified() {
