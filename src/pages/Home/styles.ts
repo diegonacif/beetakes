@@ -230,10 +230,12 @@ export const IntroBanner = styled.section`
     text-align: center;
     color: ${(props) => props.theme['yellow-500']};
     text-shadow: 1px 1px 2px ${(props) => props.theme['gray-600']};
-    filter: drop-shadow(2px 2px 14px ${(props) => props.theme['midnight-800']});
+    /* filter: drop-shadow(2px 2px 14px ${(props) => props.theme['midnight-800']}); */
     z-index: 10;
     padding: 0 0.5rem;
     transition: font-size 0.4s, margin-top 0.4s;
+    filter: none;
+    isolation: isolate;
   }
 
   .intro-subtext {
@@ -273,8 +275,8 @@ export const IntroBanner = styled.section`
     .intro-text {
       font-size: 3.5rem;
       margin-top: 0;
-      color: ${(props) => props.theme['yellow-500']};
-      filter: drop-shadow(2px 2px 14px ${(props) => props.theme['midnight-800']} )
+      /* color: ${(props) => props.theme['yellow-500']};
+      filter: drop-shadow(2px 2px 14px ${(props) => props.theme['midnight-800']} ) */
     }
     .intro-subtext {
       font-size: 1rem;
@@ -290,8 +292,8 @@ export const IntroBanner = styled.section`
     .intro-text {
       font-size: 4rem;
       margin-top: 0;
-      color: ${(props) => props.theme['yellow-500']};
-      filter: drop-shadow(2px 2px 14px ${(props) => props.theme['midnight-800']} )
+      /* color: ${(props) => props.theme['yellow-500']};
+      filter: drop-shadow(2px 2px 14px ${(props) => props.theme['midnight-800']} ) */
     }
     .intro-subtext {
       font-size: 1.125rem;
@@ -307,8 +309,8 @@ export const IntroBanner = styled.section`
     .intro-text {
       font-size: 5rem;
       margin-top: 0;
-      color: ${(props) => props.theme['yellow-500']};
-      filter: drop-shadow(2px 2px 14px ${(props) => props.theme['midnight-800']} )
+      /* color: ${(props) => props.theme['yellow-500']};
+      filter: drop-shadow(2px 2px 14px ${(props) => props.theme['midnight-800']} ) */
     }
     .intro-subtext {
       font-size: 1.5rem;
@@ -329,8 +331,8 @@ export const IntroBanner = styled.section`
     .intro-text {
       font-size: 6rem;
       margin-top: 0;
-      color: ${(props) => props.theme['yellow-500']};
-      filter: drop-shadow(2px 2px 14px ${(props) => props.theme['midnight-800']} )
+      /* color: ${(props) => props.theme['yellow-500']};
+      filter: drop-shadow(2px 2px 14px ${(props) => props.theme['midnight-800']} ) */
     }
     .intro-subtext {
       font-size: 1.75rem;
