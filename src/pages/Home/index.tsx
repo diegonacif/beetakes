@@ -46,8 +46,8 @@ export function Home() {
           alt="Logotipo da Bee Takes: Drone e Serviços Audiovisuais" 
         />
         <span className="intro-overtext">SEU PARCEIRO IDEAL EM</span>
-        <h1 className="intro-text">SERVIÇOS DE DRONE.</h1>
-        <h2 className="intro-subtext">Especialistas em imagens aéreas e produções cinematográficas para empresas.<br />Aumente suas vendas com vídeos de alta qualidade.</h2>
+        <h1 className="intro-text">SERVIÇOS DE DRONE</h1>
+        <h2 className="intro-subtext">Especialistas em imagens aéreas e produções de vídeo para empresas.<br />Aumente suas vendas com vídeos de alta qualidade.</h2>
         <BudgetButton isHigher={true} aria-label="Solicitar orçamento" />
       </IntroBanner>
       <Particulars />
