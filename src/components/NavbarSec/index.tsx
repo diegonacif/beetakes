@@ -1,9 +1,11 @@
 import { NavbarSecContainer } from "./styles";
 import beeLogo from '../../assets/bee-logo-3.png';
 import { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 export function NavbarSec() {
+
+  const navigate = useNavigate();
 
   // Navbar color //
   const [navColor, setNavColor] = useState('gradient');
@@ -19,7 +21,7 @@ export function NavbarSec() {
   }, [])
 
   return (
-    <NavbarSecContainer color={navColor}>
+    <NavbarSecContainer color={navColor} onClick={() => navigate('/')}>
       <div className="logo-wrapper">
         <img src={beeLogo} alt="bee takes logo" id="bee-logo" />
       </div>

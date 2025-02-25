@@ -13,7 +13,7 @@ import { RefsContext } from "../../contexts/RefsProvider";
 import { useContext } from "react";
 import { Footer } from "../../components/Footer";
 // import { WhatsappButton } from "../../components/WhatsappButton";
-import beeLogo from "../../assets/bee-logo-2.png";
+import beeLogo from "../../assets/bee-logo-2_comp.png";
 import { BudgetButton } from "../../components/BudgetButton";
 
 export function Home() {
@@ -30,14 +30,21 @@ export function Home() {
   return (
     <HomeContainer>
       <Navbar />
-      <IntroBanner ref={homeRef} id="section-home">
+      {/* <IntroBanner ref={homeRef} id="section-home">
         <div className="bg" />
         <img className="intro-logo" src={beeLogo} alt="bee takes logo" />
         <h1 className="intro-overtext">SEU PARCEIRO IDEAL EM</h1>
         <h1 className="intro-text">SERVIÇOS DE DRONE.</h1>
-        {/* <h2 className="intro-subtext">Somos uma empresa especializada,<br />que oferece soluções inovadoras e personalizadas para diversos segmentos.</h2> */}
         <h2 className="intro-subtext">Especialistas em imagens aéreas e produções cinematográficas para empresas.<br />Aumente suas vendas com vídeos de alta qualidade.</h2>
         <BudgetButton isHigher={true} />
+      </IntroBanner> */}
+      <IntroBanner ref={homeRef} id="section-home">
+        <div className="bg" />
+        <img className="intro-logo" src={beeLogo} loading="lazy" alt="Logotipo da Bee Takes: Drone e Serviços Audiovisuais" />
+        <span className="intro-overtext">SEU PARCEIRO IDEAL EM</span>
+        <h1 className="intro-text">SERVIÇOS DE DRONE.</h1>
+        <h2 className="intro-subtext">Especialistas em imagens aéreas e produções cinematográficas para empresas.<br />Aumente suas vendas com vídeos de alta qualidade.</h2>
+        <BudgetButton isHigher={true} aria-label="Solicitar orçamento" />
       </IntroBanner>
       <Particulars />
       <Services />

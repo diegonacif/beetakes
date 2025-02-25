@@ -52,7 +52,7 @@ export function Navbar() {
 
   return (
     <NavbarContainer color={navColor}>
-      <div className="logo-wrapper">
+      <div className="logo-wrapper" onClick={() => navigate('/')}>
         <img src={beeLogo} alt="bee takes logo" id="bee-logo" />
       </div>
       {
