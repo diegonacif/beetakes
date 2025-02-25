@@ -1,7 +1,42 @@
 import { createGlobalStyle } from 'styled-components'
+import KdamThmorProRegularTtf from '../assets/fonts/KdamThmorPro-Regular.ttf';
+import UbuntuBoldTtf from '../assets/fonts/Ubuntu-Bold.ttf';
+import UbuntuMediumTtf from '../assets/fonts/Ubuntu-Medium.ttf';
+import UbuntuRegularTtf from '../assets/fonts/Ubuntu-Regular.ttf';
 
 export const GlobalStyle = createGlobalStyle`
   
+  @font-face {
+    font-family: 'Kdam Thmor Pro';
+    src: url(${KdamThmorProRegularTtf}) format('truetype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: 'Ubuntu';
+    src: url(${UbuntuRegularTtf}) format('truetype');
+    font-weight: 400; // Regular
+    font-style: normal;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: 'Ubuntu';
+    src: url(${UbuntuMediumTtf}) format('truetype');
+    font-weight: 500; // Medium
+    font-style: normal;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: 'Ubuntu';
+    src: url(${UbuntuBoldTtf}) format('truetype');
+    font-weight: 700; // Bold
+    font-style: normal;
+    font-display: swap;
+  }
 
   * {
     margin: 0;
