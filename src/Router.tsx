@@ -13,6 +13,7 @@ import { AdmLogin } from "./pages/AdmLogin";
 import { ServicesFolio } from "./pages/ServicesFolio";
 import { useEffect } from "react";
 import ReactPixel from 'react-facebook-pixel';
+import { LinkTree } from "./pages/LinkTree";
 
 export function Router() {
   const location = useLocation();
@@ -32,6 +33,7 @@ export function Router() {
             <Route path="/" element={<DefaultLayout />}>
               <Route index element={<Home />} />
               <Route path="/contact-form" element={<Contact />} />
+              <Route path="/linktree" element={<LinkTree />} />
               <Route path="/services/:service" element={<ServicesFolio />} />
               <Route path="/under-construction" element={<UnderConstruction />} />
               <Route path="/login" element={<AdmLogin />} />
