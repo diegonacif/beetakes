@@ -67,14 +67,14 @@ export const LTButton = styled.button<LTButtonProps>`
   background-color: white;
   border: none;
   border-radius: 20px;
+  color: ${(props) => props.theme['gray-900']};
+  font-weight: 500;
 
   background-color: ${(props) => 
     props.color === 'yellow' ?
     props.theme['yellow-500']:
     props.theme['gray-100']}
   ;  
-
-  font-weight: 500;
 
   & + button {
     margin-top: 1.25rem;
