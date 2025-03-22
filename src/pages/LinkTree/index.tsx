@@ -30,12 +30,12 @@ export function LinkTree() {
 
       <LTButtonsWrapper>
         <LTButton 
-          onClick={() => window.open(formAddress)}
+          onClick={() => window.location.href = formAddress}
         >
           Solicite um orçamento
         </LTButton>
         <LTButton 
-          onClick={() => window.open(websiteAddress)}
+          onClick={() => window.location.href = websiteAddress}
           color="yellow"
         >
           Nosso Site
@@ -52,31 +52,31 @@ export function LinkTree() {
           <WhatsappLogo 
             size={32} 
             weight="regular" 
-            onClick={() => window.open(whatsappAddress)}
+            onClick={() => window.location.href = whatsappAddress}
             id="whatsapp-logo"
           />
           <YoutubeLogo 
             size={32} 
             weight="regular" 
-            onClick={() => window.open(youtubeAddress)}
+            onClick={() => window.location.href = youtubeAddress}
             id="instagram-logo"
           />
           <FacebookLogo 
             size={32} 
             weight="regular" 
-            onClick={() => window.open(facebookAddress)}
+            onClick={() => window.location.href = facebookAddress}
             id="facebook-logo"
           />
           <TiktokLogo 
             size={32} 
             weight="regular" 
-            onClick={() => window.open(tiktokAddress)}
+            onClick={() => window.location.href = tiktokAddress}
             id="tiktok-logo"
           />
           <Envelope 
             size={32} 
             weight="regular" 
-            onClick={() => window.open(mailAddress)}
+            onClick={() => window.location.href = mailAddress}
             id="mail-logo"
           />
       </FooterSocials>
