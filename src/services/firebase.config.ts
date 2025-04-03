@@ -34,4 +34,5 @@ export const storage = getStorage(app);
 export const auth = getAuth(app);
 const analytics = getAnalytics(app);
 window.analytics = analytics
+console.log("Analytics atribuído ao window:", window.analytics);
 export { analytics, logEvent };
