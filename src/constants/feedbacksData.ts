@@ -7,6 +7,15 @@ import regis from "../assets/customers/regis.png";
 
 export const feedbacksData = [
   {
+    text: '"Bee Takes sempre atingindo nossas metas e nos surpreendendo com os vídeos de alta qualidade e rapidez na entrega, continuaremos com essa forte parceria."',
+    img: charles,
+    stars: 5,
+    name: 'Charles Lopes',
+    role: 'Proprietário',
+    company: 'CL Imóveis',
+    location: 'Pau dos Ferros - RN',
+  },
+  {
     text: '"Reconheço e agradeço a empresa Bee Takes, pelo excelente trabalho de fotos e filmagens aéreas prestado. Portanto, indico e recomendo, pelo seu profissionalismo e por toda dedicação."',
     img: nicassio,
     stars: 5,
@@ -23,15 +32,6 @@ export const feedbacksData = [
     role: 'Organizadora',
     company: 'Corrida das Serras',
     location: 'Martins - RN',
-  },
-  {
-    text: '"Bee Takes sempre atingindo nossas metas e nos surpreendendo com os vídeos de alta qualidade e rapidez na entrega, continuaremos com essa forte parceria."',
-    img: charles,
-    stars: 5,
-    name: 'Charles Lopes',
-    role: 'Proprietário',
-    company: 'CL Imóveis',
-    location: 'Pau dos Ferros - RN',
   },
   {
     text: '"Bendita a hora que me indicaram seus trabalhos! Era exatamente o que eu queria! Ficou perfeito, muito bonito e valeu a pena!"',
