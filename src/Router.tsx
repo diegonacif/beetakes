@@ -14,13 +14,18 @@ import { ServicesFolio } from "./pages/ServicesFolio";
 import { useEffect } from "react";
 import ReactPixel from 'react-facebook-pixel';
 import { LinkTree } from "./pages/LinkTree";
+import { logEvent } from "firebase/analytics";
+import { analytics } from "./services/firebase.config";
 
 export function Router() {
   const location = useLocation();
 
-  // Rastreia a visualização de página do pixel ao navegar
+  // Rastreia a visualização de página do pixel e no Firebase Analytics ao navegar
   useEffect(() => {
     ReactPixel.pageView();
+    logEvent(analytics, 'page_view', {
+      page_path: location.pathname
+    })
   }, [location]);
 
   useScrollToTop();

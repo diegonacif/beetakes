@@ -12,6 +12,10 @@ export const LinkTreeContainer = styled.main`
   width: 100vw;
   max-width: 100vh;
   overflow: hidden;
+
+  @media ${deviceBreakpoint.tablet} {
+    margin: 0 auto;
+  }
 `
 
 export const LTHeader = styled.section`

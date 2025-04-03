@@ -1,6 +1,8 @@
 import { Envelope, FacebookLogo, TiktokLogo, WhatsappLogo, YoutubeLogo } from "@phosphor-icons/react";
 import { FooterSocials, LTBody, LTButton, LTButtonsWrapper, LTFooterBar, LTHeader, LTSubtitle, LinkTreeContainer } from "./styles";
 import { useWindowSize } from "usehooks-ts";
+import { logEvent } from "firebase/analytics";
+import { analytics } from "../../services/firebase.config";
 
 export function LinkTree() {
   const { width } = useWindowSize()
@@ -19,6 +21,20 @@ export function LinkTree() {
   `https://web.whatsapp.com/send?phone=${whatsappNumber}&text=` : // Abre diretamente a versão web
   `https://wa.me/${whatsappNumber}?text=`; // Para uso geral
 
+  function handleClickForm() {
+    logEvent(analytics, 'link_clicado', {
+      link_id: 'linktree_orcamento',
+    });
+    window.location.href = formAddress
+  }
+
+  function handleClickSite() {
+    logEvent(analytics, 'link_clicado', {
+      link_id: 'linktree_site',
+    });
+    window.location.href = websiteAddress
+  }
+
   return (
     <LinkTreeContainer>
     <LTHeader>
@@ -30,12 +46,12 @@ export function LinkTree() {
 
       <LTButtonsWrapper>
         <LTButton 
-          onClick={() => window.location.href = formAddress}
+          onClick={() => handleClickForm()}
         >
           Solicite um orçamento
         </LTButton>
         <LTButton 
-          onClick={() => window.location.href = websiteAddress}
+          onClick={() => handleClickSite()}
           color="yellow"
         >
           Nosso Site
@@ -52,31 +68,56 @@ export function LinkTree() {
           <WhatsappLogo 
             size={32} 
             weight="regular" 
-            onClick={() => window.location.href = whatsappAddress}
+            onClick={() => {
+              logEvent(analytics, 'link_clicado', {
+                link_id: 'linktree_whatsapp',
+              });
+              window.location.href = whatsappAddress;
+            }}
             id="whatsapp-logo"
           />
           <YoutubeLogo 
             size={32} 
             weight="regular" 
-            onClick={() => window.location.href = youtubeAddress}
+            onClick={() => {
+              logEvent(analytics, 'link_clicado', {
+                link_id: 'linktree_youtube',
+              });
+              window.location.href = youtubeAddress
+            }}
             id="instagram-logo"
           />
           <FacebookLogo 
             size={32} 
             weight="regular" 
-            onClick={() => window.location.href = facebookAddress}
+            onClick={() => {
+              logEvent(analytics, 'link_clicado', {
+                link_id: 'linktree_facebook',
+              });
+              window.location.href = facebookAddress
+            }}
             id="facebook-logo"
           />
           <TiktokLogo 
             size={32} 
             weight="regular" 
-            onClick={() => window.location.href = tiktokAddress}
+            onClick={() => {
+              logEvent(analytics, 'link_clicado', {
+                link_id: 'linktree_tiktok',
+              });
+              window.location.href = tiktokAddress
+            }}
             id="tiktok-logo"
           />
           <Envelope 
             size={32} 
             weight="regular" 
-            onClick={() => window.location.href = mailAddress}
+            onClick={() => {
+              logEvent(analytics, 'link_clicado', {
+                link_id: 'linktree_mail',
+              });
+              window.location.href = mailAddress
+            }}
             id="mail-logo"
           />
       </FooterSocials>
