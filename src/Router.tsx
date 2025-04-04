@@ -14,18 +14,22 @@ import { ServicesFolio } from "./pages/ServicesFolio";
 import { useEffect } from "react";
 import ReactPixel from 'react-facebook-pixel';
 import { LinkTree } from "./pages/LinkTree";
-import { logEvent } from "firebase/analytics";
-import { analytics } from "./services/firebase.config";
+import { TipoEvento, incrementarEventoDiario } from "./hooks/useEventIncrement";
 
 export function Router() {
   const location = useLocation();
 
   // Rastreia a visualização de página do pixel e no Firebase Analytics ao navegar
   useEffect(() => {
+    if (location.pathname === "/") {
+      incrementarEventoDiario(TipoEvento.VISITA_HOME)
+    } else if (location.pathname === "/linktree") {
+      incrementarEventoDiario(TipoEvento.VISITA_LINKTREE)
+    } else if (location.pathname === "/contact-form") {
+      incrementarEventoDiario(TipoEvento.VISITA_CONTACT_FORM)
+    }
+
     ReactPixel.pageView();
-    logEvent(analytics, 'page_view', {
-      page_path: location.pathname
-    })
   }, [location]);
 
   useScrollToTop();
