@@ -9,24 +9,24 @@ export const servicesFolioData = [
     <strong>Ideal para:</strong> Imobiliárias, corretores e incorporadoras que querem se destacar no mercado imobiliário.`,
     videos: [
       {
-        text: "Sítio de Seu João Batista",
-        id: "trmipXQ_2bo"
+        text: "Bee Takes - Demo Reel Imobiliário",
+        id: "FoNxYNUJZ8s"
       },
       {
-        text: "Ponto comercial - Pau dos Ferros RN",
-        id: "_OZUa32UEUo"
-      },
-      {
-        text: "Ponto comercial - Rua Quintino Bocaiúva - Pau dos Ferros RN",
-        id: "SvMGdgXmMHM"
+        text: "Marketing Imobiliário - Destaque-se",
+        id: "8bUZ8tiNWWE"
       },
       {
         text: "Loteamento Lagoa Nova - Martins RN",
         id: "TgtVjECpN8o"
       },
       {
-        text: "Terreno 25 de Março - Pau dos Ferros RN",
-        id: "MQW01APeKRg"
+        text: "Sítio de Seu João Batista",
+        id: "trmipXQ_2bo"
+      },
+      {
+        text: "Ponto comercial - Rua Quintino Bocaiúva - Pau dos Ferros RN",
+        id: "SvMGdgXmMHM"
       },
       {
         text: "Condomínio de Chalés - Martins RN",
