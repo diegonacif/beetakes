@@ -5,6 +5,8 @@ export const FeedBackContainer = styled.div`
   width: 28rem;
   max-width: 100%;
   cursor: default;
+  margin: 0 auto;
+  padding: 0 .75rem;
 
   .upper-section {
     display: flex;

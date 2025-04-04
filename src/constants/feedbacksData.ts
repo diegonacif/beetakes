@@ -4,8 +4,18 @@ import nicassio from "../assets/customers/nicassio.jpg";
 import larissa from "../assets/customers/larissa.png";
 import charles from "../assets/customers/charles.png";
 import regis from "../assets/customers/regis.png";
+import alessandra from "../assets/customers/alessandra.png";
 
 export const feedbacksData = [
+  {
+    text: '"Tivemos a nossa primeira experiência com a Bee Takes e foi muito positiva! Super indico 👏😍"',
+    img: alessandra,
+    stars: 5,
+    name: 'Alessandra Lisboa',
+    role: 'Corretora',
+    // company: 'CL Imóveis',
+    location: 'Natal - RN',
+  },
   {
     text: '"Bee Takes sempre atingindo nossas metas e nos surpreendendo com os vídeos de alta qualidade e rapidez na entrega, continuaremos com essa forte parceria."',
     img: charles,

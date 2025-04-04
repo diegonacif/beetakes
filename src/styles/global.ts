@@ -65,7 +65,24 @@ export const GlobalStyle = createGlobalStyle`
           outline: 0;
           background-color: transparent;
         }
-      }
+    }
+
+    /* ALICE CAROUSEL CUSTOM */
+    .alice-carousel__dots-item:not(.__custom).__active {
+      background-color: ${(props) => props.theme['gray-700']};
+    }
+
+    .alice-carousel__prev-btn-item {
+      color: ${(props) => props.theme['gray-700']};
+      font-size: 1.25rem;
+    }
+    .alice-carousel__next-btn-item {
+      color: ${(props) => props.theme['gray-700']};
+      font-size: 1.25rem;
+    }
+    .alice-carousel__dots {
+      margin: 1rem .125rem .25rem;
+    }
   }
 
   body {
