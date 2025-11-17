@@ -15,10 +15,10 @@ export function LinkTree() {
   const mailAddress = "mailto:beetakes.drones@gmail.com";
 
   const whatsappNumber = "5584981033283"
-  // const whatsappMessage = "Olá! Gostaria de solicitar um orçamento."
+  const whatsappMessage = "Ol%C3%A1%21%20Estou%20entrando%20em%20contato%20pela%20linktree%2C%20e%20gostaria%20de%20solicitar%20um%20or%C3%A7amento."
   const whatsappAddress = width >= 1024 ?
-  `https://web.whatsapp.com/send?phone=${whatsappNumber}&text=` : // Abre diretamente a versão web
-  `https://wa.me/${whatsappNumber}?text=`; // Para uso geral
+  `https://web.whatsapp.com/send?phone=${whatsappNumber}&text=${whatsappMessage}` : // Abre diretamente a versão web
+  `https://wa.me/${whatsappNumber}?text=${whatsappMessage}`; // Para uso geral
 
   // function handleClickForm() {
   //   incrementarEventoDiario(TipoEvento.CLIQUE_LINKTREE_ORCAMENTO);
