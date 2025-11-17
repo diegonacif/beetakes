@@ -9,6 +9,9 @@
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview"
   },
+  "engines": {
+    "node": "22.x"
+  },
   "dependencies": {
     "@hookform/resolvers": "^3.9.0",
     "@phosphor-icons/react": "^2.0.15",
