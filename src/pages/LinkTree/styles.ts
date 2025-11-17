@@ -1,5 +1,6 @@
 import styled from "styled-components";
-import logoImg from "../../assets/bee-logo.png";
+// import logoImg from "../../assets/bee-logo.png";
+import logoImg from "../../assets/beetakes-logo-2025.svg";
 import { deviceBreakpoint } from "../../styles/breakpoints";
 
 interface LTButtonProps {
@@ -12,6 +13,7 @@ export const LinkTreeContainer = styled.main`
   width: 100vw;
   max-width: 100vh;
   overflow: hidden;
+  background-color: "#1c1b1a";
 
   @media ${deviceBreakpoint.tablet} {
     margin: 0 auto;
@@ -21,8 +23,8 @@ export const LinkTreeContainer = styled.main`
 export const LTHeader = styled.section`
   position: relative;
   height: 22.5vh;
-  background-color: ${(props) => props.theme['yellow-500']};
-  color: ${(props) => props.theme['gray-800']};
+  background-color: ${(props) => props.theme['bt-dourado']};
+  color: ${(props) => props.theme['bt-preto']};
 
   #imgWrapper {
     position: absolute;
@@ -35,6 +37,7 @@ export const LTHeader = styled.section`
     height: 9rem;
     overflow: hidden;
     background-image: url(${logoImg});
+    background-color: ${(props) => props.theme['bt-cinza']};
     background-size: cover;
     background-position: center center;
   }
@@ -71,18 +74,24 @@ export const LTButton = styled.button<LTButtonProps>`
   background-color: white;
   border: none;
   border-radius: 20px;
-  color: ${(props) => props.theme['gray-900']};
+  color: ${(props) => props.theme['bt-preto']};
   font-weight: 500;
 
   background-color: ${(props) => 
     props.color === 'yellow' ?
-    props.theme['yellow-500']:
-    props.theme['gray-100']}
+    props.theme['bt-dourado'] :
+    props.theme['bt-branco']}
   ;  
 
   & + button {
     margin-top: 1.25rem;
   }
+
+  @media ${deviceBreakpoint.notebook} {
+    &:hover {
+      cursor: pointer;
+      filter: drop-shadow(0px 0px 4px ${(props) =>props.theme['bt-dourado']}); 
+  }}
 `
 
 export const LTSubtitle = styled.div`
@@ -100,13 +109,13 @@ export const FooterSocials = styled.div`
   margin: auto 0 2rem;
 
   svg {
-    color: ${(props) => props.theme['yellow-500']};
+    color: ${(props) => props.theme['bt-drourado']};
     transition: filter 0.3s, color 0.3s;
     cursor: pointer;
     
     @media ${deviceBreakpoint.notebook} {
       &:hover {
-        filter: drop-shadow(1px 1px 6px ${(props)=> props.theme['yellow-500']});
+        filter: drop-shadow(1px 1px 6px ${(props)=> props.theme['bt-dourado']});
 
         &#whatsapp-logo {
           filter: drop-shadow(1px 1px 5px #3c9c46);
@@ -141,5 +150,5 @@ export const FooterSocials = styled.div`
 export const LTFooterBar = styled.div`
   width: 100%;
   height: 1rem;
-  background-color: ${(props) => props.theme['yellow-500']};
+  background-color: ${(props) => props.theme['bt-dourado']};
 `

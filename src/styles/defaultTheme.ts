@@ -28,4 +28,9 @@ export const defaultTheme = {
 
   'red-500': '#FF2734',
   'yellow-500': '#f9ce38',
+
+  'bt-dourado': '#D4AF37',
+  'bt-branco': '#F5F5F5',
+  'bt-cinza': '#222120',
+  'bt-preto': '#0C0C0C'
 }

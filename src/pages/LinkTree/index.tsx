@@ -7,7 +7,7 @@ export function LinkTree() {
   const { width } = useWindowSize()
 
   const websiteAddress = "http://www.beetakes.com.br";
-  const formAddress = "http://www.beetakes.com.br/contact-form";
+  // const formAddress = "http://www.beetakes.com.br/contact-form";
 
   const youtubeAddress = "https://www.youtube.com/@BeeTakes";
   const facebookAddress = "https://www.facebook.com/profile.php?id=61553302315879&mibextid=ZbWKwL";
@@ -20,10 +20,10 @@ export function LinkTree() {
   `https://web.whatsapp.com/send?phone=${whatsappNumber}&text=` : // Abre diretamente a versão web
   `https://wa.me/${whatsappNumber}?text=`; // Para uso geral
 
-  function handleClickForm() {
-    incrementarEventoDiario(TipoEvento.CLIQUE_LINKTREE_ORCAMENTO);
-    window.location.href = formAddress;
-  }
+  // function handleClickForm() {
+  //   incrementarEventoDiario(TipoEvento.CLIQUE_LINKTREE_ORCAMENTO);
+  //   window.location.href = formAddress;
+  // }
 
   function handleClickSite() {
     incrementarEventoDiario(TipoEvento.CLIQUE_LINKTREE_SITE);
@@ -37,13 +37,16 @@ export function LinkTree() {
     </LTHeader>
     <LTBody>
       <h1>Bee Takes</h1>
-      <h2>Imagens Aéreas | Produção de Vídeos</h2>
+      <h2>Produção de Vídeos | Imagens Aéreas</h2>
 
       <LTButtonsWrapper>
         <LTButton 
-          onClick={() => handleClickForm()}
+          onClick={() => {
+            incrementarEventoDiario(TipoEvento.CLIQUE_LINKTREE_WHATSAPP);
+            window.location.href = whatsappAddress;
+          }}
         >
-          Solicite um orçamento
+          Fale conosco
         </LTButton>
         <LTButton 
           onClick={() => handleClickSite()}
