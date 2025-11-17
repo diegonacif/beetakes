@@ -54,7 +54,7 @@ export const LTBody = styled.section`
   }
   h2 {
     text-align: center;
-    font-size: .75rem;
+    font-size: .875rem;
     margin-top: .25rem;
   }
 `
@@ -96,7 +96,7 @@ export const LTButton = styled.button<LTButtonProps>`
 
 export const LTSubtitle = styled.div`
   padding: 0 3rem;
-  font-size: .875rem;
+  font-size: 1rem;
   text-align: center;
   margin-top: 2rem;
 `
