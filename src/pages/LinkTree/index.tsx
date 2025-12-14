@@ -13,6 +13,7 @@ export function LinkTree() {
   const facebookAddress = "https://www.facebook.com/profile.php?id=61553302315879&mibextid=ZbWKwL";
   const tiktokAddress = "https://www.tiktok.com/@bee.takes?_t=8kHAB64HwpB&_r=1";
   const mailAddress = "mailto:beetakes.drones@gmail.com";
+  const selectionFormAddress = "https://tally.so/r/RGxyYv";
 
   const whatsappNumber = "5584981033283"
   const whatsappMessage = "Ol%C3%A1%21%20Estou%20entrando%20em%20contato%20pelo%20instagram%2C%20e%20gostaria%20de%20solicitar%20um%20or%C3%A7amento."
@@ -53,6 +54,13 @@ export function LinkTree() {
           color="yellow"
         >
           Nosso Site
+        </LTButton>
+        <LTButton 
+          onClick={() => {
+            window.location.href = selectionFormAddress;
+          }}
+        >
+          Bee Takes: Selection
         </LTButton>
       </LTButtonsWrapper>
 
