@@ -5,7 +5,7 @@ export const navData = [
     ref: 'homeRef'
   },
   {
-    text: 'Serviços',
+    text: 'Soluções',
     url: '#section-services',
     ref: 'servicesRef'
   },
@@ -15,13 +15,18 @@ export const navData = [
   //   ref: 'packsRef'
   // },
   {
-    text: 'Feedbacks',
+    text: 'Avaliações',
     url: '#section-feedbacks',
     ref: 'feedbacksRef'
   },
-  {
+/*   {
     text: 'Beeflix',
     url: '#section-beeflix',
     ref: 'beeflixRef'
+  }, */
+    {
+    text: 'Fale Conosco',
+    url: '#section-faleconosco',
+    ref: 'faleconoscoRef'
   },
 ]

@@ -9,8 +9,8 @@ export const NavbarContainer = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 100vw;
-  height: 3.5rem;
+  width: 100%;
+  height: var(--navbar-height, 3.5rem);
   color: black;
   padding: 0 0.75rem;
   z-index: 20;

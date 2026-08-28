@@ -7,13 +7,13 @@ import { Services } from "../../components/Services";
 // import { Packs } from "../../components/Packs";
 import { Feedbacks } from "../../components/Feedbacks";
 import { WhyUs } from "../../components/WhyUs";
-import { Certified } from "../../components/Certified";
-import { Beeflix } from "../../components/Beeflix";
+// import { Certified } from "../../components/Certified";
+// import { Beeflix } from "../../components/Beeflix";
 import { RefsContext } from "../../contexts/RefsProvider";
 import { useContext } from "react";
 import { Footer } from "../../components/Footer";
 // import { WhatsappButton } from "../../components/WhatsappButton";
-import beeLogo from "../../assets/bee-logo-3_comp.webp";
+import beeLogo from "../../assets/Bee-Takes-Rebranding-Logo-Colorida.webp";
 import { BudgetButton } from "../../components/BudgetButton";
 
 export function Home() {
@@ -30,34 +30,50 @@ export function Home() {
   return (
     <HomeContainer>
       <Navbar />
-      {/* <IntroBanner ref={homeRef} id="section-home">
-        <div className="bg" />
-        <img className="intro-logo" src={beeLogo} alt="bee takes logo" />
-        <h1 className="intro-overtext">SEU PARCEIRO IDEAL EM</h1>
-        <h1 className="intro-text">SERVIÇOS DE DRONE.</h1>
-        <h2 className="intro-subtext">Especialistas em imagens aéreas e produções cinematográficas para empresas.<br />Aumente suas vendas com vídeos de alta qualidade.</h2>
-        <BudgetButton isHigher={true} />
-      </IntroBanner> */}
+      
       <IntroBanner ref={homeRef} id="section-home">
-        <div className="bg" />
-        <img 
-          className="intro-logo" 
-          src={beeLogo} 
-          alt="Logotipo da Bee Takes: Drone e Serviços Audiovisuais" 
-        />
-        <span className="intro-overtext">SEU PARCEIRO IDEAL EM</span>
-        <h1 className="intro-text">SERVIÇOS DE DRONE</h1>
-        <h2 className="intro-subtext">Especialistas em imagens aéreas e produções de vídeo para empresas.<br />Aumente suas vendas com vídeos de alta qualidade.</h2>
-        <BudgetButton isHigher={true} aria-label="Solicitar orçamento" />
+        <div className="bg" aria-hidden="true" />
+
+
+        {/* <div className="bg" /> */}
+        <div className="intro-content">
+          <img 
+            className="intro-logo" 
+            src={beeLogo} 
+            alt="Logotipo da Bee Takes: Drone e Serviços Audiovisuais" 
+          />
+
+          <div className="intro-main">
+            <div className="intro-copy">
+              <span className="intro-overtext">
+                PRODUTORA ESPECIALIZADA EM
+              </span>
+
+              <h1 className="intro-text">
+                AUDIOVISUAL IMOBILIÁRIO
+              </h1>
+              
+              <p className="intro-subtext">
+                Planejamos como cada imóvel deve ser apresentado e produzimos materiais audiovisuais para comunicar seus diferenciais com clareza e intenção.
+              </p>
+            </div>
+          </div>
+
+          <div className="intro-action">
+            <BudgetButton aria-label="Falar sobre um imóvel" />
+          </div>
+        </div>
+
       </IntroBanner>
+
       <Particulars />
       <Services />
       <HowItWorks />
       {/* <Packs /> */}
       <Feedbacks />
-      <Beeflix />
+      {/* <Beeflix /> */}
       <WhyUs />
-      <Certified />
+      {/* <Certified /> */}
       <Footer />
 
       {/* <WhatsappButton /> */}

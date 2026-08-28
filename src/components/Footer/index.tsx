@@ -1,5 +1,5 @@
 import { FooterContainer, FooterFoot, FooterInner, FooterSocials } from "./styles";
-import beeLogo from "../../assets/bee-logo-3.png";
+import beeLogo from '../../assets/Vertical Centered Brand Name.svg';
 import { Envelope, FacebookLogo, InstagramLogo, TiktokLogo, WhatsappLogo } from "@phosphor-icons/react";
 import { useWindowSize } from "usehooks-ts";
 

@@ -38,7 +38,11 @@ export const GlobalStyle = createGlobalStyle`
     font-display: swap;
   }
 
-  * {
+
+
+  *,
+  *::before,
+  *::after {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -55,34 +59,47 @@ export const GlobalStyle = createGlobalStyle`
     font-family: "Ubuntu", sans-serif;
     font-weight: 400;
     font-style: normal;
+  }
 
+  html,
+  body,
+  #root {
+    width: 100%;
+    min-height: 100%;
+    background-color: ${(props) => props.theme['gray-900']};
+  }
 
-    a {
-        text-decoration: none;
-        color: inherit;
-        &:focus-visible, &:focus-within, &:focus, &:active, &:target {
-          border: 0;
-          outline: 0;
-          background-color: transparent;
-        }
-    }
+  body,
+  #root {
+  min-height: 100vh;
+  min-height: 100dvh;
+  }
 
-    /* ALICE CAROUSEL CUSTOM */
-    .alice-carousel__dots-item:not(.__custom).__active {
-      background-color: ${(props) => props.theme['gray-700']};
-    }
+  a {
+      text-decoration: none;
+      color: inherit;
+      &:focus-visible, &:focus-within, &:focus, &:active, &:target {
+        border: 0;
+        outline: 0;
+        background-color: transparent;
+      }
+  }
 
-    .alice-carousel__prev-btn-item {
-      color: ${(props) => props.theme['gray-700']};
-      font-size: 1.25rem;
-    }
-    .alice-carousel__next-btn-item {
-      color: ${(props) => props.theme['gray-700']};
-      font-size: 1.25rem;
-    }
-    .alice-carousel__dots {
-      margin: 1rem .125rem .25rem;
-    }
+  /* ALICE CAROUSEL CUSTOM */
+  .alice-carousel__dots-item:not(.__custom).__active {
+    background-color: ${(props) => props.theme['gray-700']};
+  }
+
+  .alice-carousel__prev-btn-item {
+    color: ${(props) => props.theme['gray-700']};
+    font-size: 1.25rem;
+  }
+  .alice-carousel__next-btn-item {
+    color: ${(props) => props.theme['gray-700']};
+    font-size: 1.25rem;
+  }
+  .alice-carousel__dots {
+    margin: 1rem .125rem .25rem;
   }
 
   body {
@@ -91,6 +108,10 @@ export const GlobalStyle = createGlobalStyle`
     -webkit-font-smoothing: antialiased;
     text-rendering: optimizeLegibility;
     overflow-x: hidden;
+
+    margin: 0;
+    min-height: 100vh;
+    min-height: 100dvh;
 
     /* Works on Chrome, Edge, and Safari */
     &::-webkit-scrollbar {

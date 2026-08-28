@@ -6,22 +6,22 @@ import particular6 from '../assets/particular6.png';
 export const particularData = [
   {
     img: particular1,
-    title: "Fotografias e videos aéreos",
-    text: "Capturamos pra você belíssimas imagens aéreas e mostramos os melhores ângulos de sua propriedade.",
+    title: "Apresentação planejada",
+    text: "Entendemos o imóvel, o público e o objetivo antes de definir roteiro e imagens.",
   },
   {
     img: particular2,
-    title: "Fácil agendamento",
-    text: "Estamos sempre prontos para lhe atender. Nos fale sobre seu projeto, e nós cuidamos do resto.",
+    title: "Processo claro",
+    text: "Cada projeto possui escopo, prazo, etapas de aprovação e entrega definidos.",
   },
   {
     img: particular5,
-    title: "Customizável",
-    text: "Ajustamos nossos serviços às suas necessidades. Nos conte o que está precisando e como podemos ajudá-lo.",
+    title: "Produção completa",
+    text: "Direção, captação terrestre e aérea, edição e materiais adaptados aos canais de divulgação.",
   },
   {
     img: particular6,
-    title: "Profissionais experientes",
-    text: "Nós entendemos de que forma as imagens aéreas incrementam seu empreendimento e lhe ajudamos a determinar as melhores opções de serviço de drone.",
+    title: "Especialização imobiliária",
+    text: "Experiência produzindo para corretores, imobiliárias e empreendimentos do Rio Grande do Norte.",
   },
 ]

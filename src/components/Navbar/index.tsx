@@ -1,5 +1,7 @@
 import { NavbarContainer } from "./styles";
-import beeLogo from '../../assets/bee-logo-3.png';
+import beeLogo from '../../assets/Vertical Centered Brand Name.svg';
+// import beeLogo from '../../assets/bee-logo-3.png';
+
 import { useBreakpoint } from "../../hooks/useBreakpoint";
 import { MenuButton } from "../MenuButton";
 import { useContext, useEffect, useState } from "react";

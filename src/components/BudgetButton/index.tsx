@@ -1,19 +1,20 @@
+import type { ButtonHTMLAttributes } from "react";
 import { useNavigate } from "react-router-dom";
 import { BudgetButtonContainer } from "./styles";
 
-interface BudgetButtonProps {
-  isHigher?: boolean;
-}
+type BudgetButtonProps =
+  ButtonHTMLAttributes<HTMLButtonElement>;
 
-export function BudgetButton(props: BudgetButtonProps)  {
+export function BudgetButton(props: BudgetButtonProps) {
   const navigate = useNavigate();
 
   return (
-    <BudgetButtonContainer 
-      onClick={() => navigate('/contact-form')}
-      id={props.isHigher === true ? "budget-btn-higher" : ""}
+    <BudgetButtonContainer
+      type="button"
+      {...props}
+      onClick={() => navigate("/contact-form")}
     >
-      Solicitar orçamento
+      Falar sobre um imóvel
     </BudgetButtonContainer>
-  )
+  );
 }
