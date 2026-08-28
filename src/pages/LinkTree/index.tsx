@@ -13,7 +13,7 @@ export function LinkTree() {
   const facebookAddress = "https://www.facebook.com/profile.php?id=61553302315879&mibextid=ZbWKwL";
   const tiktokAddress = "https://www.tiktok.com/@bee.takes?_t=8kHAB64HwpB&_r=1";
   const mailAddress = "mailto:beetakes.drones@gmail.com";
-  const selectionFormAddress = "https://tally.so/r/RGxyYv";
+  // const selectionFormAddress = "https://tally.so/r/RGxyYv";
 
   const whatsappNumber = "5584981033283"
   const whatsappMessage = "Ol%C3%A1%21%20Estou%20entrando%20em%20contato%20pelo%20instagram%2C%20e%20gostaria%20de%20solicitar%20um%20or%C3%A7amento."
@@ -38,7 +38,7 @@ export function LinkTree() {
     </LTHeader>
     <LTBody>
       <h1>Bee Takes</h1>
-      <h2>Produção de Vídeos | Imagens Aéreas</h2>
+      <h2>Audiovisual Imobiliário | Natal e Grande Natal</h2>
 
       <LTButtonsWrapper>
         <LTButton 
@@ -47,7 +47,7 @@ export function LinkTree() {
             window.location.href = whatsappAddress;
           }}
         >
-          Fale conosco
+          Falar sobre um imóvel
         </LTButton>
         <LTButton 
           onClick={() => handleClickSite()}
@@ -55,18 +55,18 @@ export function LinkTree() {
         >
           Nosso Site
         </LTButton>
-        <LTButton 
+        {/* <LTButton 
           onClick={() => {
             window.location.href = selectionFormAddress;
           }}
         >
           Bee Takes: Selection
-        </LTButton>
+        </LTButton> */}
       </LTButtonsWrapper>
 
       <LTSubtitle>
         <span>
-          Especialistas em imagens aéreas e produções de vídeo para empresas.
+          Planejamento, direção e produção audiovisual para imóveis.
         </span>
       </LTSubtitle>
 
