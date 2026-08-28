@@ -53,7 +53,7 @@ export function LinkTree() {
           onClick={() => handleClickSite()}
           color="yellow"
         >
-          Nosso Site
+          Ver projetos e cases
         </LTButton>
         {/* <LTButton 
           onClick={() => {
