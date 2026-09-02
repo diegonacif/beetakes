@@ -15,6 +15,7 @@ import { useEffect } from "react";
 import ReactPixel from 'react-facebook-pixel';
 import { LinkTree } from "./pages/LinkTree";
 import { TipoEvento, incrementarEventoDiario } from "./hooks/useEventIncrement";
+import { Portfolio } from "./pages/Portfolio/index";
 
 export function Router() {
   const location = useLocation();
@@ -41,6 +42,7 @@ export function Router() {
           <Routes>
             <Route path="/" element={<DefaultLayout />}>
               <Route index element={<Home />} />
+              <Route path="/portfolio" element={<Portfolio />} />
               <Route path="/contact-form" element={<Contact />} />
               <Route path="/linktree" element={<LinkTree />} />
               <Route path="/services/:service" element={<ServicesFolio />} />

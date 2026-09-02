@@ -50,7 +50,8 @@ export const WhatsappButtonContainer = styled.div`
     
     &:hover {
       filter: opacity(1);
-      width: 14rem;
+      width: 12rem;
+      padding-right: 0.4rem;
       
       #speak-with-us {
         display: inline-block;

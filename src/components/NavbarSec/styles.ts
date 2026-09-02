@@ -16,7 +16,9 @@ export const NavbarSecContainer = styled.div`
   z-index: 20;
   transition: padding 0.3s ease-in-out;
 
-  background: linear-gradient(90deg, #6A6C71 0%, #34374B 50%, #282A36 100%);
+  /* background: linear-gradient(90deg, #6A6C71 0%, #34374B 50%, #282A36 100%); */
+  background: #0c0c0c;
+
 ;
 
   .logo-wrapper {
@@ -25,7 +27,7 @@ export const NavbarSecContainer = styled.div`
     height: 100%;
 
     #bee-logo {
-      height: 90%;
+      height: 70%;
     }
     
   }

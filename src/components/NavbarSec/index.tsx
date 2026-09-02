@@ -1,5 +1,5 @@
 import { NavbarSecContainer } from "./styles";
-import beeLogo from '../../assets/bee-logo-3.png';
+import beeLogo from '../../assets/Vertical Centered Brand Name.svg';
 import { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 

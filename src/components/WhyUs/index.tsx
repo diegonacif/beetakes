@@ -5,7 +5,8 @@ import { CheckboxCircle, WhyUsContainer, WhyUsRow, WhyUsTextWrapper } from "./st
 export function WhyUs() {
   return (
     <WhyUsContainer>
-      <h3 id="whyus-title">{whyUsData.length} motivos para escolher a Bee Takes.</h3>
+      {/* <h3 id="whyus-title">{whyUsData.length} motivos para escolher a Bee Takes.</h3> */}
+      <h3 id="whyus-title">Por que apresentar seu imóvel com a Bee Takes?</h3>
       <WhyUsTextWrapper>
         {
           whyUsData.map((whyUsData, index) => (

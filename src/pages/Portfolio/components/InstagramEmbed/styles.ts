@@ -1,0 +1,16 @@
+import styled from "styled-components";
+
+export const Container = styled.div`
+  width: 100%;
+  max-width: 540px;
+  margin: 0 auto;
+
+  iframe {
+    width: 100%;
+    min-height: 700px;
+
+    display: block;
+
+    border: 0;
+  }
+`;

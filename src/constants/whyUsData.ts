@@ -1,23 +1,20 @@
 export const whyUsData = [
   {
-    text: 'Estamos comprometidos em fornecer imagens de alta qualidade e um serviço excepcional, garantindo sua total satisfação.',
+    text: 'Criamos materiais audiovisuais que valorizam os ambientes, a arquitetura e o estilo de vida que o imóvel oferece, fazendo o potencial comprador perceber seu verdadeiro valor.',
   },
   {
-    text: 'Edição profissional para aprimorar as imagens e criar resultados visuais prontos para serem compartilhados.',
+    text: 'Nossos vídeos são planejados para apresentar o imóvel de forma estratégica, destacando seus diferenciais e conduzindo o espectador por uma experiência visual que desperta interesse.',
   },
   {
-    text: 'Vídeos estrategicamente roteirizados alinhados com seu objetivo.',
+    text: 'Uma apresentação profissional transmite cuidado, credibilidade e posicionamento. Produzimos conteúdos que ajudam corretores, imobiliárias e construtoras a se apresentarem no nível dos imóveis que comercializam.',
   },
   {
-    text: 'Vídeos terrestres estabilizados.',
+    text: 'Produzimos vídeos adaptados para Instagram, Reels, Stories, YouTube e outras plataformas, respeitando formato, ritmo e linguagem de cada canal.',
   },
   {
-    text: 'Atenção ao cliente, do pedido ao pós venda.',
+    text: 'Captação, direção, imagens aéreas, edição e gestão de tráfego fazem parte de um processo integrado. Você não precisa coordenar diferentes profissionais para ter um material completo.',
   },
   {
-    text: 'Equipamento aéreo da linha DJI.',
-  },
-  {
-    text: 'Seguimos rigorosamente todas as normas de segurança e regulamentações da ANAC, garantindo a segurança de cada voo.',
+    text: 'Além de divulgar os imóveis, oferecemos a oportunidade de fortalecer a imagem de quem está por trás dele. Criamos conteúdos que ajudam você a construir uma presença profissional e memorável no mercado imobiliário.',
   },
 ]

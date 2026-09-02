@@ -33,8 +33,8 @@ export const IntroBanner = styled.section`
    * 100lvh cobre a maior área do viewport.
    * A safe area mantém o fundo atrás da interface inferior do Safari.
    */
-  min-height: 100vh;
-  min-height: calc(100lvh + var(--safe-bottom));
+  min-height: 100lvh;
+  min-height: calc(100lvh + var(--navbar-height));
 
   overflow: hidden;
 

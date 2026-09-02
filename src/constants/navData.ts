@@ -24,9 +24,9 @@ export const navData = [
     url: '#section-beeflix',
     ref: 'beeflixRef'
   }, */
-    {
-    text: 'Fale Conosco',
-    url: '#section-faleconosco',
-    ref: 'faleconoscoRef'
-  },
+  //   {
+  //   text: 'Fale Conosco',
+  //   url: '#section-faleconosco',
+  //   ref: 'faleconoscoRef'
+  // },
 ]

@@ -70,7 +70,7 @@ export function Navbar() {
                 <li key={index} onClick={() => currentRef(item.ref)}>{item.text}</li>
               ))
             }
-            <li onClick={() => navigate('/contact-form')}>Orçamento</li>
+            <li onClick={() => navigate('/portfolio')}>Portfólio</li>
           </ul>
         </nav> :
         null

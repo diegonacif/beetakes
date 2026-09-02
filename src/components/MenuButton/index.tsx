@@ -90,7 +90,7 @@ export function MenuButton() {
                 ))
               }
               <div className="menu-item">
-                <span onClick={() => navigate('contact-form')}>Orçamento</span>
+                <span onClick={() => navigate('/portfolio')}>Portfólio</span>
               </div>
             </animated.div>
         )

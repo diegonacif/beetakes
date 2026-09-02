@@ -4,7 +4,7 @@ import { useBreakpoint } from "../../hooks/useBreakpoint";
 import { Service } from "./components/Service";
 import { ServicesContainer } from "./styles";
 import { RefsContext } from "../../contexts/RefsProvider";
-import { BudgetButton } from "../BudgetButton";
+// import { BudgetButton } from "../BudgetButton";
 import { useNavigate } from "react-router-dom";
 
 export function Services() {
@@ -14,7 +14,7 @@ export function Services() {
 
   return (
     <ServicesContainer data-breakpoint={breakpoint} id="section-services" ref={servicesRef}>
-      <h2 className="services-title">Serviços</h2>
+      <h2 className="services-title">Soluções</h2>
       {
         servicesData.map((service, index) => (
           <div
@@ -28,7 +28,7 @@ export function Services() {
           </div>
         ))
       }
-      <BudgetButton />
+      {/* <BudgetButton /> */}
     </ServicesContainer>
   )
 }
