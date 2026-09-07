@@ -1,7 +1,7 @@
 // import residencialImg from '../assets/residencial.png';
 // import comercialImg from '../assets/comercial_01.jpg';
 import comercialImg from '../assets/20250317-DJI_0620-HDR-3-min.jpg';
-import obrasImg from '../assets/obras_01.jpg';
+import obrasImg from '../assets/jardins_obras.png';
 // import eventosImg from '../assets/show_01.jpg';
 // import turismoImg from '../assets/hikers_01.jpg';
 import marketingImg from '../assets/marketing_01.png';

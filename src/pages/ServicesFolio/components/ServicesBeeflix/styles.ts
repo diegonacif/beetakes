@@ -1,7 +1,5 @@
 import styled from "styled-components";
 import { deviceBreakpoint } from "../../../../styles/breakpoints";
-import customCursor from "../../../../assets/cursor/Normal-Select-y.png";
-
 
 export const ServicesBeeflixContainer = styled.section`
   position: relative;
@@ -9,8 +7,6 @@ export const ServicesBeeflixContainer = styled.section`
   min-height: 100dvh;
   background-color: ${(props) => props.theme['gray-100']};
   padding: 5rem 0.75rem 8rem;
-
-  cursor: url(${customCursor}), auto;
 
   #services-beeflix-title {
     text-align: center;

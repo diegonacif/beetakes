@@ -1,6 +1,5 @@
 import styled from "styled-components";
 // import bgImg from "../../assets/IMG_5531_1080_blur-min.jpg";
-import customCursor from "../../assets/cursor/Normal-Select-y.png";
 import heroDesktop from "../../assets/BGs/hero-imobiliario-desktop.webp";
 import heroMobile from "../../assets/BGs/hero-imobiliario-mobile.webp";
 
@@ -14,8 +13,6 @@ export const HomeContainer = styled.main`
   min-height: 100dvh;
 
   overflow-x: hidden;
-
-  cursor: url(${customCursor}), auto;
 `;
 
 export const IntroBanner = styled.section`
