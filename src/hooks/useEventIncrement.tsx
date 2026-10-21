@@ -8,6 +8,7 @@ export enum TipoEvento {
   CLIQUE_BOTAO_ORCAMENTO = 'clique_botao_orcamento',
   CLIQUE_LINKTREE_ORCAMENTO = 'clique_linktree_orcamento',
   CLIQUE_LINKTREE_SITE = 'clique_linktree_site',
+  CLIQUE_LINKTREE_PORTFOLIO = 'clique_linktree_portfolio',
   CLIQUE_LINKTREE_WHATSAPP = 'clique_linktree_whatsapp',
   CLIQUE_LINKTREE_YOUTUBE = 'clique_linktree_youtube',
   CLIQUE_LINKTREE_FACEBOOK = 'clique_linktree_facebook',

@@ -6,7 +6,8 @@ import { TipoEvento, incrementarEventoDiario } from "../../hooks/useEventIncreme
 export function LinkTree() {
   const { width } = useWindowSize()
 
-  const websiteAddress = "http://www.beetakes.com.br";
+  // const websiteAddress = "http://www.beetakes.com.br";
+  const portfolioAddress = "http://www.beetakes.com.br/portfolio";
   // const formAddress = "http://www.beetakes.com.br/contact-form";
 
   const youtubeAddress = "https://www.youtube.com/@BeeTakes";
@@ -26,9 +27,14 @@ export function LinkTree() {
   //   window.location.href = formAddress;
   // }
 
-  function handleClickSite() {
+  /* function handleClickSite() {
     incrementarEventoDiario(TipoEvento.CLIQUE_LINKTREE_SITE);
     window.location.href = websiteAddress;
+  } */
+
+  function handleClickPortfolio() {
+    incrementarEventoDiario(TipoEvento.CLIQUE_LINKTREE_PORTFOLIO);
+    window.location.href = portfolioAddress;
   }
 
   return (
@@ -49,11 +55,17 @@ export function LinkTree() {
         >
           Falar sobre um imóvel
         </LTButton>
-        <LTButton 
+        {/* <LTButton 
           onClick={() => handleClickSite()}
           color="yellow"
         >
           Ver projetos e cases
+        </LTButton> */}
+        <LTButton 
+          onClick={() => handleClickPortfolio()}
+          color="yellow"
+        >
+          Portfólio
         </LTButton>
         {/* <LTButton 
           onClick={() => {
